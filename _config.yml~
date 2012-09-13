@@ -5,7 +5,7 @@
 url: http://tayeb83.github.com/dtmdeblog
 title: مدونة الطيب الضادي
 subtitle: A blogging framework for hackers.
-author: Your Name
+author: طيب مرابطي
 simple_search: http://google.com/search
 description:
 
@@ -72,12 +72,12 @@ twitter_show_follower_count: false
 twitter_tweet_button: true
 
 # Google +1
-google_plus_one: false
+google_plus_one: true
 google_plus_one_size: medium
 
 # Google Plus Profile
 # Hidden: No visible button, just add author information to search results
-googleplus_user:
+googleplus_user: 101099896157910648102
 googleplus_hidden: false
 
 # Pinboard
@@ -89,8 +89,8 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name:
-disqus_show_comment_count: false
+disqus_short_name: dtmdeblog
+disqus_show_comment_count: true
 
 # Google Analytics
 google_analytics_tracking_id:
