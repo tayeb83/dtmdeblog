@@ -3,7 +3,7 @@ layout: post
 title: " إدارة الإصدارات-تثبيث و إعداد "
 date: 2012-07-08 08:43
 comments: true
-categories: 
+categories: git, github, rails 
 ---
 لتثبيث الGIT أنصحكم بتتبع الخطوات المشروحة بطريقة جيدة و مفصلة حسب نوع النظام على الرابط
  [http://git-scm.com/book/en/Getting-Started-Installing-Git](http://git-scm.com/book/en/Getting-Started-Installing-Git)  , على سبيل المثال تثبيث الGIT على نظام الأبونتو يتم بالأمر التالي :
