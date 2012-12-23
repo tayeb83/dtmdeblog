@@ -16,20 +16,7 @@ categories: rails, scaffold, mvc
 rails generate build_db $
 {% endcodeblock %} 
 الأمر ينشأ لنا الملف 20121223181308_build_db.rb في المجلد db/migrate داخل التطبيق. بعد فتح الملف يجب إضافة الأسطر ليصبح كالتالي :
-{% codeblock %}
-class BuildDb < ActiveRecord::Migration
-  def up
-    create_table :languages do |t|
-     t.string :name
-     t.string :description
-    end
-  end
-
-  def down
-   drop_table :languages
-  end
-end
-{% endcodeblock %} 
+<img src="/images/build_db_text.png" title="إنشاء قاعدة البيانات"/>
 
 بعدها يجب تنفيذ السكريبت لإنشاء جدول لغات البرمجة داخل قاعدة البيانات :
 {% codeblock %}
