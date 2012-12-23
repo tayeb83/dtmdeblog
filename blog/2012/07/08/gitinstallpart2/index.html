@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title> إدارة الإصدارات-تثبيث و إعداد  - مدونة الطيب الضادي</title>
+  <meta name="author" content="طيب مرابطي">
+
+  
+  <meta name="description" content="لتثبيث الGIT أنصحكم بتتبع الخطوات المشروحة بطريقة جيدة و مفصلة حسب نوع النظام على الرابط http://git-scm.com/book/en/Getting-Started-Installing-Git , &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2">
+  <link href="/dtmdeblog/favicon.png" rel="icon">
+  <link href="/dtmdeblog/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/dtmdeblog/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/dtmdeblog/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    body {
+      padding-bottom: 40px;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    .page-footer p {
+      text-align: center;
+    }
+  </style>
+  <script src="/dtmdeblog/javascripts/libs/jquery.js"></script>
+  <script src="/dtmdeblog/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/dtmdeblog/javascripts/libs/bootstrap.js"></script>
+  <script src="/dtmdeblog/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/dtmdeblog/atom.xml" rel="alternate" title="مدونة الطيب الضادي" type="application/atom+xml">
+  
+  
+
+</head>
+
+<body    style="direction: rtl">
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+     
+
+      <div class="nav-collapse">
+         
+        <ul class="nav pull-right">
+  <li><a href="/dtmdeblog/blog/archives">الأرشيف</a></li>
+  <li><a href="/dtmdeblog/">المدونة</a></li>
+  <li><a href="/dtmdeblog/about">من أنا؟</a></li>
+  <a class="brand" href="/dtmdeblog/">مدونة الطيب الضادي</a>
+</ul>
+
+
+        <ul class="nav pull-right" data-subscription="rss">
+          <li><a href="/dtmdeblog/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+          
+        </ul>
+
+        
+          <form class="pull-right navbar-search" action="http://google.com/search" method="get">
+            <fieldset role="search">
+              <input type="hidden" name="q" value="site:tayeb83.github.com/dtmdeblog" />
+              <input class="search-query" type="text" name="q" results="0" placeholder="ابحث"/>
+            </fieldset>
+          </form>
+        
+      </div>
+     
+    </div>
+  </div>
+</div>
+</nav>
+  <div class="container">
+    <div class="row-fluid">
+      
+<article class="hentry span9" role="article">
+
+  
+  <header class="page-header">
+    
+      <h1 class="entry-title">إدارة الإصدارات-تثبيث و إعداد</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-08T08:43:00+02:00" pubdate data-updated="true">Jul 8<span>th</span>, 2012</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>لتثبيث الGIT أنصحكم بتتبع الخطوات المشروحة بطريقة جيدة و مفصلة حسب نوع النظام على الرابط
+ <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">http://git-scm.com/book/en/Getting-Started-Installing-Git</a>  , على سبيل المثال تثبيث الGIT على نظام الأبونتو يتم بالأمر التالي :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install git-core $</span></code></pre></td></tr></table></div></figure>
+
+
+<p>بعد تثبيث الGIT, تأتي المرحلة التالية و التي نقوم فيها بتهيئة الإعدادات و هي عبارة عن إعدادات خاصة بالنظام أي أنكم لن تنفذوها إلا مرة واحدة على نفس النظام :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git-config --global user.name "الإسم" $
+</span><span class='line'>git-config --global user.email "البريد الإلكتروني" $</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>تهيئة الإعدادات لل repository (المستودع)</h2>
+
+<p>تشمل هذه المرحلة مجموعة من العمليات الضرورية لتشكيل الrepository, و الذي هو عبارة عن &#8220;ملف أو نظام تحكم&#8221; تُوضع فيه الإصدارات الخاصة بالتطبيق :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git init $</span></code></pre></td></tr></table></div></figure>
+
+
+<p>بعدها يجب إضافة الملفات داخل الrepository, ولكن يكمن هنا مشكل بسيط و هو أن الGIT يتبع التغيرات التي تطرأ على كل الملفات حتى تلك التي لا نريد تتبعها, أخص بالذكر ملفات الlog على سبيل المثال وذلك أن هذه الملفات تتغير بكثرة و لسنا بحاجة لأن يقوم نظام إدارة الإصدارات بتتبع تغيراتها. لحسن الحظ فإن الGIT لديه القدرة على تجاهل مثل هذه الملفات و ذلك بالطريقة التالية :
+نضف إلى الملف الرئيسي للتطبيق ملف إسمه gitignore. و الذي سوف يحتوي على بعض القواعد تحدد لGIT الملفات التي يجب تجاهلها, اﻵن لو عدنا إلى الدرس   <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/06/25/first-application-rails">أول تطبيق برايلز</a>  فسوف تلاحظون أن رايلز قام بإنشاء ملف gitignore. داخل الملف الرئيسي مثل ما توضحه الصورة :</p>
+
+<p><img src="/dtmdeblog/images/gitginoreinapplication.png" title="ملف gitignore. داخل الملف الرئيسي"/></p>
+
+<p>اﻵن لو فتحنا gitignore. فسوف تلاحظون أن الملف يحتوي على مجموعة من القواعد تجبر الGIT على تجاهل التغيرات التي تطرأ على ملفات الlog, الملفات المؤقتة و قاعدة البيانات sqllite.</p>
+
+<p><img src="/dtmdeblog/images/gitigorefile.png" title=" محتوى ملف gitignore."/></p>
+
+<h2>الإضافة و الحفظ</h2>
+
+<p>و أخير وصلنا إلى المرحلة التي سوف نقوم من خلالها إضافة ملفات التطبيق إلى الGIT ثم حفظها (commit), يمكنكم إضافة كل الملفات (ماعدا التي تمت تجاهلها) بالطريقة التالية :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>. git add  $</span></code></pre></td></tr></table></div></figure>
+
+
+<p>النقطة (.) هنا تمثل الملف الجاري و الGIT ذكي بما فيه الكفاية لكي يقوم بإضافة كل الملفات بطريقة الإستدعاء الذاتي. هذه العملية تقوم بإضافة الملفات إلى &#8220;ساحة التخزين&#8221; (staging area) و التي تحتوي على التغيرات المؤقتة على المشروع. يمكنكم رؤيتها عن طريق تنفيذ الأمر &#8220;git status&#8221;  كما هو موضح في الصورة :</p>
+
+<p><img src="/dtmdeblog/images/gitstatus.png"/></p>
+
+<p>اﻵن إذا أردتم حفظ هذه التغيرات و تأكيدها فيجب إستعمال الأمر &#8220;commit -m&#8221; بحيث أن الخاصية &#8220;m-&#8221; تسمح لكم بإضافة تعليق يوضح مثلا سبب التغيير.</p>
+
+<h2>ماذا يستطيع الGIT القيام به من أجل مساعدتكم</h2>
+
+<p>بعد كل ما قمنا به في هذا الدرس أعتقد أن الفائدة من إستعمال الGIT لم تظهر بعد, لهذا دعونا نقوم بعمل تطبيقي يوضح لنا الأمور أكثر. أول شيء سوف نقوم به هو تدمير الملف app/controllers, عملية يمكن أن يقوم بها أي مطور بطريق الخطأ.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd first_app/ $
+</span><span class='line'> rm -rf app/controllers $</span></code></pre></td></tr></table></div></figure>
+
+
+<p>لمعرفة ما حصل سوف نفوم بإرسال الأمر &#8220;git status&#8221;.</p>
+
+<p><img src="/dtmdeblog/images/gitstatusrmrfcontrollers.png"/></p>
+
+<p>الصورة توضح التغيرات التي حصلت ولكن ما يجب معرفته أن هذه التغيرات لم تحفظ بعد على الGIT و بالتالي فإن بإمكاننا إلغاءها بطريقة سهلة و ربط الGIT مع الإصدار اﻷخير عن طريق تنفيذ اﻷمر  &#8220;git chekout -f&#8221;.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -f $
+</span><span class='line'>git status $
+</span><span class='line'># On branch master
+</span><span class='line'>nothing to commit (working directory clean)
+</span><span class='line'>ls app/controllers/ $
+</span><span class='line'>application_controller.rb</span></code></pre></td></tr></table></div></figure>
+
+
+<p>الحمد لله الملف المحذوف عاد مجددا.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">طيب مرابطي</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-08T08:43:00+02:00" pubdate data-updated="true">Jul 8<span>th</span>, 2012</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/dtmdeblog/blog/categories/git-/'>git,</a>, <a class='category' href='/dtmdeblog/blog/categories/github-/'>github,</a>, <a class='category' href='/dtmdeblog/blog/categories/rails/'>rails</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2/" data-via="tayebM" data-counturl="http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    
+    <section>
+      <h1>التعليقات</h1>
+      <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+    <ul class="pager">
+      
+      <li class="previous"><a class="basic-alignment left"
+        href="/dtmdeblog/blog/2012/07/07/gitinitialisation/" title="Previous Post:
+         إدارة الإصدارات-مقدمة">&laquo;  إدارة الإصدارات-مقدمة</a></li>
+      
+      <li><a href="/dtmdeblog/blog/archives">أرشيف المدونات</a></li>
+      
+      <li class="next"><a class="basic-alignment right" href="/dtmdeblog/blog/2012/09/23/github/"
+        title="Next Post: إدارة الإصدارات-github">إدارة الإصدارات-github
+        &raquo;</a></li>
+      
+    </ul>
+  </footer>
+</article>
+
+<aside class="sidebar-nav span3">
+  
+    <section class="well">
+  <ul id="recent_posts" class="nav nav-list">
+    <li class="nav-header">أخر التدوينات</li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2012/12/23/scaffolding-base/">السقالة في روبي أون رايلز(scaffolding)</a>
+      </li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2012/12/10/staticpageinrails/">من البداية</a>
+      </li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2012/09/23/github/">إدارة الإصدارات-github</a>
+      </li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2012/07/08/gitinstallpart2/"> إدارة الإصدارات-تثبيث و إعداد </a>
+      </li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2012/07/07/gitinitialisation/"> إدارة الإصدارات-مقدمة</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section class="well">
+  <ul id="tweets" class="nav">
+    <li class="nav-header">أخر التغريدات</li>
+    <li class="loading">تحديث ...</li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      getTwitterFeed("tayebM", 4, false);
+    });
+  </script>
+  <script src="/dtmdeblog/javascripts/asides/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/tayebM" class="twitter-follow-button" data-show-count="false">تابع @tayebM</a>
+  
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/101099896157910648102?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo" class="page-footer"><hr>
+<p>
+  جميع الحقوق محفوظة &copy; 2012 - طيب مرابطي -
+  <span class="credit">انجز باستعمال <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'dtmdeblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2/';
+        var disqus_url = 'http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

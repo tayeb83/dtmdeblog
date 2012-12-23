@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rails | مدونة الطيب الضادي]]></title>
+  <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://tayeb83.github.com/dtmdeblog/"/>
+  <updated>2012-12-23T21:57:28+01:00</updated>
+  <id>http://tayeb83.github.com/dtmdeblog/</id>
+  <author>
+    <name><![CDATA[طيب مرابطي]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[إدارة الإصدارات-github]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/09/23/github/"/>
+    <updated>2012-09-23T12:44:00+02:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/09/23/github</id>
+    <content type="html"><![CDATA[<p>الآن و قد قمنا بوضع مشروعنا تحت منصة إدارة الإصدارات, حان الوقت ل"تحميل" البرنامج نحو
+ <a href="https://github.com">https://github.com</a>  و الذي هو عبارة عن موقع إجتماعي مهيأ و مطور من أجل إستقبال و تقاسم المستودعات من نوع الGIT.
+وضع نسخة من مستودعكم في الgithub له هدفان :</p>
+
+<ol>
+<li>حفظ كامل لكل المشروع (بالإضافة إلى جميع المستودعات التي تم إنشاءها)</li>
+<li>تسهيل التبادل و التقاسم مع مطورين أخرين لنفس المشروع أو لنسخ مشاريع نريد إنشاء مثلها و العمل عليها, هذه النقطة تعتبر ثانوية و لكن كونكم عضو في الgithub يمنحكم لكم صلاحية للإطلاع على العديد من المشاريع المطورة بلغتكم المفضلة و من بينها Ruby, مع العلم أن موقع الgithub طُور عن طريق منصة Ruby On Rails.</li>
+</ol>
+
+
+<p>يحتوي الgithub على العديد من الصيغ الغير مجانية ولكن من أجل البرامج المفتوحة المصادر فإنه يقترح خدمات مجانية, و لهذا فإن ما يجب فعله أولا هو التسجيل على الموقع من أجل الحصول على حساب مجاني, ثم الضغط على الرابط (new repository) من أجل تسجيل و إنشاء مستودع جديد, بعدها لم يتبقى إلا إتمام معلومات الإستمارة كما هو موضح في الصورة</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/githubNew.png" title="github إنشاء مستودع جديد على"/>
+ و من ثم تحميل المشروع عن طريق إرساله إلى المستودع البعيد كالتالي :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git remote add origin git@github.com:&lt;username>/project_name.git $
+</span><span class='line'>git push origin master $</span></code></pre></td></tr></table></div></figure></notextile></div><br/>
+بحيث أن : username تمثل إسم المستحدم و project_name إسم المشروع.</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/resultsFirstCommands.png" title="github المشروع على"/></p>
+
+<h2> الفروع أو الفرع Branch</h2>
+
+<p>الGIT عبارة عن أداة رائعة من أجل إنشاء "الفروع" و التي هي عبارة عن نسخ للمستودعات التي نقوم بالعمل عليها دون تغيير الملف الرئيسي. في جميع الحالات, المستودع الرئيسي هو الفرع "master" و يمكننا أن نقوم من خلاله بإنشاء فرع جديد عن طريق الأمر checkout و العَلم b- :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -b modify-README $
+</span><span class='line'>git branch $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>في هذه الحالة, الأمر الثاني يقوم بعرض كل الفروع المحلية, و النجمة تحدد الفرع الذي نحن بصدد العمل عليه, لاحظتم أن git checkout -b تقوم من جهة بإنشاء فرع جديد و من جهة بتغيير الفرع الذي تم إنشاءه.
+فائدة الفروع لا تتجلى إلا عند العمل جماعة على نفس المشروع.</p>
+
+<h2> التغيير Edit</h2>
+
+<p>بعد إنشاء الفرع نقوم بتعديله, تعتبر الmarkdown لغة جيدة من أجل القيام بالتغييرات على الملفات في الgithub. على سبيل المثال سوف نقوم بتغيير الملف README, من أجل هذا نقوم بتحويله إلى ملف markdown عن طريق اﻷمر :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git mv README README.markdown $
+</span><span class='line'>gedit   README.markdown $</span></code></pre></td></tr></table></div></figure></notextile></div><br/>
+و منها نقوم بالتغيير في الملف ثم تطبيق التغييرات كما هو موضح في الصورة.
+<img src="http://tayeb83.github.com/dtmdeblog/images/README_Markdown.png" title="بعد تحويله و تغييره README الملف "/></p>
+
+<h2> الإدماج Merge</h2>
+
+<p>الأن و بعد إتمام التغييرات, نقوم بدمج النتيجة إلى الفرع الرئيسي عن طريق اﻷمر :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout master $
+</span><span class='line'>git merge modify-README $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2> التحميل Push</h2>
+
+<p>لم يتبقى الأن إلى تحميل التغيرات على الgithub من أجل رؤية النتائج كما توضح الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/READMEONGITHUB.png" title=" githubبعد تغييره على ال README الملف  "/></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ إدارة الإصدارات-تثبيث و إعداد ]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2/"/>
+    <updated>2012-07-08T08:43:00+02:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2</id>
+    <content type="html"><![CDATA[<p>لتثبيث الGIT أنصحكم بتتبع الخطوات المشروحة بطريقة جيدة و مفصلة حسب نوع النظام على الرابط
+ <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">http://git-scm.com/book/en/Getting-Started-Installing-Git</a>  , على سبيل المثال تثبيث الGIT على نظام الأبونتو يتم بالأمر التالي :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install git-core $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>بعد تثبيث الGIT, تأتي المرحلة التالية و التي نقوم فيها بتهيئة الإعدادات و هي عبارة عن إعدادات خاصة بالنظام أي أنكم لن تنفذوها إلا مرة واحدة على نفس النظام :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git-config --global user.name "الإسم" $
+</span><span class='line'>git-config --global user.email "البريد الإلكتروني" $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>تهيئة الإعدادات لل repository (المستودع)</h2>
+
+<p>تشمل هذه المرحلة مجموعة من العمليات الضرورية لتشكيل الrepository, و الذي هو عبارة عن "ملف أو نظام تحكم" تُوضع فيه الإصدارات الخاصة بالتطبيق :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git init $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>بعدها يجب إضافة الملفات داخل الrepository, ولكن يكمن هنا مشكل بسيط و هو أن الGIT يتبع التغيرات التي تطرأ على كل الملفات حتى تلك التي لا نريد تتبعها, أخص بالذكر ملفات الlog على سبيل المثال وذلك أن هذه الملفات تتغير بكثرة و لسنا بحاجة لأن يقوم نظام إدارة الإصدارات بتتبع تغيراتها. لحسن الحظ فإن الGIT لديه القدرة على تجاهل مثل هذه الملفات و ذلك بالطريقة التالية :
+نضف إلى الملف الرئيسي للتطبيق ملف إسمه gitignore. و الذي سوف يحتوي على بعض القواعد تحدد لGIT الملفات التي يجب تجاهلها, اﻵن لو عدنا إلى الدرس   <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/06/25/first-application-rails">أول تطبيق برايلز</a>  فسوف تلاحظون أن رايلز قام بإنشاء ملف gitignore. داخل الملف الرئيسي مثل ما توضحه الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/gitginoreinapplication.png" title="ملف gitignore. داخل الملف الرئيسي"/></p>
+
+<p>اﻵن لو فتحنا gitignore. فسوف تلاحظون أن الملف يحتوي على مجموعة من القواعد تجبر الGIT على تجاهل التغيرات التي تطرأ على ملفات الlog, الملفات المؤقتة و قاعدة البيانات sqllite.</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/gitigorefile.png" title=" محتوى ملف gitignore."/></p>
+
+<h2>الإضافة و الحفظ</h2>
+
+<p>و أخير وصلنا إلى المرحلة التي سوف نقوم من خلالها إضافة ملفات التطبيق إلى الGIT ثم حفظها (commit), يمكنكم إضافة كل الملفات (ماعدا التي تمت تجاهلها) بالطريقة التالية :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>. git add  $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>النقطة (.) هنا تمثل الملف الجاري و الGIT ذكي بما فيه الكفاية لكي يقوم بإضافة كل الملفات بطريقة الإستدعاء الذاتي. هذه العملية تقوم بإضافة الملفات إلى "ساحة التخزين" (staging area) و التي تحتوي على التغيرات المؤقتة على المشروع. يمكنكم رؤيتها عن طريق تنفيذ الأمر "git status"  كما هو موضح في الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/gitstatus.png"/></p>
+
+<p>اﻵن إذا أردتم حفظ هذه التغيرات و تأكيدها فيجب إستعمال الأمر "commit -m" بحيث أن الخاصية "m-" تسمح لكم بإضافة تعليق يوضح مثلا سبب التغيير.</p>
+
+<h2>ماذا يستطيع الGIT القيام به من أجل مساعدتكم</h2>
+
+<p>بعد كل ما قمنا به في هذا الدرس أعتقد أن الفائدة من إستعمال الGIT لم تظهر بعد, لهذا دعونا نقوم بعمل تطبيقي يوضح لنا الأمور أكثر. أول شيء سوف نقوم به هو تدمير الملف app/controllers, عملية يمكن أن يقوم بها أي مطور بطريق الخطأ.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd first_app/ $
+</span><span class='line'> rm -rf app/controllers $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>لمعرفة ما حصل سوف نفوم بإرسال الأمر "git status".</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/gitstatusrmrfcontrollers.png"/></p>
+
+<p>الصورة توضح التغيرات التي حصلت ولكن ما يجب معرفته أن هذه التغيرات لم تحفظ بعد على الGIT و بالتالي فإن بإمكاننا إلغاءها بطريقة سهلة و ربط الGIT مع الإصدار اﻷخير عن طريق تنفيذ اﻷمر  "git chekout -f".</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -f $
+</span><span class='line'>git status $&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>On branch master&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>nothing to commit (working directory clean)
+</span><span class='line'>ls app/controllers/ $
+</span><span class='line'>application_controller.rb</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>الحمد لله الملف المحذوف عاد مجددا.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ إدارة الإصدارات-مقدمة]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/07/07/gitinitialisation/"/>
+    <updated>2012-07-07T00:09:00+02:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/07/07/gitinitialisation</id>
+    <content type="html"><![CDATA[<p>الأن و لقد قمنا بتشغيل أول تطبيق على رايلز, سوف نقوم بتسليط الضوء على جانب ثانوي في الحقيقة و لكن أساسي في نظر أغلب المطورين على رايلز أو على غيره من اللغات و الإطارات الأخرى ألا و هو إدارة الإصدارات.</p>
+
+<p>أنظمة إدارة الإصدارات تسمح لنا بتغيير الكود أو الملفات داخل التطبيقات, التقاسم مع مطورين أخرين مع الرجوع إلى الوراء في حالات الخطأ (كحذف ملف بالخطأ مثلا) أو مجرد الرجوع إلى مرحلة معينة. لهذا فإن تعلم التعامل مع أي نظام إدارة الإصدارات كفاءة أساسية يجب توفرها لدى كل متطور محترف.</p>
+
+<p>هناك خيارات عديدة من أجل إدارة الإصدارات و لكن المجتمع الرايلزي يفضل استعمال الGIT و الذي هو عبارة عن نظام إدارة الإصدارات طور في الأصل من طرف لينوس تروفالد (مصمم نواة اللينوكس) لإستقبال نواة اللينوكس. GIT عبارة عن موسوعة كبيرة و لا نستطيع تغطية كل جوانبه و لكننا سوف نقوم بسرد المهم منها لباقي الدروس و لكن بإمكانكم الإطلاع عليه بعمق إن أردتم من خلال الموارد الكثيرة المتواجدة على مستوى الويب و خاصة كتاب <a href="http://git-scm.com/book/ar">البروجيت</a> و الذي تُرجمت منه بعض الصفحات إلى اللغة العربية.</p>
+
+<p>عموما, وضع أي تطبيف (كود+ملفات) تحت إدارة الإصدارات GIT عملية ضرورية ليس لكونها مشهورة فحسب في عالم الرايلز و لكن لمنحها إمكانية تقاسم, تبادل و تشغيل الكود بطريقة سهلة جدا.</p>
+
+<p>في الدرس القادم إن شاء الله سنقوم بتثبيث و إعداد ال GIT من أجل حفظ التطبيق.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[أول تطبيق ب Rails]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/06/25/first-application-rails/"/>
+    <updated>2012-06-25T22:04:00+02:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/06/25/first-application-rails</id>
+    <content type="html"><![CDATA[<p>في هذا الدرس سوف نقوم بانشاء أول تطبيق باستعمال رايلز. كل الأوامر التي سوف أنفذها تعمل بشكل طبيعي على نظام لينوكس أبونتو.</p>
+
+<p>أول ما يجب القيام به هو انشاء ملف يحتوي على التطبيق الذي سوف نقوم بتطويره, على سبيل المثال "DemoApp", بعدها يجب التمركز في هذا الملف و ارسال هذا الأمر rails new first_app, أين first_app تمثل اسم التطبيق.</p>
+
+<p> <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>مقطع من الأوامر من أجل انشاء تطبيق   </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>   mkdir DemoApp $&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>  cd DemoApp $
+</span><span class='line'>  rails new first_app $
+</span><span class='line'>  create  
+</span><span class='line'>  create  README
+</span><span class='line'>  create  .gitignore
+</span><span class='line'>  create  Rakefile
+</span><span class='line'>  create  config.ru
+</span><span class='line'>  create  Gemfile
+</span><span class='line'>  create  app
+</span><span class='line'>  create  app/controllers/application_controller.rb
+</span><span class='line'>  create  app/helpers/application_helper.rb
+</span><span class='line'>  create  app/views/layouts/application.html.erb
+</span><span class='line'>  create  app/models
+</span><span class='line'>  create  config
+</span><span class='line'>  create  config/routes.rb
+</span><span class='line'>  create  config/application.rb
+</span><span class='line'>  create  config/environment.rb
+</span><span class='line'>                              .
+</span><span class='line'>                              .
+</span><span class='line'>                              .     
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>اﻷمر الملاحظ بعد ارسال الأمر هو العدد الكبير من الملفات التي تم انشاءها. هذه البنية النموذجية للملفات تعتبر ميزة من عديد الميزات التي يتمتع بها رايلز, لأنها تسمح بالانتقال من الصفر الى تطبيق يعمل بشكل طبيعي حتى و ان كان التطبيق جد مصغر. زيادة على ذلك وبما أن هذه البنية مشتركة بين جميع التطبيقات التي تعمل برايلز فانه بامكانكم أخذ معالمكم بالاطلاع على تطبيقات أخرى مطورة على الويب و بالخصوص على Github. و فيمايلي ملخص عن كل الملفات التي تم انشاءها :</p>
+
+<ul>
+<li>الملف /app : يعتبر قلب التطبيق يحتوي على النماذج (models), الواجهات (views) ووحدات التحكم(controllers).</li>
+<li>الملف /config : يحتوي على ملفات التكوين الخاصة بالتطبيق.</li>
+<li>الملف /db: ملفات التعامل مع قاعدة البيانات.</li>
+<li>الملف /doc: الوثائق الخاصة بالتطبيق.</li>
+<li>الملف /lib:  وحدات المكتبة البرمجية.</li>
+<li>الملف /log: يحتوي على ملفات تتبع عمليات التطبيق.</li>
+<li>الملف /public: البيانات العامة التي يمكن الوصول اليها من طرف المتصفحات مثل الصور و أوراق الأنماط.</li>
+<li>الملف /script/rails : يحتوي على أمر نصي من أجل تسيير البرامج أو  فتح جلسة عمل وحدة التحكم.</li>
+<li>الملف /test: من أجل اختبار التطبيق.</li>
+<li>الملف /tmp: الملفات المؤقتة.</li>
+<li>الملف /vendor: البرامج الهامشية مثل ال gem أو ال plugins.</li>
+<li>الملف README: نبذة عن التطبيق.</li>
+<li>الملف Rakefile: المهام المساعدة و التي يمكن الوصول اليها عن طريق الأمر Rake.</li>
+<li>الملف Gemfile: يحتوي على الجيمات المستعملة و الاساسية للتطبيق.</li>
+<li>الملف config.ru: عبارة عن ملف التكوين لل Rake middleware.</li>
+</ul>
+
+
+<h1><img src="http://tayeb83.github.com/dtmdeblog/images/application_view.png" title="البنية النموذجية للتطبيق بواسطة رايلز"/></h1>
+
+<h2>Bundler</h2>
+
+<p>بعد انشاء التطبيق, نستعمل الBundler من أجل تثبيث و ادراج الجيمات المستعملة و التي يحتاجها التطبيق. الصورة التالية توضح مثال لملف Gemfile و الذي يحتوي على الجيمات التي سوف نقوم بتثبيثها عن طريق ال Bundler. أغلب سطور الملف عبارة عن تعليقات (#) و هذا من أجل المساعدة و اعطاء نظرة عن أغلب الجيمات التي يمكن استعمالها و اعطاء نظرة أيضا عن الكتابة المستعملة في ال Bundler. في هذه المرحلة من الدرس نحن  بحاجة إلا للجيمات الأساسية مثل : rails و جيم للتحكم في قاعدة بيانات اختيارية.(slqlite ,mysql أو postgresql).</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/geditgemfile.png" title="الملف Gemfile عند فتحه لأول مرة"/></p>
+
+<p>اﻷن وقد اطلعتم على الجيمات و مكان وضعها يمكنكم ارسال اﻷمر الذي سوف يقوم بتثبيثها  :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>   bundle install $&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>rails server</h2>
+
+<p>بفضل الأوامر rails new و bundle install عندنا الأن تطبيق يمكننا تشغيله, و لكن كيف ؟ لحسن الحظ رايلز يوفر تطبيق أو سكريبت يسمح بتشغيل حاجز ألي (web server) محلي لا يمكن الوصول اليه الا بواسطة اﻷلة المحلية.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>rails server $
+</span><span class='line'>=> Booting WEBrick
+</span><span class='line'>=> Rails 3.2.1 application starting in development on http://0.0.0.0:3000
+</span><span class='line'>=> Call with -d to detach
+</span><span class='line'>=> Ctrl-C to shutdown server
+</span><span class='line'>[2012-07-04 13:32:49] INFO  WEBrick 1.3.1
+</span><span class='line'>[2012-07-04 13:32:49] INFO  ruby 1.9.3 (2012-04-20) [i686-linux]
+</span><span class='line'>[2012-07-04 13:32:49] INFO  WEBrick::HTTPServer#start: pid=18106 port=3000&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>بعد ارسال الأمر rails server يخبرنا رايلز كما هو موضح أنا التطبيق شغال على الباب 3000 على العنوان 0.0.0.0 . هذا العنوان يرشد الألة للانصات على كل العناوين IP المكونة على الالة, مثل 127.0.0.1 و المعروف ب localhost. يمكنكم ملاحظة النتيجة على العنوان http://localhost:3000, مثل الصورة التالية :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/railsserver.png" title="صفحة البداية بعد تشغيل الحاجز الالي"/></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[بعض الموارد للبدء ب Rails]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/06/17/railstools/"/>
+    <updated>2012-06-17T23:14:00+02:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/06/17/railstools</id>
+    <content type="html"><![CDATA[<p>ماهي الأدوات التي بمكن أن تسهل لي العمل على لغتي المفضلة ؟ ماهي الكتب و الدروس التي يجب أن أبدأ بها ؟ أسئلة تتكرر عندما نريد تعلم و استخدام أية لغة برمجة. نفس الأسئلة يطرحها مبتدئ مثلي من أجل تعلم Rails. لهذا اخوتي أقترح عليكم بعض الموارد و الكتب التي سوف تعينكم ان شاء الله في بدء مغامرتكم "الروبستية" على قضبان "الرايلز", بالتركيز على الموارد الخاصة ب "Rails".
+أعتقد أن أي مبتدئ بأي لغة يمكنه الاعتماد على الدروس المقدمة من المورد المختص أو "الرسمي" للغة البرمجة والذي ينشأه بشكل عام مصممو اللغة. فيما يخص "Rails",تعتبر صفحة <a href="http://rubyonrails.org">http://rubyonrails.org</a> المورد الرئيسي بلا منازع من حيث تنوع المعلومات و الدروس الخاصة ب Rails.</p>
+
+<p>كتاب جميل هو ذلك الكتاب <a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book">دروس روبي اون رايلز</a> المقدم من طرف مايكل هارتل. الكتاب عبارة عن مثال لتطبيق اجتماعي معروض بطريقة تجعل القارئ و المتعلم يجوب أغلب أساسيات ل Rails. شخصيا تعلمت الكثير من هذا الكتاب السهل الممتع و الذي يشمل على الكثير من المعلومات.</p>
+
+<p>لعلكم بعد اطلاعكم على Rails أو بالأحرى Ruby لاحظتم تركيزه على ال gems والتي هي عبارة عن مجموعة من الحزم التي تساعد بشكل كبير في تطوير التطبيقات باستعمال Ruby و بالتالي Rails الذي يستفيد بشكل كبير من هذه الخاصية :</p>
+
+<ul>
+<li><a href="https://www.ruby-toolbox.com">https://www.ruby-toolbox.com</a> عبارة عن مخزن لروابط أهم "الجيمات" (gems) مصنفة على مجموعات من الفئات مثل : الجيمات الخاصة بتسيير قاعدة البيانات أو تلك الخاصة بواجهات التحكم (Active admin). لنفس الأهداف تعتبر <a href="http://railscasts.com">http://railscasts.com</a> عن صفحة غنية بالفيديوهات و الدروس التي تساعد في تطوير التطبيقات بشكل جد محترف, حتى و ان كنا نأسف لأن بعض الدروس ليست مجانية.</li>
+<li>آخر مورد أطرحه عليكم هو <a href="http://railsforzombies.com">http://railsforzombies.com</a> الذي يحتوي على أجمل الدروس المختصرة و بقالب مروع و لكن فكاهي مع بعض التمارين التي تتدرج من السهل الى الصعب مع التنقيط, هنا أيضا الوصول لبعض الدروس ليس مجانيا و لكن يجب الاشادة بالفكرة التي وراء هذه الصفحة.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

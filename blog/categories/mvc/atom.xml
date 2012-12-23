@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: mvc | مدونة الطيب الضادي]]></title>
+  <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/mvc/atom.xml" rel="self"/>
+  <link href="http://tayeb83.github.com/dtmdeblog/"/>
+  <updated>2012-12-23T21:57:28+01:00</updated>
+  <id>http://tayeb83.github.com/dtmdeblog/</id>
+  <author>
+    <name><![CDATA[طيب مرابطي]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[السقالة في روبي أون رايلز(scaffolding)]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/12/23/scaffolding-base/"/>
+    <updated>2012-12-23T11:36:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/12/23/scaffolding-base</id>
+    <content type="html"><![CDATA[<p>ماهي السقالة أو الscaffolding في رايلز ؟ لشرح هذا المفهوم لنبدأ بطرح المشكل التالي :
+أنت مطور و عندك فكرة لمشروع ما، قمت برسم المخطط لقاعدة البيانات و تريد إنشاء تطبيق بسيط و شغال بأسرع ما يمكن. الحل ب Ruby On Rails سهل :</p>
+
+<p>بعد إنشاء قاعدة البيانات و ربط الإتصال بينها و بين رايلز، يمكنننا الطلب من رايلز إنشاء السقالة (scaffolding). إذا تمكنتم من ذلك فإنه يكون بحوزتكم تطبيق مُكون من وحدة تحكم و الكود من أجل الواجهة من أجل التواصل مع قاعدة البيانات. التطبيق شغال و لكن مُبسط لدرجة السماح لكم الإنطلاق بتطوير معمق لباقي التطبيق.
+فيمايلي سأقوم بشرح تفصيلي للسقالة من خلال مثال بسيط. المثال عبارة عن تطبيق رايلز يحفظ مجموعة من لغات البرمجة مع تعريف مُختصر لكل لغة.
+الخُطوة الأولى تكمن في تهيئة قاعدة البيانات، من أجل ذلك نقُوم بإنشاء سكريبت الmigration  بواسطة الأمر التالي :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate build_db $</span></code></pre></td></tr></table></div></figure></notextile></div>
+الأمر ينشأ لنا الملف 20121223181308_build_db.rb في المجلد db/migrate داخل التطبيق. بعد فتح الملف يجب إضافة الأسطر ليصبح كالتالي :
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class BuildDb &lt; ActiveRecord::Migration
+</span><span class='line'>  def up&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>create_table :languages do |t|
+</span><span class='line'> t.string :name
+</span><span class='line'> t.string :description
+</span><span class='line'>end
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  end&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  def down
+</span><span class='line'>   drop_table :languages
+</span><span class='line'>  end
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>بعدها يجب تنفيذ السكريبت لإنشاء جدول لغات البرمجة داخل قاعدة البيانات :
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:migrate $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>بعد إنشاء قاعدة البيانات يمكننا إنشاء السقالة عن طريق الأمر التالي :
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails  generate scaffold languages$</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>كما توضح الصورة المٌرفقة، فإن الأمر ينشأ مجموعة من الملفات داخل شجرة المشروع و خاصة النموذج (model)، وحدة التحكم (controller) و مجموعة من ملفات الواجهة.
+<img src="http://tayeb83.github.com/dtmdeblog/images/rails_scaffold_generate.png" title="إنشاء السقالة"/>
+ النتيجة أنه لدينا الآن تطبيق ويب شغال نستطيع الإعتماد عليه من أجل الذهاب بعيدا في مشروعنا النهائي.
+ <img src="http://tayeb83.github.com/dtmdeblog/images/views_generated.png" title=" واجهات التطبيق"/>
+في النهاية يجب التنويه أن المطورين في رايلز يرون في السقالة مجرد بوابة إنطلاق يساعد في تطوير الجزء الكبير للبرنامج. بالنسبة للمبتدئين مثلي، فإن السقالة تعتبر تدريب فعال لفهم طريقة إشتغال منصة رايلز. لا تنسو أن الواجهات المتحصل عليها يمكن تحسينها عن طريق ال CSS، فالواجهات المتحصل عليها لا يُستحسن تقديمها كما هي للمستخدمين النهائيين.</p>
+]]></content>
+  </entry>
+  
+</feed>

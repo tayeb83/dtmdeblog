@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: rails, | مدونة الطيب الضادي]]></title>
+  <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/rails-/atom.xml" rel="self"/>
+  <link href="http://tayeb83.github.com/dtmdeblog/"/>
+  <updated>2012-12-23T21:57:28+01:00</updated>
+  <id>http://tayeb83.github.com/dtmdeblog/</id>
+  <author>
+    <name><![CDATA[طيب مرابطي]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[السقالة في روبي أون رايلز(scaffolding)]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/12/23/scaffolding-base/"/>
+    <updated>2012-12-23T11:36:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/12/23/scaffolding-base</id>
+    <content type="html"><![CDATA[<p>ماهي السقالة أو الscaffolding في رايلز ؟ لشرح هذا المفهوم لنبدأ بطرح المشكل التالي :
+أنت مطور و عندك فكرة لمشروع ما، قمت برسم المخطط لقاعدة البيانات و تريد إنشاء تطبيق بسيط و شغال بأسرع ما يمكن. الحل ب Ruby On Rails سهل :</p>
+
+<p>بعد إنشاء قاعدة البيانات و ربط الإتصال بينها و بين رايلز، يمكنننا الطلب من رايلز إنشاء السقالة (scaffolding). إذا تمكنتم من ذلك فإنه يكون بحوزتكم تطبيق مُكون من وحدة تحكم و الكود من أجل الواجهة من أجل التواصل مع قاعدة البيانات. التطبيق شغال و لكن مُبسط لدرجة السماح لكم الإنطلاق بتطوير معمق لباقي التطبيق.
+فيمايلي سأقوم بشرح تفصيلي للسقالة من خلال مثال بسيط. المثال عبارة عن تطبيق رايلز يحفظ مجموعة من لغات البرمجة مع تعريف مُختصر لكل لغة.
+الخُطوة الأولى تكمن في تهيئة قاعدة البيانات، من أجل ذلك نقُوم بإنشاء سكريبت الmigration  بواسطة الأمر التالي :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate build_db $</span></code></pre></td></tr></table></div></figure></notextile></div>
+الأمر ينشأ لنا الملف 20121223181308_build_db.rb في المجلد db/migrate داخل التطبيق. بعد فتح الملف يجب إضافة الأسطر ليصبح كالتالي :
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class BuildDb &lt; ActiveRecord::Migration
+</span><span class='line'>  def up&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;pre>&lt;code>create_table :languages do |t|
+</span><span class='line'> t.string :name
+</span><span class='line'> t.string :description
+</span><span class='line'>end
+</span><span class='line'>&lt;/code>&lt;/pre>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  end&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>  def down
+</span><span class='line'>   drop_table :languages
+</span><span class='line'>  end
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>بعدها يجب تنفيذ السكريبت لإنشاء جدول لغات البرمجة داخل قاعدة البيانات :
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:migrate $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>بعد إنشاء قاعدة البيانات يمكننا إنشاء السقالة عن طريق الأمر التالي :
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails  generate scaffold languages$</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>كما توضح الصورة المٌرفقة، فإن الأمر ينشأ مجموعة من الملفات داخل شجرة المشروع و خاصة النموذج (model)، وحدة التحكم (controller) و مجموعة من ملفات الواجهة.
+<img src="http://tayeb83.github.com/dtmdeblog/images/rails_scaffold_generate.png" title="إنشاء السقالة"/>
+ النتيجة أنه لدينا الآن تطبيق ويب شغال نستطيع الإعتماد عليه من أجل الذهاب بعيدا في مشروعنا النهائي.
+ <img src="http://tayeb83.github.com/dtmdeblog/images/views_generated.png" title=" واجهات التطبيق"/>
+في النهاية يجب التنويه أن المطورين في رايلز يرون في السقالة مجرد بوابة إنطلاق يساعد في تطوير الجزء الكبير للبرنامج. بالنسبة للمبتدئين مثلي، فإن السقالة تعتبر تدريب فعال لفهم طريقة إشتغال منصة رايلز. لا تنسو أن الواجهات المتحصل عليها يمكن تحسينها عن طريق ال CSS، فالواجهات المتحصل عليها لا يُستحسن تقديمها كما هي للمستخدمين النهائيين.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[من البداية]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/12/10/staticpageinrails/"/>
+    <updated>2012-12-10T23:09:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/12/10/staticpageinrails</id>
+    <content type="html"><![CDATA[<p>بعد غياب طويل نظرا لإنشغالاتي الكثيرة, أعود إليكم لمواصلة دروسنا الرايلزية. في هذا الدرس سوف نبدأ بمشروع جديد أحاول من خلاله شرح أهم ما يمكن معرفته لإنجاح أول مشروع ب ROR.
+رغم أن الهدف من  روبي رايلز هو تصميم مواقع و تطبيقات ويب ديناميكية فإن رايلز بارع في إنشاء صفحات ويب ساكنة. إستعمال ROR لتصميم مواقع ويب ساكنة له فوائد كثيرة بحيث أنه يمكننا إضافة و لو قليلا بعض الكود ديناميكي.
+في البداية و كما أوضحناه في درس سابق نقوم بإنشاء أول مشروع رايلز نسميه testproject كالتالي :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails new testproject $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/railsNewTestproject.png" title="إنشاء مشروع على رايلز"/></p>
+
+<p>يمكن التنويه أنه في الإصدارات السابقة لرايلز كان لابد القيام بالأمر bundle install بعد إنشاء المشروع و لكن مع rails 3.2 أصبحت هذه الخطوة آلية عند المشروع, نُذكر أن الهدف من هذه الخطوة هو تثبيث الجيمات التي يحتاجها المشروع.</p>
+
+<h2>  الصفحات الساكنة</h2>
+
+<p>رايلز يقترح  طريقتين لإنشاء صفحات ويب ساكنة, الأولى بإستعمال صفحات ويب تحتوي على مجرد  الكود HTML, و الثانية, رايلز يتيح لنا تطوير واجهات (views) تحتوي على الHTML و التي يقوم رايلز بتحويلها إلى خادم الشبكة (web server).</p>
+
+<h2>الصفحات الساكنة الفعلية</h2>
+
+<p>لاحظتم أنه عند تشغيل مشروع رايلز للمرة الأولى ظهور صفحة بداية إفتراضية عند الذهاب إلى الرابط : http://localhost:3000
+<img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/testprojectfirstpage.png" title=" صفحة البداية على رايلز"/></p>
+
+<p>لمعرفة مصدر الصفحة يجب النظر إلى الملف public/index.html و الذي قام رايلز بإنشاءه بشكل إفتراضي, المهم أن رايلز يُرسل أي ملف في الpublic مباشرة على المتصفح, في حالة الملف
+ الخاص index.html فإننا لن نحتاج لكتابة الإسم على الرابط لأن الإسم index.html يُعتبر ملف إفتراضي لصفحة البداية. إذن إذا فهمتم هذه الفقرة فإنه بإمكانكم الآن إنشاء صفحاتكم الخاصة ووضعها في الملف public, على سبيل المثال يمكننا إنشاء صفحة تحتوي على كلمة ترحيب.
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gedit public/marhaba.html $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/marhabaContent.png" title="marhaba.html محتوى"/></p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/marhabaPage.png" title=" إظهار الصفحة الترحيبية على السرفير"/></p>
+
+<h2>الصفحات الساكنة الرايلزية </h2>
+
+<p>القدرة على التعامل مع صفحات الHTML الساكنة ضروري ولكنه غير كافي بالدرجة الأولى خاصة من أجل إنشاء تطبيقات ديناميكية. في هذه الفقرة سوف نقوم بخطوة مهمة تسمح لنا بإنشاء صفحات ديناميكية و ذلك بإنشاء مانسميه مجموعة من "الأفعال" أو actions بحيث نستطيع من خلالهم تعريف الروابط بطريقة أقوى من الصفحات الساكنة. رايلز يتوفر على محرك يسمح بإنشاء وحدات التحكم "controller" إسمه "generate", كل ما يلزمه لذلك هو إسم وحدة التحكم. في مثالنل سوف نقوم بإنشاء وحدة التحكم من أجل صفحاتنا الساكنة و التي سنسميها safahates. والتي سوف تحتوي على "الأفعال" التي سوف تمثل صفحاتنا الساكنة مثل صفحة "البداية","الإتصال" أو صفحة "من نحن", و منه فإن السكريبت generate سوف يأخذ لائحة من الأفعال لإنشاء صفحاتنا.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate controller Safahates contact home $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>مع إنشاء الفعلين home و contact فإن التوجيه نحو هاذين الفعلين قد تمت إضافته بطريقة آلية داخل الملف config/routes.rb.
+<img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/railsGenerateController.png" title="generate تسلسل الملفات التي أنشأت عن بواسطة السكريبت "/></p>
+
+<p>لو أليقنا نظرة على الملف config/routes.rb سنلاحظ مثلا وجود العلاقة "get safahates/home", هذه العلاقة تتكفل بالأمر الموافق للرابط safahates/home لصفحة البداية, أكثر من ذلك, فإنه بإستعمالنا  لget فإننا تطبيقنا يجيب على الأمر get و الذي هو عبارة عن واحد من الأفعال الأساسية للHTTP المستعملة من طرف HyperText Transfer Protocol. يمكنكم الآن مشاهدة النتيجة بإرسال اﻷمر rails s و تشغيل الرابط safahates/home. الآن لمعرفة منبع هذه الصفحات, يجب الذهاب إلى وحدة التحكم التي قمنا بإنشاءها, سوف تلاحظون أن الملف safahates_controller يُعرف فئة تُسمى SahafatesController. الفئات هم عبارة عن طريقة سهلة و مرنة لترتيب الأفعال "الطرق" مثل الأفعال home  أو contact و التي تم تعريفها عن طريق الكلمة المفتاحية def, العلامة ">" تُشير إلى أن SahafatesController ترث من ApplicationController التي تعبر عن فئة رايلزية هذا يعني أن الفئة SahafatesController تحوي على الكثير من الميزات من رايلز. في روبي, هذه الأفعال لا تعني أي شيء بصفتها خالية, و لكن في رايلز الوضعية مختلفة : SahafatesController عبارة عن فئة روبية و لكن لكونها ترث من ApplicationController فإن سلوك هذه الأفعال ستكون خاصة برايلز, و لهذا عند تصفحنا الرابط safahates/home, يقوم رايلز بمراجعة وحدة التحكم safahates ثم بإرسال الأمر المقابل للفعل home ثم يرسل في الآخر الواجهة الموافقة. في المثال بماأن الفعل home خالي من أي أمر فإن كل الأوامر التي يتم إرسالها إلى safahates/home ترسل بدورها مجرد واجهات لا غير, و لكن أين هذه الواجهات ؟ الجواب موجود في الصورة السابقة التي تظهر نتيجة الأمر "rails generate Safahates contact home" و التي تظهر بكل وضوح الرابط  بين الواجهة ووحدة التحكم, فالفعل home يُقابله واجهة إسمها "home.html.erb" لاتحتوي على الكثير من الكود لإنها أُنشأت بطريقة إفتراضية.</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/RouteFile.png" title="config/routes.rb الملف "/></p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/safahateHome.png" title="sahahates/home"/></p>
+
+<h2> متغيرات الحالة و الروبي المتضمنن</h2>
+
+<p>الملفات من نوع "erb." يمكن أن تحتوي على الكود روبي, و الذي يمكننا إستعماله لجعل الصفحات أكثر ديناميكية. دعونا نجرب بعض الأمور السهلة بروبي داخل الصفحة  home مثل إضافة "1+1" و نلاحظ النتيجة في المتصفح. لإدماج الكود روبي داخل الhtml هنالك طريقتين :
+- عن طريق العلامات &lt;% %> لتنفيذ الكود روبي الموجود بين هاتين العلامتين ؛
+- عن طريق  &lt;% =%> لتنفيذ الكود روبي و إظهار النتيجة مباشرة على المتصفح, بحيث أن الفرق مع الطريقة الأولى يكمن في إظهار النتيجة.
+<img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/rubyembeded.png" title="مثال عن الروبي المتضمنن"/></p>
+
+<p>أخر شيئ نتطرق له في هذا المقال هو مبدأ البرمجة من غير التكرار عن طريق الLayout. الملف application.html.erb الموجود فيapp/views/layout يعتبر من الملفات المهمة والتي تساعد بشكل كبير في تسريع البرمجة. الملف يحتوي على سطر في الظاهر بسيط ولكنه مفيد بدرجة كبيرة إنه :   &lt;% yield %> و الي يسمح بإدخال إي واجهة, لهذا فإن الملف application.html.erb يستعمل بشكل كبير برسم الواجهة الأساسية لكل مشروع داخل رايلز, بحيث لو أن الصفحات داخل التطبيق تتقاسم بعض المحتوى فإن يمكن كتابتها مرة واحدة في هذا الLayout.</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/applicationlayout.png" title="application.html.erb الملف"/></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[نمط-عرض-متحكم (MVC)]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/07/05/architercturemvc/"/>
+    <updated>2012-07-05T23:52:00+02:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/07/05/architercturemvc</id>
+    <content type="html"><![CDATA[<p>بالرغم من أننا لم نتقدم كثيرا في درسنا, إلا أنه من المهم جدا أن نلقي نظرة عامة عن النظام الذي تعمل به التطبيقات على رايلز. لعلكم لاحظتم في الدرس السابق أن البنية النموذجية لأي تطبيق رايلز تحتوي على الملف /app و الذي يحتوي بدوره على ثلاث ملفات فرعية و هي :  النماذج (models), الواجهات (views) و وحدات التحكم    (controllers). هذه التركيبة و إن دلت على شيء فإنها تدل على أن رايلز يتبع النموذج "نمط-عرض-متحكم" (MVC) والذي هو قائم على مبدأ عزل "منطق العمل" عن "واجهات الإستخدام".</p>
+
+<p>لعلكم اﻷن تتسألون عن معنى المفهومين  "منطق العمل" و "واجهات الإستخدام", أما اﻷول فماهو إلا النموذج الذي يتحكم في البيانات الخاصة بالتطبيق مثل : المستعملين, المقالات أو المنتجات و المفهوم الثاني فإنه يعبر في حقيقة الأمر عن صفحة الويب التي تظهرها المتصفحات.</p>
+
+<p>عمليا, عند التعامل مع أي تطبيق على رايلز, يقوم المتصفح بإرسال طلب يتلقاه الحاجز الألي و الذي يحوله بدوره إلى المتحكم و الذي هو المسؤول عن إدارة العمليات التي تتوالى. في بعض الحالات يقوم المتحكم بإرسال واجهة مباشرة بعد تلقي اﻷمر والتي هي في الواقع تمثل نموذج ترجم إلى ال HTML و حول إلى المتصفح. أما في الحالات الإعتيادية فإن المتحكم يقوم بالتفاعل مع النموذج و الذي هو عبارة عن مكون روبي يمثل عنصرا من الموقع (كالمستعمل على سبيل المثال) و الذي يقوم بالتواصل مع قاعدة البيانات, بعدها يُكون المتحكم واجهة و يُحولها إلى صفحة ويب نهائية قابلة للنشر من طرف أي متصفح متخصص.</p>
+]]></content>
+  </entry>
+  
+</feed>
