@@ -4,7 +4,7 @@
   <title><![CDATA[Category: scaffold, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/scaffold-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2012-12-23T22:40:38+01:00</updated>
+  <updated>2012-12-23T22:42:39+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -27,7 +27,7 @@
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>rails generate build_db $</span></code></pre></td></tr></table></div></figure></notextile></div>
-الأمر ينشأ لنا الملف 20121223181308_build_db.rb في المجلد db/migrate داخل التطبيق. بعد فتح الملف يجب إضافة الأسطر ليصبح كالتالي :
+الأمر ينشأ لنا الملف 20121223181308_build_db.rb في المجلد db/migrate داخل التطبيق. بعد فتح الملف يجب إضافة بعض الأسطر ليصبح كالتالي :
 <img src="http://tayeb83.github.com/dtmdeblog/images/build_db_text.png" title="إنشاء قاعدة البيانات"/></p>
 
 <p>بعدها يجب تنفيذ السكريبت لإنشاء جدول لغات البرمجة داخل قاعدة البيانات :
