@@ -4,7 +4,7 @@
   <title><![CDATA[مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2012-12-29T22:45:42+01:00</updated>
+  <updated>2012-12-30T23:24:55+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,74 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ مدخل إلى CRUD :Activerecord ]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part1/"/>
+    <updated>2012-12-30T22:49:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part1</id>
+    <content type="html"><![CDATA[<p>الActiverecord يُمثل الطبقة المسؤولة عن تمثيل البيانات في رايلز. الActiverecord عرفه ووصفه  مارتن فولر في كتابه &#8220;Patterns of Enterprise Application Architecture&#8221;. في الActiverecord، الكائنات (objects) توفر الحفظ الدائم للبيانات و كذلك التغيرات التي تطرأ على هذه البيانات.<br/>
+ الActiveRecord يُسهل إنشاء و إستعمال كائنات الأعمال  التي  تتطلب بيانات التخزين الثابتة من خلال قاعدة البيانات. إنه يُمثل نمط تصميم Activerecord  والذي بدوره يصف نظام مخطط الكائن العلائقية ( object-relational mapping ) أو الORM، هذا الأخير عبارة عن تقنية تسمح بإيجاد علاقة بين الكائنات   داخل تطبيق و جداول أنظمة تسيير قواعد البيانات. عمليا هذا يعني إستعمال الActiverecord لإنشاء و إستخراج البيانات بواسطة طرق وسِمات Ruby من دون الحاجة لاستعمال ال SQL بطريقة مباشرة. على سبيل المثال :
+لنفرض أن تطبيقنا عبارة عن مدونة مكونة من مجموعة مقالات (يحتوي على نموذج نسميه Post) ونريد المقال</p>
+
+<p>الأول، الطلب sql هو التالي :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>SELECT *  FROM posts ORDER BY date DESC LIMIT 1</span></code></pre></td></tr></table></div></figure>
+
+
+<p> باستعمال ال Activerecord الطلب يكون بالطريقة التالية و البسيطة :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p = Post.last</span></code></pre></td></tr></table></div></figure>
+
+
+<p>تلاحظون أن إستعمال الActiverecord يسهل عليكم التعامل مع البيانات و جعل الsql شفاف إلى حد كبير، في المثال السابق يمكنكم بكل بساطة إضافة عنوان بواسطة إستعمال الطريقة p.title بالطريقة التالية مثلا :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p.title = "dtmdeblog post"</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>CRUD :</h2>
+
+<p>CRUD هو مُختصر ل &#8220;CREATE, READ, UPDATE, DELETE&#8221; : العمليات الأربعة الأساسية داخل قاعدة البيانات. الActiveRecord يوفر كل هذه العمليات الأساسية بحيث أن كل عملية تتم مُعالجتها من قبل Ruby API  إصطلاحية للغاية  (idiomatic) :</p>
+
+<h2>CREATE : </h2>
+
+<p>لإنشاء كائن ActiveRecord و من تم تجسيد الإنشاء. على سيبل المثال : لو قمنا بإنشاء نموذج للمدونة إسمه  Post داخل التطبيق، فإن إنشاء مقال يكون عن طريق كتابة الأمر : Post.new أو إذا أردنا إدخال كل
+أو بعض الأوصاف للكائن يمكننا إستعمال الأمر create كالتالي :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Post.create \(title:”dtmdeblog post 1”, date:Time.now\)</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>READ :</h2>
+
+<p>تشير إلى استخراج البيانات من قاعدة البيانات. Activerecord يُوفر مجموعة من الطرق كاملة على شكل أسئلة باللغة الإنجليزية مثل : Post.last أو Post.first.</p>
+
+<h2>UPDATE :</h2>
+
+<p>التحديث عبارة عن عملية من عمليات القراءة (read) لكائن معين من قاعدة البيانات و من بعدها تبديل وصف أو مجموعة من الصفات ثم حفظ التغيير، على سبيل المثال، إذا أردنا تحديث المقال الذي يحمل العنوان &#8220;المقال الضادي&#8221; فإننا نقوم بإستخراج المقال المناسب بواسطة الطريقة :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p = Post.find_by_title(“dtmdeblog post 1”)</span></code></pre></td></tr></table></div></figure>
+
+
+<p>المقال الآن محفوظ داخل الكائن p. بعدها نقوم بتغيير العنوان كما لو أردنا إدخال عنوان جديد :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p.title = “dtmdeblog post new title”</span></code></pre></td></tr></table></div></figure>
+
+
+<p>و في الأخير لم يتبقى لنا سوى حفظ الكائن :  p.save</p>
+
+<h2>DELETE :</h2>
+
+<p>هذا الفعل يُستعمل من أجل حذف الكائن و الذي يقوم بحذف سطر من داخل قاعدة البيانات بواسطة الأمر : DELETE.</p>
+
+<p>في الجزء الثاني من المقال  إن شاء الله سأقوم بشرح العلاقات التي يمكن إنشاءها بين الكائنات و كيف يُمكن  إدارتها بالActiverecord</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[مقدمة في lucene]]></title>
