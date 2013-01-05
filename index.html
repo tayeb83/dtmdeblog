@@ -132,20 +132,20 @@
 
 <p>الأول، الطلب sql هو التالي :</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers">
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>SELECT *  FROM posts ORDER BY date DESC LIMIT 1</span></code></pre></td></tr></table></div></figure>
 
 
 <p> باستعمال ال Activerecord الطلب يكون بالطريقة التالية و البسيطة :</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers">
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>p = Post.last</span></code></pre></td></tr></table></div></figure>
 
 
 <p>تلاحظون أن إستعمال الActiverecord يسهل عليكم التعامل مع البيانات و جعل الsql شفاف إلى حد كبير، في المثال السابق يمكنكم بكل بساطة إضافة عنوان بواسطة إستعمال الطريقة p.title بالطريقة التالية مثلا :</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers">
-</pre></td><td class='code'><pre><code class=''><span class='line' dir='ltr'>p.title = "dtmdeblog post"</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p.title = "dtmdeblog post"</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>CRUD :</h2>
@@ -157,8 +157,8 @@
 <p>لإنشاء كائن ActiveRecord و من تم تجسيد الإنشاء. على سيبل المثال : لو قمنا بإنشاء نموذج للمدونة إسمه  Post داخل التطبيق، فإن إنشاء مقال يكون عن طريق كتابة الأمر : Post.new أو إذا أردنا إدخال كل
 أو بعض الأوصاف للكائن يمكننا إستعمال الأمر create كالتالي :</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers">
-</pre></td><td class='code'><pre><code class=''><span class='line' dir='ltr'>Post.create (title:”dtmdeblog post 1”, date:Time.now)</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Post.create \(title:”dtmdeblog post 1”, date:Time.now\)</span></code></pre></td></tr></table></div></figure>
 
 
 <h2>READ :</h2>
@@ -167,16 +167,16 @@
 
 <h2>UPDATE :</h2>
 
-<p>التحديث عبارة عن عملية من عمليات القراءة (read) لكائن معين من قاعدة البيانات و من بعدها تبديل وصف أو مجموعة من الصفات ثم حفظ التغيير، على سبيل المثال، إذا أردنا تحديث المقال الذي يحمل العنوان &#8220;dtmdeblog post 1&#8221; فإننا نقوم بإستخراج المقال المناسب بواسطة الطريقة :</p>
+<p>التحديث عبارة عن عملية من عمليات القراءة (read) لكائن معين من قاعدة البيانات و من بعدها تبديل وصف أو مجموعة من الصفات ثم حفظ التغيير، على سبيل المثال، إذا أردنا تحديث المقال الذي يحمل العنوان &#8220;المقال الضادي&#8221; فإننا نقوم بإستخراج المقال المناسب بواسطة الطريقة :</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers">
-</pre></td><td class='code'><pre><code class=''><span class='line' dir='ltr'>p = Post.find_by_title(“dtmdeblog post 1”)</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p = Post.find_by_title(“dtmdeblog post 1”)</span></code></pre></td></tr></table></div></figure>
 
 
 <p>المقال الآن محفوظ داخل الكائن p. بعدها نقوم بتغيير العنوان كما لو أردنا إدخال عنوان جديد :</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers">
-</pre></td><td class='code'><pre><code class=''><span class='line' dir='ltr'>p.title = “dtmdeblog post new title”</span></code></pre></td></tr></table></div></figure>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p.title = “dtmdeblog post new title”</span></code></pre></td></tr></table></div></figure>
 
 
 <p>و في الأخير لم يتبقى لنا سوى حفظ الكائن :  p.save</p>
@@ -223,9 +223,9 @@
   </header>
 
 
-  <div class="entry-content"><p>في هذا المقال الجديد و كبداية لتوجه جديد في مدونتي بالموازاة مع ماأكتبه عن روبي أون رايلز، قررت الكتابة عن Lucene.  هذا التوجه له دافع مباشر في الحقيقة وهو طبيعة أعمالي في مجال البحث و التي تدور حول محرك بحث طبي، و طبيعة مذكرتي في الدكتوراة و التي دارت حول كل ما يتعلق بمجال المعالجة الآلية للغة و كل مايتعلق بالمكنزات الطبية. على كل حال دعوني أبدأ في مقالي المخصص لlucene و كما عودتكم من جانب تقني أكثر منه &#8220;صحفي&#8221;.</p>
+  <div class="entry-content"><p>في هذا المقال الجديد و كبداية لتوجه جديد في مدونتي بالموازاة مع ماأكتبه عن روبي أون رايلز، قررت الكتابة عن Lucene.  هذا التوجه له دافع مباشر في الحقيقة وهو طبيعة أعمالي في مجال البحث و التي تدور حول محرك بحث طبي، و طبيعة مذكرتي في الدكتوراه و التي دارت حول كل ما يتعلق بمجال المعالجة الآلية للغة و كل مايتعلق بالمكنزات الطبية. على كل حال دعوني أبدأ في مقالي المخصص لlucene و كما عودتكم من جانب تقني أكثر منه &#8220;صحفي&#8221;.</p>
 
-<p> lucene عبارة عن مكتبة برمجية مفتوحة المصدر مطورة بالجافا و متوفرة بلغات برمجة أخرى،
+<p> <a href="http://lucene.apache.org/">Lucene</a> عبارة عن مكتبة برمجية مفتوحة المصدر مطورة بالجافا و متوفرة بلغات برمجة أخرى،
 والهدف منه إضافة وظائف بحث و فهرسة داخل تطبيقاتكم. المشروع Lucene تتبناه <a href="http://www.apache.org/">The Apache Software Foundation</a>.  المكتبة لا تحتوي على أدوات يمكن إستعمالها مباشرة لفهرسة البيانات لهذا فإنه يجب المرور عبر البرمجة و الكود لوضع حجر
 الأساس من أجل إنشاء محرك بحث داخل النصوص.</p>
 
@@ -233,7 +233,7 @@
 
 <p>Lucene يسمح بفهرسة الوثائق أو المستندات. المستندات عبارة عن مجموعة ملفات Excel, Word, PDF أو HTML, و لكن أيضا مجموعة من البيانات منظمة على مجموعة من الحقول. الحقل هو عبارة عن معطى يحتوي على إسم سواء كان هذا الإسم عنوان أو تاريخ النشر أو محتوى المعطى و الذي يُربط بنص، بحيث أن هذا النص هو الذي يُفهرس ثم نقوم بالبحث فيه. مجموعة النصوص تُجمع فيما بعد داخل مجموعة من النصوص تُسمى الفهرس. الفهرس يُمكن أن يحتوي على مئات، آلاف أو ملايين النصوص و يمكننا إنشاء عدد من الفهارس مختلفة حسب إختلاف الإحتياجات. فعليا، الفهرس عبارة عن ملف يقوم lucene بإنشاءه.</p>
 
-<h2>الحصول و إستعمال Lucene:</h2>
+<h2>الحصول على Lucene و إستعماله:</h2>
 
 <p>النسخة الحالية هي النسخة 4.0 و هي متوفرة   <a href="http://www.apache.org/dyn/closer.cgi/lucene/java/4.0.0">هنا</a>. الملف من نوع .zip وهو يحتوي علي جميع المكتبات التي نحتاجها من أجل إستخدام مختلف الوظائف التي يقترحها. في باقي المقال سوف أعرض مثال مُبسط بالجافا حول كيفية إستخدام معظم الوظائف الرئيسية المتوفرة.
 أول شيئ يُمكن القيام به هو إنشاء مشروع جديد و إدخال أهم المكتبات الرئيسية الموجودة التي تم الحصول عليها، شخصيا أستعمل Eclipse من أجل البرمجة بجافا و أستخدم أيضا النسخة 1.6 من جافا و لكن النسخة 1.5 يمكن إستعمالها من غير مشاكل.</p>
@@ -244,16 +244,16 @@
 
 <h2>فهرسة البيانات (Indexation) :</h2>
 
-<p>أول مرحلة يجب القيام  بها هي تهيئة البيانات و إنشاء الفهرس للبحث عليه فيما بعد. من أجل ذلك فإن المكتبة توفر الفئات التي تسمح لنا بإنشاء الفهرس. أهم هذه الفئات هي الفئة  IndexWriter و التي تسمح لنا بالتعامل مع الفهرس و الكتابة  فيه : إنشاء الفهرس، إضافة مستند، &#8230; الفئة الأخرى هي الanalyzer والذي تحتوي على  الفئات التي تسمح بتقسيم النص إلى كلمات و من ثم تحديد ساق الكلمة، من أهم الفئات التي تُوفرها يمكن ذكر :</p>
+<p>أول مرحلة يجب القيام  بها هي تهيئة البيانات و إنشاء الفهرس للبحث عليه فيما بعد. من أجل ذلك فإن المكتبة توفر الفئات التي تسمح لنا بإنشاء الفهرس. أهم هذه الفئات هي الفئة <a href="http://lucene.apache.org/core/4_0_0/core/org/apache/lucene/index/IndexWriter.html">IndexWriter</a>  و التي تسمح لنا بالتعامل مع الفهرس و الكتابة  فيه : إنشاء الفهرس، إضافة مستند، &#8230; الفئة الأخرى هي ال<a href="http://lucene.apache.org/core/4_0_0/core/org/apache/lucene/analysis/Analyzer.html">Analyzer</a> والتي تحتوي على  الفئات التي تسمح بتقسيم النص إلى كلمات و من ثم تحديد ساق الكلمة، من أهم الفئات التي تُوفرها يمكن ذكر :</p>
 
 <ul>
 <li>SimpleAnalyzer :  يٌقسم النص إلى كلمات ثم يُحولها إلى شكلها المصغر.</li>
-<li>StopAnalyzer :  يٌقسم النص إلى كلمات ثم يُحولها إلى شكلها المصغر ِم يحذف الكلمات الفارغة أي الكلمات التي ليست لها فائدة كبيرة عند عملية البحث.</li>
+<li>StopAnalyzer :  يٌقسم النص إلى كلمات، يُحولها إلى شكلها المصغر ثم يحذف الكلمات الفارغة أي الكلمات التي ليست لها فائدة كبيرة عند عملية البحث.</li>
 <li>StandardAnalyzer : عبارة عن نسخة كاملة تحتوي علي خصائص الفئتين السابقتين.</li>
 </ul>
 
 
-<p>فئة أخرى يمكن التنويه إليها هي الفئة Document و التي تمثل أصغر محتوى. على سبيل المثال، فهرسة كل الملفات Word داخل مجلد سيضيف إلى الفهرس Lucene مسند Document يُمثل كل ملف. وبالتالي لائحة النتائج التي يُرجعها البحث داخل الفهرس عبارة عن لائحة Documents. بدوره الDocument مُكون من ما نسميه Field أوالحقول  و هي عبارة عن مجموعة فرعية من الDocument. الحقول المتداولة بكثرة هي : العنوان، المؤلف، تاريخ النشر &#8230;وهلم جر.</p>
+<p>فئة أخرى يمكن التنويه إليها هي الفئة <a href="http://lucene.apache.org/core/4_0_0/core/org/apache/lucene/document/Document.html">Document</a>  و التي تمثل أصغر محتوى. على سبيل المثال، فهرسة كل الملفات Word داخل مجلد سيضيف إلى الفهرس Lucene مسند Document يُمثل كل ملف. وبالتالي لائحة النتائج التي يُرجعها البحث داخل الفهرس عبارة عن لائحة Documents. بدوره الDocument مُكون من ما نسميه Field أو الحقول  و هي عبارة عن مجموعة فرعية من الDocument. الحقول المتداولة بكثرة هي : العنوان، المؤلف، تاريخ النشر &#8230;وهلم جر.</p>
 
 <p><img src="/dtmdeblog/images/introductionLucene.png" title="فهرسة البيانات"/></p>
 
@@ -262,15 +262,16 @@
 <p> البحث يستلزم إستعمال ستة فئات :</p>
 
 <ul>
-<li>IndexSearcher : هي الفئة التي تسمح إستعمال فهرس البحث.</li>
-<li>Analyzer : مثل الفهرسة فإن فئات تحليل النصوص يدخلون في عملية البحث من أجل تحليل الكلمات المستعملة في البحث.</li>
+<li>IndexSearcher : هي الفئة التي تسمح باستعمال فهرس البحث.</li>
+<li>Analyzer : مثل الفهرسة فإن فئات تحليل النصوص يدخلن في عملية البحث من أجل تحليل الكلمات المستعملة في البحث.</li>
 <li>QueryParser : من أجل تحليل كلمة البحث و تحويلها إلى سؤال مفهوم لLucene.</li>
 <li>Query : عبارة عن كائن (object) يمثل سؤال المستخدم والذي سوف يستعمل من طرف  IndexSearcher.</li>
 <li>Hits : عبارة عن لائحة النتائج للبحث.</li>
-<li>Hit : عضو من اللائحة.
-و أخير الDocument والذي يمثل المسند كما تمت فهرسته.</li>
+<li>Hit : عضو من اللائحة.</li>
 </ul>
 
+
+<p>و أخير الDocument والذي يمثل المسند كما تمت فهرسته.</p>
 
 <p><img src="/dtmdeblog/images/searchLucene.png" title="البحث في الفهرس"/></p>
 
@@ -1024,7 +1025,7 @@
   </div>
   <footer role="contentinfo" class="page-footer"><hr>
 <p>
-  جميع الحقوق محفوظة &copy; 2012 - طيب مرابطي -
+  جميع الحقوق محفوظة &copy; 2013 - طيب مرابطي -
   <span class="credit">انجز باستعمال <a href="http://octopress.org">Octopress</a></span>
 </p>
 
