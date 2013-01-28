@@ -48,7 +48,7 @@ p = Post.find_by_title(“dtmdeblog post 1”)
 {% endcodeblock %}
 المقال الآن محفوظ داخل الكائن p. بعدها نقوم بتغيير العنوان كما لو أردنا إدخال عنوان جديد : 
 
-{% codeblock dir='ltr' %}
+{% codeblock  %}
 p.title = “dtmdeblog post new title”
 {% endcodeblock %}
 

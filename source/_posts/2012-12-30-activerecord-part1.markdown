@@ -1,6 +1,6 @@
 ---
 layout: post
-title: " مدخل إلى CRUD :Activerecord "
+title: " مدخل إلى Activerecord : CRUD"
 date: 2012-12-30 22:49
 comments: true
 categories: rails, activerecord, CRUD, ORM
