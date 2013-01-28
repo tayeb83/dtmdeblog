@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/rails-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-01-05T23:48:42+01:00</updated>
+  <updated>2013-01-28T22:15:04+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -14,7 +14,65 @@
 
   
   <entry>
-    <title type="html"><![CDATA[ مدخل إلى CRUD :Activerecord ]]></title>
+    <title type="html"><![CDATA[ مدخل إلى  Activerecord: العلاقات]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part2/"/>
+    <updated>2012-12-30T22:49:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part2</id>
+    <content type="html"><![CDATA[<p>قاعدة بيانات علائقية بدون تبادل مرجعي (cross-referencing) بين الجداول  لا يعني الشيء الكثير. في مثال الجزء الأول المقال داخل المدونة (Post) يمكن أن يحوي على أكثر من تعليق أو لا يحوي أي تعليق. التعليق و الذي سيُمثل بجدول في قاعدة البيانات يحتوي على عمود (post_id) يُمكن من خلاله ربط التعليق بالمقال. الActiverecord يرعى هذه العلاقات بالنسبة لنا ويجعلها شفافة لحد كبير و لدرجة أننا لن نحتاج إلى لمس الSQL.
+هناك مجموعة من العلاقات يستطيع الActiverecord إدارتها من بينها :</p>
+
+<h2>belongs_to : </h2>
+
+<p>تعتبر العلاقة الأكثر إستعمالا في قاعدة البيانات. قولنا بأن النوع أ ينتمي إلى النوع ب هذا يعني أن النوع أ يحتوي على عمود ID مرجعي للنوع ب. مثال ذلك، أنه داخل المدونة الPost يحتوي على أكثر من تعليق (Comments) أي بمعنى أخر أن التعليق ينتمي لPost واحد فهذا يعني أن الجدول الذي يمثل الComment سوف يحتوي على العمود Post_Id والذي يُشير إلى الPost الذي سوف يحتوي التعليق. النتيجة أنه إذا كان لك كائن يُمثل تعليقا من التعليقات (c)  فإنه بإمكاننا إستخراج الPost الموافق عن طريق الأمر : c.Post و النتيجة أيضا أن حذف الPost يعني مباشرة حذف التعليقات التي تنتمي إليه.</p>
+
+<h2>has_many : </h2>
+
+<p>تُعبر العلاقة عن الطرف الأخر للعلاقة belongs_to. في المثال السابق كان بإمكاننا القول : التعليق ينتمي إلى مقال (belongs_to) أو المقال له مجموعة من التعليقات (has_many). المقال لا يحتفظ بجدول يحتوي على التعليقات التي تنتمي إليه، ولكن بكل بساطة يستعلم داخل جدول التعليقات و يستخرج تلك التي تتعلق به. فمثلا من أجل المقال p التعليقات الخاصة به ستُحفظ داخل جدول عن طريق الأمر : p.comments.</p>
+
+<h2>has_one : </h2>
+
+<p>هذه العلاقة تشبه إلى حد كبير العلاقة has_many، باستثناء أن العلاقة تربط بين كائنين فقط أي علاقة واحد-واحد. فمثلا داخل تطبيق ما المستعمل له حساب واحد و واحد فقط في هذه الحالة نموذج المستعمل سيربط بالنموذج الخاص بالحساب بواسطة العلاقة has_one. وبالتالي العلاقة تفرض وحدانية الحساب الخاص بكل مستعمل أي أنه إذا أردنا مثلا إضافة
+حساب آخر فهذا خطأ.</p>
+
+<h2>has_many :through Association :</h2>
+
+<p> تستعمل هذه العلاقة لإعداد العلاقة مجموعة إلى مجموعة (many to many) بواسطة نموذج وسط. العلاقة تشير إلى أن النموذج المعلن يمكن ربطه مع صفر أو أكثر من حالة لنموذج ثاني بواسطة نموذج ثالث وسط. لنفرض مثلا أننا نريد معرفة ثمن الحليب الذي يبيعه المربي لبائعي التجزئة. الأمر كان سهلا لو كان الثمن ثابت بحيث أنه كان بإمكاننا جعل ثمن الحليب عبارة عن عمود داخل الجدول الخاص بالمربي فقط  ولكن هذا غير صحيح لأن الثمن غير ثابت و يختلف باختلاف بائعي التجزئة أو لأن البائع يشتري الحليب بأثمان مختلفة باختلاف المربين، في هذه الحالة يمكننا استعمال العلاقة    has_many :through ، لأنه يجب تعريف نموذج وسط بين البائع و المربي يعبر عن عملية التوزيع DISTRIBUTION.</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;br/>
+</span><span class='line'>class Reseller &lt; ActiveRecord::Base
+</span><span class='line'>  has_many :distributions
+</span><span class='line'>  has_many :farmers, :through => :distributions
+</span><span class='line'>end
+</span><span class='line'>class Distributions &lt; ActiveRecord::Base  &lt;br/>
+</span><span class='line'>  belongs_to :reseller
+</span><span class='line'>  belongs_to :farmer
+</span><span class='line'>end
+</span><span class='line'>class Farmer &lt; ActiveRecord::Base
+</span><span class='line'>  has_many :distributions
+</span><span class='line'>  has_many :resellers, :through => :distributions
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<h2>  has_and_belong_to_many : </h2>
+
+<p>هذه العلاقة تُعتبر مُعقدة نوع ما. المثال التقليدي هو "الوسمات". بمعنى أن المقال له مجموعة من الوسمات و الوسام يمكن أن ينتمي رلى مجموعة مقالات مختلفة، أي أن العلاقة  هي has_many بين الوسام و المقال بدون نموذج وسط.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[ مدخل إلى Activerecord : CRUD]]></title>
     <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part1/"/>
     <updated>2012-12-30T22:49:00+01:00</updated>
     <id>http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part1</id>

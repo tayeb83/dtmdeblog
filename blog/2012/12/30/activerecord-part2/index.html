@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title> مدخل إلى Activerecord : CRUD - مدونة الطيب الضادي</title>
+  <title> مدخل إلى  Activerecord: العلاقات - مدونة الطيب الضادي</title>
   <meta name="author" content="طيب مرابطي">
 
   
-  <meta name="description" content="الActiverecord يُمثل الطبقة المسؤولة عن تمثيل البيانات في رايلز. الActiverecord عرفه ووصفه مارتن فولر في كتابه &#8220;Patterns of Enterprise &hellip;">
+  <meta name="description" content="قاعدة بيانات علائقية بدون تبادل مرجعي (cross-referencing) بين الجداول لا يعني الشيء الكثير. في مثال الجزء الأول المقال داخل المدونة (Post) يمكن أن &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part1">
+  <link rel="canonical" href="http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part2">
   <link href="/dtmdeblog/favicon.png" rel="icon">
   <link href="/dtmdeblog/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/dtmdeblog/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -99,7 +99,7 @@
   
   <header class="page-header">
     
-      <h1 class="entry-title">مدخل إلى Activerecord : CRUD</h1>
+      <h1 class="entry-title">مدخل إلى Activerecord: العلاقات</h1>
     
     
       <p class="meta">
@@ -124,66 +124,55 @@
   </header>
 
 
-<div class="entry-content"><p>الActiverecord يُمثل الطبقة المسؤولة عن تمثيل البيانات في رايلز. الActiverecord عرفه ووصفه  مارتن فولر في كتابه &#8220;Patterns of Enterprise Application Architecture&#8221;. في الActiverecord، الكائنات (objects) توفر الحفظ الدائم للبيانات و كذلك التغيرات التي تطرأ على هذه البيانات.<br/>
- الActiveRecord يُسهل إنشاء و إستعمال كائنات الأعمال  التي  تتطلب بيانات التخزين الثابتة من خلال قاعدة البيانات. إنه يُمثل نمط تصميم Activerecord  والذي بدوره يصف نظام مخطط الكائن العلائقية ( object-relational mapping ) أو الORM، هذا الأخير عبارة عن تقنية تسمح بإيجاد علاقة بين الكائنات   داخل تطبيق و جداول أنظمة تسيير قواعد البيانات. عمليا هذا يعني إستعمال الActiverecord لإنشاء و إستخراج البيانات بواسطة طرق وسِمات Ruby من دون الحاجة لاستعمال ال SQL بطريقة مباشرة. على سبيل المثال :
-لنفرض أن تطبيقنا عبارة عن مدونة مكونة من مجموعة مقالات (يحتوي على نموذج نسميه Post) ونريد المقال</p>
+<div class="entry-content"><p>قاعدة بيانات علائقية بدون تبادل مرجعي (cross-referencing) بين الجداول  لا يعني الشيء الكثير. في مثال الجزء الأول المقال داخل المدونة (Post) يمكن أن يحوي على أكثر من تعليق أو لا يحوي أي تعليق. التعليق و الذي سيُمثل بجدول في قاعدة البيانات يحتوي على عمود (post_id) يُمكن من خلاله ربط التعليق بالمقال. الActiverecord يرعى هذه العلاقات بالنسبة لنا ويجعلها شفافة لحد كبير و لدرجة أننا لن نحتاج إلى لمس الSQL.
+هناك مجموعة من العلاقات يستطيع الActiverecord إدارتها من بينها :</p>
 
-<p>الأول، الطلب sql هو التالي :</p>
+<h2>belongs_to : </h2>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>SELECT *  FROM posts ORDER BY date DESC LIMIT 1</span></code></pre></td></tr></table></div></figure>
+<p>تعتبر العلاقة الأكثر إستعمالا في قاعدة البيانات. قولنا بأن النوع أ ينتمي إلى النوع ب هذا يعني أن النوع أ يحتوي على عمود ID مرجعي للنوع ب. مثال ذلك، أنه داخل المدونة الPost يحتوي على أكثر من تعليق (Comments) أي بمعنى أخر أن التعليق ينتمي لPost واحد فهذا يعني أن الجدول الذي يمثل الComment سوف يحتوي على العمود Post_Id والذي يُشير إلى الPost الذي سوف يحتوي التعليق. النتيجة أنه إذا كان لك كائن يُمثل تعليقا من التعليقات (c)  فإنه بإمكاننا إستخراج الPost الموافق عن طريق الأمر : c.Post و النتيجة أيضا أن حذف الPost يعني مباشرة حذف التعليقات التي تنتمي إليه.</p>
 
+<h2>has_many : </h2>
 
-<p> باستعمال ال Activerecord الطلب يكون بالطريقة التالية و البسيطة :</p>
+<p>تُعبر العلاقة عن الطرف الأخر للعلاقة belongs_to. في المثال السابق كان بإمكاننا القول : التعليق ينتمي إلى مقال (belongs_to) أو المقال له مجموعة من التعليقات (has_many). المقال لا يحتفظ بجدول يحتوي على التعليقات التي تنتمي إليه، ولكن بكل بساطة يستعلم داخل جدول التعليقات و يستخرج تلك التي تتعلق به. فمثلا من أجل المقال p التعليقات الخاصة به ستُحفظ داخل جدول عن طريق الأمر : p.comments.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>p = Post.last</span></code></pre></td></tr></table></div></figure>
+<h2>has_one : </h2>
 
+<p>هذه العلاقة تشبه إلى حد كبير العلاقة has_many، باستثناء أن العلاقة تربط بين كائنين فقط أي علاقة واحد-واحد. فمثلا داخل تطبيق ما المستعمل له حساب واحد و واحد فقط في هذه الحالة نموذج المستعمل سيربط بالنموذج الخاص بالحساب بواسطة العلاقة has_one. وبالتالي العلاقة تفرض وحدانية الحساب الخاص بكل مستعمل أي أنه إذا أردنا مثلا إضافة
+حساب آخر فهذا خطأ.</p>
 
-<p>تلاحظون أن إستعمال الActiverecord يسهل عليكم التعامل مع البيانات و جعل الsql شفاف إلى حد كبير، في المثال السابق يمكنكم بكل بساطة إضافة عنوان بواسطة إستعمال الطريقة p.title بالطريقة التالية مثلا :</p>
+<h2>has_many :through Association :</h2>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>p.title = "dtmdeblog post"</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>CRUD :</h2>
-
-<p>CRUD هو مُختصر ل &#8220;CREATE, READ, UPDATE, DELETE&#8221; : العمليات الأربعة الأساسية داخل قاعدة البيانات. الActiveRecord يوفر كل هذه العمليات الأساسية بحيث أن كل عملية تتم مُعالجتها من قبل Ruby API  إصطلاحية للغاية  (idiomatic) :</p>
-
-<h2>CREATE : </h2>
-
-<p>لإنشاء كائن ActiveRecord و من تم تجسيد الإنشاء. على سيبل المثال : لو قمنا بإنشاء نموذج للمدونة إسمه  Post داخل التطبيق، فإن إنشاء مقال يكون عن طريق كتابة الأمر : Post.new أو إذا أردنا إدخال كل
-أو بعض الأوصاف للكائن يمكننا إستعمال الأمر create كالتالي :</p>
+<p> تستعمل هذه العلاقة لإعداد العلاقة مجموعة إلى مجموعة (many to many) بواسطة نموذج وسط. العلاقة تشير إلى أن النموذج المعلن يمكن ربطه مع صفر أو أكثر من حالة لنموذج ثاني بواسطة نموذج ثالث وسط. لنفرض مثلا أننا نريد معرفة ثمن الحليب الذي يبيعه المربي لبائعي التجزئة. الأمر كان سهلا لو كان الثمن ثابت بحيث أنه كان بإمكاننا جعل ثمن الحليب عبارة عن عمود داخل الجدول الخاص بالمربي فقط  ولكن هذا غير صحيح لأن الثمن غير ثابت و يختلف باختلاف بائعي التجزئة أو لأن البائع يشتري الحليب بأثمان مختلفة باختلاف المربين، في هذه الحالة يمكننا استعمال العلاقة    has_many :through ، لأنه يجب تعريف نموذج وسط بين البائع و المربي يعبر عن عملية التوزيع DISTRIBUTION.</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>Post.create \(title:”dtmdeblog post 1”, date:Time.now\)</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>class Reseller &lt; ActiveRecord::Base
+</span><span class='line'>  has_many :distributions
+</span><span class='line'>  has_many :farmers, :through => :distributions
+</span><span class='line'>end
+</span><span class='line'>class Distributions &lt; ActiveRecord::Base    
+</span><span class='line'>  belongs_to :reseller
+</span><span class='line'>  belongs_to :farmer
+</span><span class='line'>end
+</span><span class='line'>class Farmer &lt; ActiveRecord::Base
+</span><span class='line'>  has_many :distributions
+</span><span class='line'>  has_many :resellers, :through => :distributions
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure>
 
 
-<h2>READ :</h2>
+<h2>  has_and_belong_to_many : </h2>
 
-<p>تشير إلى استخراج البيانات من قاعدة البيانات. Activerecord يُوفر مجموعة من الطرق كاملة على شكل أسئلة باللغة الإنجليزية مثل : Post.last أو Post.first.</p>
-
-<h2>UPDATE :</h2>
-
-<p>التحديث عبارة عن عملية من عمليات القراءة (read) لكائن معين من قاعدة البيانات و من بعدها تبديل وصف أو مجموعة من الصفات ثم حفظ التغيير، على سبيل المثال، إذا أردنا تحديث المقال الذي يحمل العنوان &#8220;المقال الضادي&#8221; فإننا نقوم بإستخراج المقال المناسب بواسطة الطريقة :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>p = Post.find_by_title(“dtmdeblog post 1”)</span></code></pre></td></tr></table></div></figure>
-
-
-<p>المقال الآن محفوظ داخل الكائن p. بعدها نقوم بتغيير العنوان كما لو أردنا إدخال عنوان جديد :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>p.title = “dtmdeblog post new title”</span></code></pre></td></tr></table></div></figure>
-
-
-<p>و في الأخير لم يتبقى لنا سوى حفظ الكائن :  p.save</p>
-
-<h2>DELETE :</h2>
-
-<p>هذا الفعل يُستعمل من أجل حذف الكائن و الذي يقوم بحذف سطر من داخل قاعدة البيانات بواسطة الأمر : DELETE.</p>
-
-<p>في الجزء الثاني من المقال  إن شاء الله سأقوم بشرح العلاقات التي يمكن إنشاءها بين الكائنات و كيف يُمكن  إدارتها بالActiverecord</p>
+<p>هذه العلاقة تُعتبر مُعقدة نوع ما. المثال التقليدي هو &#8220;الوسمات&#8221;. بمعنى أن المقال له مجموعة من الوسمات و الوسام يمكن أن ينتمي رلى مجموعة مقالات مختلفة، أي أن العلاقة  هي has_many بين الوسام و المقال بدون نموذج وسط.</p>
 </div>
 
 
@@ -211,7 +200,7 @@
 
 <span class="categories">
   
-    <a class='category' href='/dtmdeblog/blog/categories/crud-/'>CRUD,</a>, <a class='category' href='/dtmdeblog/blog/categories/orm/'>ORM</a>, <a class='category' href='/dtmdeblog/blog/categories/activerecord-/'>activerecord,</a>, <a class='category' href='/dtmdeblog/blog/categories/rails-/'>rails,</a>
+    <a class='category' href='/dtmdeblog/blog/categories/activerecord-/'>activerecord,</a>, <a class='category' href='/dtmdeblog/blog/categories/rails-/'>rails,</a>, <a class='category' href='/dtmdeblog/blog/categories/relations/'>relations</a>
   
 </span>
 
@@ -220,7 +209,7 @@
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part1/" data-via="tayebM" data-counturl="http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part1/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part2/" data-via="tayebM" data-counturl="http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part2/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -239,14 +228,10 @@
     <ul class="pager">
       
       <li class="previous"><a class="basic-alignment left"
-        href="/dtmdeblog/blog/2012/12/28/lucene-introduction/" title="Previous Post:
-        مقدمة في lucene">&laquo; مقدمة في lucene</a></li>
+        href="/dtmdeblog/blog/2012/12/30/activerecord-part1/" title="Previous Post:
+         مدخل إلى Activerecord : CRUD">&laquo;  مدخل إلى Activerecord : CRUD</a></li>
       
       <li><a href="/dtmdeblog/blog/archives">أرشيف المدونات</a></li>
-      
-      <li class="next"><a class="basic-alignment right" href="/dtmdeblog/blog/2012/12/30/activerecord-part2/"
-        title="Next Post:  مدخل إلى  Activerecord: العلاقات"> مدخل إلى  Activerecord: العلاقات
-        &raquo;</a></li>
       
     </ul>
   </footer>
@@ -331,8 +316,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part1/';
-        var disqus_url = 'http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part1/';
+        var disqus_identifier = 'http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part2/';
+        var disqus_url = 'http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part2/';
         var disqus_script = 'embed.js';
       
     (function () {

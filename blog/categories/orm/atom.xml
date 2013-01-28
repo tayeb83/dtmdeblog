@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ORM | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/orm/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-01-05T23:48:42+01:00</updated>
+  <updated>2013-01-28T22:15:04+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[ مدخل إلى CRUD :Activerecord ]]></title>
+    <title type="html"><![CDATA[ مدخل إلى Activerecord : CRUD]]></title>
     <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part1/"/>
     <updated>2012-12-30T22:49:00+01:00</updated>
     <id>http://tayeb83.github.com/dtmdeblog/blog/2012/12/30/activerecord-part1</id>
