@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/ruby-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-01T19:35:19+01:00</updated>
+  <updated>2013-02-02T14:15:06+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -22,8 +22,9 @@
 رغم أن الهدف من  روبي رايلز هو تصميم مواقع و تطبيقات ويب ديناميكية فإن رايلز بارع في إنشاء صفحات ويب ساكنة. إستعمال ROR لتصميم مواقع ويب ساكنة له فوائد كثيرة بحيث أنه يمكننا إضافة و لو قليلا بعض الكود ديناميكي.
 في البداية و كما أوضحناه في درس سابق نقوم بإنشاء أول مشروع رايلز نسميه testproject كالتالي :</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails new testproject $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+rails new testproject $
+{% endcodeblock %}</p>
 
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/railsNewTestproject.png" title="إنشاء مشروع على رايلز"/></p>
 
@@ -40,8 +41,9 @@
 
 <p>لمعرفة مصدر الصفحة يجب النظر إلى الملف public/index.html و الذي قام رايلز بإنشاءه بشكل إفتراضي, المهم أن رايلز يُرسل أي ملف في الpublic مباشرة على المتصفح, في حالة الملف
  الخاص index.html فإننا لن نحتاج لكتابة الإسم على الرابط لأن الإسم index.html يُعتبر ملف إفتراضي لصفحة البداية. إذن إذا فهمتم هذه الفقرة فإنه بإمكانكم الآن إنشاء صفحاتكم الخاصة ووضعها في الملف public, على سبيل المثال يمكننا إنشاء صفحة تحتوي على كلمة ترحيب.
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gedit public/marhaba.html $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+{% codeblock %}
+gedit public/marhaba.html $
+{% endcodeblock %}</p>
 
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/marhabaContent.png" title="marhaba.html محتوى"/></p>
 
@@ -51,8 +53,9 @@
 
 <p>القدرة على التعامل مع صفحات الHTML الساكنة ضروري ولكنه غير كافي بالدرجة الأولى خاصة من أجل إنشاء تطبيقات ديناميكية. في هذه الفقرة سوف نقوم بخطوة مهمة تسمح لنا بإنشاء صفحات ديناميكية و ذلك بإنشاء مانسميه مجموعة من "الأفعال" أو actions بحيث نستطيع من خلالهم تعريف الروابط بطريقة أقوى من الصفحات الساكنة. رايلز يتوفر على محرك يسمح بإنشاء وحدات التحكم "controller" إسمه "generate", كل ما يلزمه لذلك هو إسم وحدة التحكم. في مثالنا سوف نقوم بإنشاء وحدة التحكم من أجل صفحاتنا الساكنة و التي سنسميها safahates. والتي سوف تحتوي على "الأفعال" التي سوف تمثل صفحاتنا الساكنة مثل صفحة "البداية","الإتصال" أو صفحة "من نحن", و منه فإن السكريبت generate سوف يأخذ لائحة من الأفعال لإنشاء صفحاتنا.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate controller Safahates contact home $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}
+rails generate controller Safahates contact home $
+{% endcodeblock %}</p>
 
 <p>مع إنشاء الفعلين home و contact فإن التوجيه نحو هاذين الفعلين قد تمت إضافته بطريقة آلية داخل الملف config/routes.rb.
 <img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/railsGenerateController.png" title="generate تسلسل الملفات التي أنشأت عن بواسطة السكريبت "/></p>

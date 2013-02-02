@@ -4,7 +4,7 @@
   <title><![CDATA[Category: relations | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/relations/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-01T19:35:19+01:00</updated>
+  <updated>2013-02-02T14:15:06+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -38,32 +38,20 @@
 
 <p> تستعمل هذه العلاقة لإعداد العلاقة مجموعة إلى مجموعة (many to many) بواسطة نموذج وسط. العلاقة تشير إلى أن النموذج المعلن يمكن ربطه مع صفر أو أكثر من حالة لنموذج ثاني بواسطة نموذج ثالث وسط. لنفرض مثلا أننا نريد معرفة ثمن الحليب الذي يبيعه المربي لبائعي التجزئة. الأمر كان سهلا لو كان الثمن ثابت بحيث أنه كان بإمكاننا جعل ثمن الحليب عبارة عن عمود داخل الجدول الخاص بالمربي فقط  ولكن هذا غير صحيح لأن الثمن غير ثابت و يختلف باختلاف بائعي التجزئة أو لأن البائع يشتري الحليب بأثمان مختلفة باختلاف المربين، في هذه الحالة يمكننا استعمال العلاقة    has_many :through ، لأنه يجب تعريف نموذج وسط بين البائع و المربي يعبر عن عملية التوزيع DISTRIBUTION.</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;br/>
-</span><span class='line'>class Reseller &lt; ActiveRecord::Base
-</span><span class='line'>  has_many :distributions
-</span><span class='line'>  has_many :farmers, :through => :distributions
-</span><span class='line'>end
-</span><span class='line'>class Distributions &lt; ActiveRecord::Base  &lt;br/>
-</span><span class='line'>  belongs_to :reseller
-</span><span class='line'>  belongs_to :farmer
-</span><span class='line'>end
-</span><span class='line'>class Farmer &lt; ActiveRecord::Base
-</span><span class='line'>  has_many :distributions
-</span><span class='line'>  has_many :resellers, :through => :distributions
-</span><span class='line'>end</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p>{% codeblock %}   <br/>
+class Reseller &lt; ActiveRecord::Base
+  has_many :distributions
+  has_many :farmers, :through => :distributions
+end
+class Distributions &lt; ActiveRecord::Base  <br/>
+  belongs_to :reseller
+  belongs_to :farmer
+end
+class Farmer &lt; ActiveRecord::Base
+  has_many :distributions
+  has_many :resellers, :through => :distributions
+end
+{% endcodeblock %}</p>
 
 <h2>  has_and_belong_to_many : </h2>
 

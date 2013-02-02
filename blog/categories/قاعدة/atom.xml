@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: قاعدة | مدونة الطيب الضادي]]></title>
+  <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/قاعدة/atom.xml" rel="self"/>
+  <link href="http://tayeb83.github.com/dtmdeblog/"/>
+  <updated>2013-02-02T14:15:06+01:00</updated>
+  <id>http://tayeb83.github.com/dtmdeblog/</id>
+  <author>
+    <name><![CDATA[طيب مرابطي]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[وضع مخطط لقاعدة بيانات]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/01/schema-definition/"/>
+    <updated>2013-02-01T21:25:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/01/schema-definition</id>
+    <content type="html"><![CDATA[<p>نحن بصدد تطوير تطبيق رايلز و نريد توزيع التطبيق للجميع، كما نريد من بياناتنا أن تشتغل على أكبر عدد ممكن من قاعدة البيانات تستطيع التعامل مع رايلز مثل MySQL،PostregSQL، SQLite، SQL Server و Oracle. بعبارة أخرى نريد تعريف لمخطط البيانات من غير التفكير في كيفية و طريقة كتابة الSQL.
+أول مايجب القيام به و بعد إنشاء التطبيق هو إرسال الأمر من داخل الملف الرئيسي للبرنامج كالتالي :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/databseschema/railsgeneratemigration.png" title="إنشاء سكريبت الmigration"/></p>
+
+<p>هذا الأمر سيقوم بإنشاء سكريبت الmigration و الذي إسمه يشبه هذا الإسم :  "20130201212100_create_database.rb"، عند فتح السكريبت نجد إحتوائه على وظيفتين up و down. في الوظيفة up سنقوم بإضافة الأوامر الخاصة بإنشاء المخطط البياني بواسطة الأوامر الموجودة في الActive Record الخاصة بإنشاء المخططات البيانية، مثل إنشاء الجداول. العكس يجب فعله في الوظيفة down، بمعنى الأوامر التي تُستعمل من أجل تدمير الجداول التي أنشأتها الوظيفة up.</p>
+
+<p>{% codeblock %}
+rake db:migrate $
+{% endcodeblock %}</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/databseschema/executionrakedbmigrate.png" title="مراحل إنشاء الجداول عن طريق السكريبت"/></p>
+
+<p>الأن يمكننا التأكد داخل قاعدة بياناتنا (SQLLite) بأن الجداول تم إنشاءها بطريقة صحيحة.</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/databseschema/sqliteshowtables.png" title="رؤية الجداول داخل قاعدة البيانات"/></p>
+
+<p>الفائدة أنه قمنا بإنشاء مخطط بيانات داخل قاعدة البيانات من دون كتابة سطر SQL واحد ومن دون التفكير في أي نوع من القواعد، وهذا من أهم مميزات الActive Record الذي قمنا بتقديمه في درس سابق،</p>
+]]></content>
+  </entry>
+  
+</feed>
