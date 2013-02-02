@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/github-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-02T14:15:06+01:00</updated>
+  <updated>2013-02-02T14:15:40+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -33,10 +33,10 @@
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/githubNew.png" title="github إنشاء مستودع جديد على"/>
  و من ثم تحميل المشروع عن طريق إرساله إلى المستودع البعيد كالتالي :</p>
 
-<p>{% codeblock %}
-git remote add origin git@github.com:<username>/project_name.git $
-git push origin master $
-{% endcodeblock %}<br/>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git remote add origin git@github.com:&lt;username>/project_name.git $
+</span><span class='line'>git push origin master $</span></code></pre></td></tr></table></div></figure></notextile></div><br/>
 بحيث أن : username تمثل إسم المستحدم و project_name إسم المشروع.</p>
 
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/resultsFirstCommands.png" title="github المشروع على"/></p>
@@ -45,10 +45,10 @@ git push origin master $
 
 <p>الGIT عبارة عن أداة رائعة من أجل إنشاء "الفروع" و التي هي عبارة عن نسخ للمستودعات التي نقوم بالعمل عليها دون تغيير الملف الرئيسي. في جميع الحالات, المستودع الرئيسي هو الفرع "master" و يمكننا أن نقوم من خلاله بإنشاء فرع جديد عن طريق الأمر checkout و العَلم b- :</p>
 
-<p>{% codeblock %}
-git checkout -b modify-README $
-git branch $
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -b modify-README $
+</span><span class='line'>git branch $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>في هذه الحالة, الأمر الثاني يقوم بعرض كل الفروع المحلية, و النجمة تحدد الفرع الذي نحن بصدد العمل عليه, لاحظتم أن git checkout -b تقوم من جهة بإنشاء فرع جديد و من جهة بتغيير الفرع الذي تم إنشاءه.
 فائدة الفروع لا تتجلى إلا عند العمل جماعة على نفس المشروع.</p>
@@ -57,10 +57,10 @@ git branch $
 
 <p>بعد إنشاء الفرع نقوم بتعديله, تعتبر الmarkdown لغة جيدة من أجل القيام بالتغييرات على الملفات في الgithub. على سبيل المثال سوف نقوم بتغيير الملف README, من أجل هذا نقوم بتحويله إلى ملف markdown عن طريق اﻷمر :</p>
 
-<p>{% codeblock %}
-git mv README README.markdown $
-gedit   README.markdown $
-{% endcodeblock %}<br/>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git mv README README.markdown $
+</span><span class='line'>gedit   README.markdown $</span></code></pre></td></tr></table></div></figure></notextile></div><br/>
 و منها نقوم بالتغيير في الملف ثم تطبيق التغييرات كما هو موضح في الصورة.
 <img src="http://tayeb83.github.com/dtmdeblog/images/README_Markdown.png" title="بعد تحويله و تغييره README الملف "/></p>
 
@@ -68,10 +68,10 @@ gedit   README.markdown $
 
 <p>الأن و بعد إتمام التغييرات, نقوم بدمج النتيجة إلى الفرع الرئيسي عن طريق اﻷمر :</p>
 
-<p>{% codeblock %}
-git checkout master $
-git merge modify-README $
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout master $
+</span><span class='line'>git merge modify-README $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h2> التحميل Push</h2>
 
@@ -89,24 +89,22 @@ git merge modify-README $
     <content type="html"><![CDATA[<p>لتثبيث الGIT أنصحكم بتتبع الخطوات المشروحة بطريقة جيدة و مفصلة حسب نوع النظام على الرابط
  <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">http://git-scm.com/book/en/Getting-Started-Installing-Git</a>  , على سبيل المثال تثبيث الGIT على نظام الأبونتو يتم بالأمر التالي :</p>
 
-<p>{% codeblock %}
-sudo apt-get install git-core $
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install git-core $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>بعد تثبيث الGIT, تأتي المرحلة التالية و التي نقوم فيها بتهيئة الإعدادات و هي عبارة عن إعدادات خاصة بالنظام أي أنكم لن تنفذوها إلا مرة واحدة على نفس النظام :</p>
 
-<p>{% codeblock %}
-git-config --global user.name "الإسم" $
-git-config --global user.email "البريد الإلكتروني" $
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git-config --global user.name "الإسم" $
+</span><span class='line'>git-config --global user.email "البريد الإلكتروني" $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h2>تهيئة الإعدادات لل repository (المستودع)</h2>
 
 <p>تشمل هذه المرحلة مجموعة من العمليات الضرورية لتشكيل الrepository, و الذي هو عبارة عن "ملف أو نظام تحكم" تُوضع فيه الإصدارات الخاصة بالتطبيق :</p>
 
-<p>{% codeblock %}
-git init $
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git init $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>بعدها يجب إضافة الملفات داخل الrepository, ولكن يكمن هنا مشكل بسيط و هو أن الGIT يتبع التغيرات التي تطرأ على كل الملفات حتى تلك التي لا نريد تتبعها, أخص بالذكر ملفات الlog على سبيل المثال وذلك أن هذه الملفات تتغير بكثرة و لسنا بحاجة لأن يقوم نظام إدارة الإصدارات بتتبع تغيراتها. لحسن الحظ فإن الGIT لديه القدرة على تجاهل مثل هذه الملفات و ذلك بالطريقة التالية :
 نضف إلى الملف الرئيسي للتطبيق ملف إسمه gitignore. و الذي سوف يحتوي على بعض القواعد تحدد لGIT الملفات التي يجب تجاهلها, اﻵن لو عدنا إلى الدرس   <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/06/25/first-application-rails">أول تطبيق برايلز</a>  فسوف تلاحظون أن رايلز قام بإنشاء ملف gitignore. داخل الملف الرئيسي مثل ما توضحه الصورة :</p>
@@ -121,9 +119,8 @@ git init $
 
 <p>و أخير وصلنا إلى المرحلة التي سوف نقوم من خلالها إضافة ملفات التطبيق إلى الGIT ثم حفظها (commit), يمكنكم إضافة كل الملفات (ماعدا التي تمت تجاهلها) بالطريقة التالية :</p>
 
-<p>{% codeblock %}
-. git add  $
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>. git add  $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>النقطة (.) هنا تمثل الملف الجاري و الGIT ذكي بما فيه الكفاية لكي يقوم بإضافة كل الملفات بطريقة الإستدعاء الذاتي. هذه العملية تقوم بإضافة الملفات إلى "ساحة التخزين" (staging area) و التي تحتوي على التغيرات المؤقتة على المشروع. يمكنكم رؤيتها عن طريق تنفيذ الأمر "git status"  كما هو موضح في الصورة :</p>
 
@@ -135,10 +132,10 @@ git init $
 
 <p>بعد كل ما قمنا به في هذا الدرس أعتقد أن الفائدة من إستعمال الGIT لم تظهر بعد, لهذا دعونا نقوم بعمل تطبيقي يوضح لنا الأمور أكثر. أول شيء سوف نقوم به هو تدمير الملف app/controllers, عملية يمكن أن يقوم بها أي مطور بطريق الخطأ.</p>
 
-<p>{% codeblock %}
- cd first_app/ $
- rm -rf app/controllers $
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd first_app/ $
+</span><span class='line'> rm -rf app/controllers $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>لمعرفة ما حصل سوف نفوم بإرسال الأمر "git status".</p>
 
@@ -146,16 +143,22 @@ git init $
 
 <p>الصورة توضح التغيرات التي حصلت ولكن ما يجب معرفته أن هذه التغيرات لم تحفظ بعد على الGIT و بالتالي فإن بإمكاننا إلغاءها بطريقة سهلة و ربط الGIT مع الإصدار اﻷخير عن طريق تنفيذ اﻷمر  "git chekout -f".</p>
 
-<p>{% codeblock %}
-git checkout -f $
-git status $</p>
-
-<h1>On branch master</h1>
-
-<p>nothing to commit (working directory clean)
-ls app/controllers/ $
-application_controller.rb
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -f $
+</span><span class='line'>git status $&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;h1>On branch master&lt;/h1>
+</span><span class='line'>
+</span><span class='line'>&lt;p>nothing to commit (working directory clean)
+</span><span class='line'>ls app/controllers/ $
+</span><span class='line'>application_controller.rb</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>الحمد لله الملف المحذوف عاد مجددا.</p>
 ]]></content>

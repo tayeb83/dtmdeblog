@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/rails-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-02T14:15:06+01:00</updated>
+  <updated>2013-02-02T14:15:40+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -25,9 +25,8 @@
 
 <p>هذا الأمر سيقوم بإنشاء سكريبت الmigration و الذي إسمه يشبه هذا الإسم :  "20130201212100_create_database.rb"، عند فتح السكريبت نجد إحتوائه على وظيفتين up و down. في الوظيفة up سنقوم بإضافة الأوامر الخاصة بإنشاء المخطط البياني بواسطة الأوامر الموجودة في الActive Record الخاصة بإنشاء المخططات البيانية، مثل إنشاء الجداول. العكس يجب فعله في الوظيفة down، بمعنى الأوامر التي تُستعمل من أجل تدمير الجداول التي أنشأتها الوظيفة up.</p>
 
-<p>{% codeblock %}
-rake db:migrate $
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:migrate $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/databseschema/executionrakedbmigrate.png" title="مراحل إنشاء الجداول عن طريق السكريبت"/></p>
 
@@ -64,20 +63,32 @@ rake db:migrate $
 
 <p> تستعمل هذه العلاقة لإعداد العلاقة مجموعة إلى مجموعة (many to many) بواسطة نموذج وسط. العلاقة تشير إلى أن النموذج المعلن يمكن ربطه مع صفر أو أكثر من حالة لنموذج ثاني بواسطة نموذج ثالث وسط. لنفرض مثلا أننا نريد معرفة ثمن الحليب الذي يبيعه المربي لبائعي التجزئة. الأمر كان سهلا لو كان الثمن ثابت بحيث أنه كان بإمكاننا جعل ثمن الحليب عبارة عن عمود داخل الجدول الخاص بالمربي فقط  ولكن هذا غير صحيح لأن الثمن غير ثابت و يختلف باختلاف بائعي التجزئة أو لأن البائع يشتري الحليب بأثمان مختلفة باختلاف المربين، في هذه الحالة يمكننا استعمال العلاقة    has_many :through ، لأنه يجب تعريف نموذج وسط بين البائع و المربي يعبر عن عملية التوزيع DISTRIBUTION.</p>
 
-<p>{% codeblock %}   <br/>
-class Reseller &lt; ActiveRecord::Base
-  has_many :distributions
-  has_many :farmers, :through => :distributions
-end
-class Distributions &lt; ActiveRecord::Base  <br/>
-  belongs_to :reseller
-  belongs_to :farmer
-end
-class Farmer &lt; ActiveRecord::Base
-  has_many :distributions
-  has_many :resellers, :through => :distributions
-end
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;br/>
+</span><span class='line'>class Reseller &lt; ActiveRecord::Base
+</span><span class='line'>  has_many :distributions
+</span><span class='line'>  has_many :farmers, :through => :distributions
+</span><span class='line'>end
+</span><span class='line'>class Distributions &lt; ActiveRecord::Base  &lt;br/>
+</span><span class='line'>  belongs_to :reseller
+</span><span class='line'>  belongs_to :farmer
+</span><span class='line'>end
+</span><span class='line'>class Farmer &lt; ActiveRecord::Base
+</span><span class='line'>  has_many :distributions
+</span><span class='line'>  has_many :resellers, :through => :distributions
+</span><span class='line'>end</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h2>  has_and_belong_to_many : </h2>
 
@@ -95,19 +106,16 @@ end
 لنفرض أن تطبيقنا عبارة عن مدونة مكونة من مجموعة مقالات (يحتوي على نموذج نسميه Post) ونريد المقال</p>
 
 <p>الأول، الطلب sql هو التالي :
-{% codeblock %}
-SELECT *  FROM posts ORDER BY date DESC LIMIT 1
-{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>SELECT *  FROM posts ORDER BY date DESC LIMIT 1</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p> باستعمال ال Activerecord الطلب يكون بالطريقة التالية و البسيطة :
-{% codeblock %}
-p = Post.last
-{% endcodeblock %}
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p = Post.last</span></code></pre></td></tr></table></div></figure></notextile></div>
 تلاحظون أن إستعمال الActiverecord يسهل عليكم التعامل مع البيانات و جعل الsql شفاف إلى حد كبير، في المثال السابق يمكنكم بكل بساطة إضافة عنوان بواسطة إستعمال الطريقة p.title بالطريقة التالية مثلا :</p>
 
-<p>{% codeblock %}
- p.title = "dtmdeblog post"
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p.title = "dtmdeblog post"</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h2>CRUD :</h2>
 
@@ -117,9 +125,8 @@ p = Post.last
 
 <p>لإنشاء كائن ActiveRecord و من تم تجسيد الإنشاء. على سيبل المثال : لو قمنا بإنشاء نموذج للمدونة إسمه  Post داخل التطبيق، فإن إنشاء مقال يكون عن طريق كتابة الأمر : Post.new أو إذا أردنا إدخال كل
 أو بعض الأوصاف للكائن يمكننا إستعمال الأمر create كالتالي :
-{% codeblock %}
-Post.create (title:”dtmdeblog post 1”, date:Time.now)
-{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Post.create (title:”dtmdeblog post 1”, date:Time.now)</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h2>READ :</h2>
 
@@ -128,14 +135,12 @@ Post.create (title:”dtmdeblog post 1”, date:Time.now)
 <h2>UPDATE :</h2>
 
 <p>التحديث عبارة عن عملية من عمليات القراءة (read) لكائن معين من قاعدة البيانات و من بعدها تبديل وصف أو مجموعة من الصفات ثم حفظ التغيير، على سبيل المثال، إذا أردنا تحديث المقال الذي يحمل العنوان "المقال الضادي" فإننا نقوم بإستخراج المقال المناسب بواسطة الطريقة :
-{% codeblock %}
-p = Post.find_by_title(“dtmdeblog post 1”)
-{% endcodeblock %}
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p = Post.find_by_title(“dtmdeblog post 1”)</span></code></pre></td></tr></table></div></figure></notextile></div>
 المقال الآن محفوظ داخل الكائن p. بعدها نقوم بتغيير العنوان كما لو أردنا إدخال عنوان جديد :</p>
 
-<p>{% codeblock  %}
-p.title = “dtmdeblog post new title”
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p.title = “dtmdeblog post new title”</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>و في الأخير لم يتبقى لنا سوى حفظ الكائن :  p.save</p>
 
@@ -159,21 +164,18 @@ p.title = “dtmdeblog post new title”
 فيمايلي سأقوم بشرح تفصيلي للسقالة من خلال مثال بسيط. المثال عبارة عن تطبيق رايلز يحفظ مجموعة من لغات البرمجة مع تعريف مُختصر لكل لغة.
 الخُطوة الأولى تكمن في تهيئة قاعدة البيانات، من أجل ذلك نقُوم بإنشاء سكريبت الmigration  بواسطة الأمر التالي :</p>
 
-<p>{% codeblock %}
-rails generate build_db $
-{% endcodeblock %}
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate build_db $</span></code></pre></td></tr></table></div></figure></notextile></div>
 الأمر ينشأ لنا الملف 20121223181308_build_db.rb في المجلد db/migrate داخل التطبيق. بعد فتح الملف يجب إضافة بعض الأسطر ليصبح كالتالي :
 <img src="http://tayeb83.github.com/dtmdeblog/images/build_db_text.png" title="إنشاء قاعدة البيانات"/></p>
 
 <p>بعدها يجب تنفيذ السكريبت لإنشاء جدول لغات البرمجة داخل قاعدة البيانات :
-{% codeblock %}
-rake db:migrate $
-{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:migrate $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>بعد إنشاء قاعدة البيانات يمكننا إنشاء السقالة عن طريق الأمر التالي :
-{% codeblock %}
-rails  generate scaffold languages$
-{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails  generate scaffold languages$</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>كما توضح الصورة المٌرفقة، فإن الأمر ينشأ مجموعة من الملفات داخل شجرة المشروع و خاصة النموذج (model)، وحدة التحكم (controller) و مجموعة من ملفات الواجهة.
 <img src="http://tayeb83.github.com/dtmdeblog/images/rails_scaffold_generate.png" title="إنشاء السقالة"/>
@@ -192,9 +194,8 @@ rails  generate scaffold languages$
 رغم أن الهدف من  روبي رايلز هو تصميم مواقع و تطبيقات ويب ديناميكية فإن رايلز بارع في إنشاء صفحات ويب ساكنة. إستعمال ROR لتصميم مواقع ويب ساكنة له فوائد كثيرة بحيث أنه يمكننا إضافة و لو قليلا بعض الكود ديناميكي.
 في البداية و كما أوضحناه في درس سابق نقوم بإنشاء أول مشروع رايلز نسميه testproject كالتالي :</p>
 
-<p>{% codeblock %}
-rails new testproject $
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails new testproject $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/railsNewTestproject.png" title="إنشاء مشروع على رايلز"/></p>
 
@@ -211,9 +212,8 @@ rails new testproject $
 
 <p>لمعرفة مصدر الصفحة يجب النظر إلى الملف public/index.html و الذي قام رايلز بإنشاءه بشكل إفتراضي, المهم أن رايلز يُرسل أي ملف في الpublic مباشرة على المتصفح, في حالة الملف
  الخاص index.html فإننا لن نحتاج لكتابة الإسم على الرابط لأن الإسم index.html يُعتبر ملف إفتراضي لصفحة البداية. إذن إذا فهمتم هذه الفقرة فإنه بإمكانكم الآن إنشاء صفحاتكم الخاصة ووضعها في الملف public, على سبيل المثال يمكننا إنشاء صفحة تحتوي على كلمة ترحيب.
-{% codeblock %}
-gedit public/marhaba.html $
-{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>gedit public/marhaba.html $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/marhabaContent.png" title="marhaba.html محتوى"/></p>
 
@@ -223,9 +223,8 @@ gedit public/marhaba.html $
 
 <p>القدرة على التعامل مع صفحات الHTML الساكنة ضروري ولكنه غير كافي بالدرجة الأولى خاصة من أجل إنشاء تطبيقات ديناميكية. في هذه الفقرة سوف نقوم بخطوة مهمة تسمح لنا بإنشاء صفحات ديناميكية و ذلك بإنشاء مانسميه مجموعة من "الأفعال" أو actions بحيث نستطيع من خلالهم تعريف الروابط بطريقة أقوى من الصفحات الساكنة. رايلز يتوفر على محرك يسمح بإنشاء وحدات التحكم "controller" إسمه "generate", كل ما يلزمه لذلك هو إسم وحدة التحكم. في مثالنا سوف نقوم بإنشاء وحدة التحكم من أجل صفحاتنا الساكنة و التي سنسميها safahates. والتي سوف تحتوي على "الأفعال" التي سوف تمثل صفحاتنا الساكنة مثل صفحة "البداية","الإتصال" أو صفحة "من نحن", و منه فإن السكريبت generate سوف يأخذ لائحة من الأفعال لإنشاء صفحاتنا.</p>
 
-<p>{% codeblock %}
-rails generate controller Safahates contact home $
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate controller Safahates contact home $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>مع إنشاء الفعلين home و contact فإن التوجيه نحو هاذين الفعلين قد تمت إضافته بطريقة آلية داخل الملف config/routes.rb.
 <img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/railsGenerateController.png" title="generate تسلسل الملفات التي أنشأت عن بواسطة السكريبت "/></p>

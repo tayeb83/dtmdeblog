@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mvc | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/mvc/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-02T14:15:06+01:00</updated>
+  <updated>2013-02-02T14:15:40+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -25,21 +25,18 @@
 فيمايلي سأقوم بشرح تفصيلي للسقالة من خلال مثال بسيط. المثال عبارة عن تطبيق رايلز يحفظ مجموعة من لغات البرمجة مع تعريف مُختصر لكل لغة.
 الخُطوة الأولى تكمن في تهيئة قاعدة البيانات، من أجل ذلك نقُوم بإنشاء سكريبت الmigration  بواسطة الأمر التالي :</p>
 
-<p>{% codeblock %}
-rails generate build_db $
-{% endcodeblock %}
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate build_db $</span></code></pre></td></tr></table></div></figure></notextile></div>
 الأمر ينشأ لنا الملف 20121223181308_build_db.rb في المجلد db/migrate داخل التطبيق. بعد فتح الملف يجب إضافة بعض الأسطر ليصبح كالتالي :
 <img src="http://tayeb83.github.com/dtmdeblog/images/build_db_text.png" title="إنشاء قاعدة البيانات"/></p>
 
 <p>بعدها يجب تنفيذ السكريبت لإنشاء جدول لغات البرمجة داخل قاعدة البيانات :
-{% codeblock %}
-rake db:migrate $
-{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:migrate $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>بعد إنشاء قاعدة البيانات يمكننا إنشاء السقالة عن طريق الأمر التالي :
-{% codeblock %}
-rails  generate scaffold languages$
-{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rails  generate scaffold languages$</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>كما توضح الصورة المٌرفقة، فإن الأمر ينشأ مجموعة من الملفات داخل شجرة المشروع و خاصة النموذج (model)، وحدة التحكم (controller) و مجموعة من ملفات الواجهة.
 <img src="http://tayeb83.github.com/dtmdeblog/images/rails_scaffold_generate.png" title="إنشاء السقالة"/>

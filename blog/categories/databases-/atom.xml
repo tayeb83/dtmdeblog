@@ -4,7 +4,7 @@
   <title><![CDATA[Category: databases, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/databases-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-02T14:15:06+01:00</updated>
+  <updated>2013-02-02T14:15:40+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -25,9 +25,8 @@
 
 <p>هذا الأمر سيقوم بإنشاء سكريبت الmigration و الذي إسمه يشبه هذا الإسم :  "20130201212100_create_database.rb"، عند فتح السكريبت نجد إحتوائه على وظيفتين up و down. في الوظيفة up سنقوم بإضافة الأوامر الخاصة بإنشاء المخطط البياني بواسطة الأوامر الموجودة في الActive Record الخاصة بإنشاء المخططات البيانية، مثل إنشاء الجداول. العكس يجب فعله في الوظيفة down، بمعنى الأوامر التي تُستعمل من أجل تدمير الجداول التي أنشأتها الوظيفة up.</p>
 
-<p>{% codeblock %}
-rake db:migrate $
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:migrate $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/databseschema/executionrakedbmigrate.png" title="مراحل إنشاء الجداول عن طريق السكريبت"/></p>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ORM | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/orm/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-02T14:15:06+01:00</updated>
+  <updated>2013-02-02T14:15:40+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -23,19 +23,16 @@
 لنفرض أن تطبيقنا عبارة عن مدونة مكونة من مجموعة مقالات (يحتوي على نموذج نسميه Post) ونريد المقال</p>
 
 <p>الأول، الطلب sql هو التالي :
-{% codeblock %}
-SELECT *  FROM posts ORDER BY date DESC LIMIT 1
-{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>SELECT *  FROM posts ORDER BY date DESC LIMIT 1</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p> باستعمال ال Activerecord الطلب يكون بالطريقة التالية و البسيطة :
-{% codeblock %}
-p = Post.last
-{% endcodeblock %}
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p = Post.last</span></code></pre></td></tr></table></div></figure></notextile></div>
 تلاحظون أن إستعمال الActiverecord يسهل عليكم التعامل مع البيانات و جعل الsql شفاف إلى حد كبير، في المثال السابق يمكنكم بكل بساطة إضافة عنوان بواسطة إستعمال الطريقة p.title بالطريقة التالية مثلا :</p>
 
-<p>{% codeblock %}
- p.title = "dtmdeblog post"
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p.title = "dtmdeblog post"</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h2>CRUD :</h2>
 
@@ -45,9 +42,8 @@ p = Post.last
 
 <p>لإنشاء كائن ActiveRecord و من تم تجسيد الإنشاء. على سيبل المثال : لو قمنا بإنشاء نموذج للمدونة إسمه  Post داخل التطبيق، فإن إنشاء مقال يكون عن طريق كتابة الأمر : Post.new أو إذا أردنا إدخال كل
 أو بعض الأوصاف للكائن يمكننا إستعمال الأمر create كالتالي :
-{% codeblock %}
-Post.create (title:”dtmdeblog post 1”, date:Time.now)
-{% endcodeblock %}</p>
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Post.create (title:”dtmdeblog post 1”, date:Time.now)</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h2>READ :</h2>
 
@@ -56,14 +52,12 @@ Post.create (title:”dtmdeblog post 1”, date:Time.now)
 <h2>UPDATE :</h2>
 
 <p>التحديث عبارة عن عملية من عمليات القراءة (read) لكائن معين من قاعدة البيانات و من بعدها تبديل وصف أو مجموعة من الصفات ثم حفظ التغيير، على سبيل المثال، إذا أردنا تحديث المقال الذي يحمل العنوان "المقال الضادي" فإننا نقوم بإستخراج المقال المناسب بواسطة الطريقة :
-{% codeblock %}
-p = Post.find_by_title(“dtmdeblog post 1”)
-{% endcodeblock %}
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p = Post.find_by_title(“dtmdeblog post 1”)</span></code></pre></td></tr></table></div></figure></notextile></div>
 المقال الآن محفوظ داخل الكائن p. بعدها نقوم بتغيير العنوان كما لو أردنا إدخال عنوان جديد :</p>
 
-<p>{% codeblock  %}
-p.title = “dtmdeblog post new title”
-{% endcodeblock %}</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>p.title = “dtmdeblog post new title”</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>و في الأخير لم يتبقى لنا سوى حفظ الكائن :  p.save</p>
 
