@@ -4,7 +4,7 @@
   <title><![CDATA[Category: مخطط | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/مخطط/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-02T14:15:40+01:00</updated>
+  <updated>2013-02-03T22:32:13+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -18,7 +18,7 @@
     <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/01/schema-definition/"/>
     <updated>2013-02-01T21:25:00+01:00</updated>
     <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/01/schema-definition</id>
-    <content type="html"><![CDATA[<p>نحن بصدد تطوير تطبيق رايلز و نريد توزيع التطبيق للجميع، كما نريد من بياناتنا أن تشتغل على أكبر عدد ممكن من قاعدة البيانات تستطيع التعامل مع رايلز مثل MySQL،PostregSQL، SQLite، SQL Server و Oracle. بعبارة أخرى نريد تعريف لمخطط البيانات من غير التفكير في كيفية و طريقة كتابة الSQL.
+    <content type="html"><![CDATA[<p>نحن بصدد تطوير تطبيق رايلز و نريد توزيع التطبيق للجميع، كما نريد من بياناتنا أن تشتغل على أكبر عدد ممكن من قاعدة البيانات تستطيع التعامل مع رايلز مثل MySQL،PostregSQL، SQLite، SQLServer و Oracle. بعبارة أخرى نريد تعريف لمخطط البيانات من غير التفكير في كيفية و طريقة كتابة الSQL.
 أول مايجب القيام به و بعد إنشاء التطبيق هو إرسال الأمر من داخل الملف الرئيسي للبرنامج كالتالي :</p>
 
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/databseschema/railsgeneratemigration.png" title="إنشاء سكريبت الmigration"/></p>
