@@ -61,15 +61,21 @@
         <lastmod>2013-02-03T22:32:04+01:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://tayeb83.github.com/dtmdeblog/blog/2013/02/05/unified-medical-language-system/
+        </loc>
+        <lastmod>2013-02-05T22:49:59+01:00</lastmod>
+    </url>
+    <url>
         <loc>http://tayeb83.github.com/dtmdeblog/about/</loc>
         <lastmod>2013-01-05T23:02:16+01:00</lastmod>
     </url>
     <url>
         <loc>http://tayeb83.github.com/dtmdeblog/</loc>
-        <lastmod>2013-02-03T22:32:04+01:00</lastmod>
+        <lastmod>2013-02-05T22:49:59+01:00</lastmod>
     </url>
     <url>
         <loc>http://tayeb83.github.com/dtmdeblog/blog/archives/</loc>
-        <lastmod>2013-02-03T22:32:04+01:00</lastmod>
+        <lastmod>2013-02-05T22:49:59+01:00</lastmod>
     </url>
 </urlset>
