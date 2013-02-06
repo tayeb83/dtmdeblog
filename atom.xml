@@ -4,7 +4,7 @@
   <title><![CDATA[مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-05T23:07:02+01:00</updated>
+  <updated>2013-02-06T23:32:54+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -20,7 +20,7 @@
     <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/05/unified-medical-language-system</id>
     <content type="html"><![CDATA[<p>في هذا المقال الجديد و الذي من خلاله أفتح صفحة جديدة و نوعا آخر من المقالات أبدأ الكتابة في مجال البحث العلمي الخاص بعلم  الحاسوب في المجال الطبي من ناحية التعامل مع البيانات الطبية و تصنيفها و تحسين العمل و البحث فيها. في هذا المقال أبذأ بتعريف أكبر و أشهر قاعدة بيانات للمصطلحات الطبية الUnified Medical Language System أو الUMLS . بدأت به لأن الUMLS تعتبر أكبر إنجاز لحد الآن و الذي سهل بشكل كبير التعامل مع أغلب المصطلحات الطبية بجميع اللغات للآسف ماعدا اللغة العربية التي تعتبر شبه غائبة في هذا المجال الحساس و المهم.</p>
 
-<h2>: Unified Medical Language Systems</h2>
+<h2>Unified Medical Language Systems</h2>
 
 <p>في عام 1986 أطلقت المكتبة الوطنية لعلم الطب بالولايات المتحدة الأمريكية الNational Library of  Medecine  أو (NLM) برنامج تنمية على عدة سنوات أطلقت عليه  إسم  “Unified Medical Language System”  أو بالعربية النظام الموحد  للغة الطب.
 هذا المشروع جمع مجموعة من فرق البحث و شركات تجارية من تخصصات طبية و حاسوبية.</p>
