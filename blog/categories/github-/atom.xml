@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/github-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-06T23:32:54+01:00</updated>
+  <updated>2013-02-11T00:46:10+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[تثبيث الoctopress]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/09/install-octopress/"/>
+    <updated>2013-02-09T18:06:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/09/install-octopress</id>
+    <content type="html"><![CDATA[<p>في هذا المقال سوف أشرح  لكم كيفية تثبيث الoctorpress و استعماله مع الgithub كمحرك و مولد لصفحات تابثة لكم بطريقة  سهلة و بسيطة.</p>
+
+<h2>أول سؤال ماهو الOctorpress ؟ </h2>
+
+<p> هو عبارة عن منصة عمل طورها Brandon Mathis لل jekyll. للتدوين بالjekyll كان لابد من كتابة قوالب الhtml الخاصة، الCSS، الJavascript و إعداد التكوين الخاص بك. و لكن مع الOctopress كل هذا يصبح شفاف و المنصة تقوم بكل هذه الأعمال فور تثبيثها.
+شخصيا الشيئ الذي دفعني لاستعمال الOctopress هو فضولٌٌ أردت من خلاله التدرب و لمس كل مايتعلق بالgit و الgithub، و بالفعل فلقد ساعدني هذا الفضول إلى كسر حاجز الخوف بيني و بين أوامر الgit هذا من جانب أما الجانب الثاني هو امتلاك مدونة الكتابة فيها تشعرك كل يوم أنك فعلا hacker مع كل الأدوات التي استعملها و الأوامر التي أرسلها لكتابة مقال واحد، فرق سوف ترونه بلا شك لو استعملتم هذه المنصة.</p>
+
+<h2>تثبيث الOctopress :</h2>
+
+<p>أول شيئ قبل بدأ تثبيث المنصة هو إطلاعكم على مايجب تثبيثه قبل البدأ في تثبيث الOctopress.</p>
+
+<ol>
+<li>تثبيث ال git : كنت قد شرحت عملية تثبيث الgit على نظام الubuntu في مقال سابق <a href="%D9%85%D9%82%D8%A7%D9%84%20%D8%B3%D8%A7%D8%A8%D9%82">http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2/</a>  في مدونتي باستطاعتكم الإطلاع عليه و إن شئتم يمكنكم تتبع الخطوات المشروحة و بطريقة مفصلة حسب نوع النظام على الرابط <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">http://git-scm.com/book/en/Getting-Started-Installing-Git</a>.</li>
+<li>تثبيث Ruby : نفس الشيئ كنت قد وضحت هذه العملية في مقال سابق و إن كانت الغاية هي تثبيث Ruby On Rails. و لكن أنصح لتثبيث الRuby  ولتسهيل التعامل مع النسخ المختلفة تثبيث  <a href="RVM">https://rvm.io/rvm/install/</a>أو الRuby Version Manager و الذي سيسهل لكم بشكل لن تتصورونه تثبيث ال Ruby و استعمال النسخة التي تريدونها لذلك.</li>
+<li>إنشاء المستودع الخاص بكم على الgithub، تسجيل الدخول و إنشاء المستودع للمزيد يمكنكم الإطلاع على <a href="%D9%85%D9%82%D8%A7%D9%84%20%D8%B3%D8%A7%D8%A8%D9%82">http://tayeb83.github.com/dtmdeblog/blog/2012/09/23/github/
+</a> في مدونتي.</li>
+<li>إنشاء ملف داخلي يحتوي المدونة، لنفرض أنكم سميتموه "modawinaty".</li>
+</ol>
+
+
+<p>بعدها لم يبقى علينا سوى تثبيث المنصة على الملف الذي قمتم بإنشاءه، و ذلك باتباع الخطوات التالية :</p>
+
+<ol>
+<li>git remote add octopress git://github.com/imathis/octopress.git</li>
+<li>git pull octopress master</li>
+<li>git checkout -b source</li>
+<li>git remote add origin git@github.com:YourUserName/YourRepoName.git</li>
+<li>git push origin source</li>
+<li>rvm rvmrc trust و ذلك بعد تثبيث ال RVM</li>
+<li>rvm reload</li>
+<li>rake setup_github_pages في بعض الحالات يجب إرسال الأمرbundle install</li>
+<li>rake install
+بعدها يجب الذهاب إلى الملف config.yml و تحديث السطر المقابل للroot باسم المستودع الذي أنشأتموه في الgithub في مثالنا : moudawinaty.</li>
+<li>Rake Generate</li>
+<li>Rake Deploy</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[إدارة الإصدارات-github]]></title>
