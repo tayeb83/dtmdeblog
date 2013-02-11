@@ -4,7 +4,7 @@
   <title><![CDATA[مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-11T23:33:06+01:00</updated>
+  <updated>2013-02-11T23:37:01+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -34,9 +34,13 @@
 
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/perl/perl version linux.png" title="التأكد من وجود بيرل"/></p>
 
-<p>في حالة ما إذا كان العكس لديكم الإختيار :
-1. إعادة تجميعه المصادر متوفرة في perl.com، أو
-2. إتباع أوامر تحميل و تثبيث الActivPerl المتوفر في الصفحة : http://www.activestate.com/ حسب نوع النظام.</p>
+<p>في حالة ما إذا كان العكس لديكم الإختيار :</p>
+
+<ol>
+<li>إعادة تجميعه المصادر متوفرة في perl.com، أو</li>
+<li>إتباع أوامر تحميل و تثبيث الActivPerl المتوفر في الصفحة : http://www.activestate.com/ حسب نوع النظام.</li>
+</ol>
+
 
 <h2>التحية ببيرل :</h2>
 
