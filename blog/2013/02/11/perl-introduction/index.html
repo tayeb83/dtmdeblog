@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>تثبيث الoctopress - مدونة الطيب الضادي</title>
+  <title>مقدمة في Perl - مدونة الطيب الضادي</title>
   <meta name="author" content="طيب مرابطي">
 
   
-  <meta name="description" content="في هذا المقال سوف أشرح لكم كيفية تثبيث الoctopress و استعماله مع الgithub كمحرك و مولد لصفحات تابثة لكم بطريقة سهلة و بسيطة. أول سؤال ماهو &hellip;">
+  <meta name="description" content="في هذا المقال أردت أن أعرفكم عن أحد لغات البرمجة التي أحببتها و لا زلت أحبها كيف لا و قد كانت رفيقتي قبل الجافا في تسهيل مهامي في مجال البحث العلمي، &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/09/install-octopress">
+  <link rel="canonical" href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/11/perl-introduction">
   <link href="/dtmdeblog/favicon.png" rel="icon">
   <link href="/dtmdeblog/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/dtmdeblog/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -99,7 +99,7 @@
   
   <header class="page-header">
     
-      <h1 class="entry-title">تثبيث الoctopress</h1>
+      <h1 class="entry-title">مقدمة في Perl</h1>
     
     
       <p class="meta">
@@ -115,7 +115,7 @@
   
 
 
-<time datetime="2013-02-09T18:06:00+01:00" pubdate data-updated="true">Feb 9<span>th</span>, 2013</time>
+<time datetime="2013-02-11T22:23:00+01:00" pubdate data-updated="true">Feb 11<span>th</span>, 2013</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -124,50 +124,60 @@
   </header>
 
 
-<div class="entry-content"><p>في هذا المقال سوف أشرح  لكم كيفية تثبيث ال<a href="http://octopress.org/">octopress</a> و استعماله مع الgithub كمحرك و مولد لصفحات تابثة لكم بطريقة  سهلة و بسيطة.</p>
+<div class="entry-content"><p>في هذا المقال أردت أن أعرفكم عن أحد لغات البرمجة التي أحببتها و لا زلت أحبها كيف لا و قد كانت رفيقتي قبل الجافا في تسهيل مهامي في مجال البحث العلمي، إنها لغة بيرل Perl.</p>
 
-<h2>أول سؤال ماهو الOctorpress ؟ </h2>
+<p>لغة Perl : Practical Extracting and Reporting Language هي كما قلت لغة برمجة أنشأها Larry Wall في عام 1987 مدرجا ميزات عديدة للغة الc و لغات سكريبت كالsed و الawk لينوكس اللغة أنشأت في الأصل للتعامل بسهولة مع الملفات و السلاسل.</p>
 
-<p> هو عبارة عن منصة عمل طورها Brandon Mathis لل jekyll. للتدوين بالjekyll كان لابد من كتابة قوالب الhtml الخاصة، الCSS، الJavascript و إعداد التكوين الخاص بك. و لكن مع الOctopress كل هذا يصبح شفاف و المنصة تقوم بكل هذه الأعمال فور تثبيثها.
-شخصيا الشيئ الذي دفعني لاستعمال الOctopress هو فضولٌٌ أردت من خلاله التدرب و لمس كل مايتعلق بالgit و الgithub، و بالفعل فلقد ساعدني هذا الفضول إلى كسر حاجز الخوف بيني و بين أوامر الgit هذا من جانب أما الجانب الثاني هو امتلاك مدونة الكتابة فيها تشعرك كل يوم أنك فعلا hacker مع كل الأدوات التي استعملها و الأوامر التي أرسلها لكتابة مقال واحد، فرق سوف ترونه بلا شك لو استعملتم هذه المنصة.</p>
+<h2>تثبيث الPerl :</h2>
 
-<h2>تثبيث الOctopress :</h2>
+<p>فيما يخص تثبيث بيرل، فإذا كنتم من مستخدمي لينوكس أو ماك فالنسبة 95% لكي يكون البيرل متثبث للتأكد يمكنكم إرسال الأمر التالي :</p>
 
-<p>أول شيئ قبل بدأ تثبيث المنصة هو إطلاعكم على مايجب تثبيثه قبل البدأ في تثبيث الOctopress.</p>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>perl -v $</span></code></pre></td></tr></table></div></figure>
+
+
+<p>فإذا كان متبثا فالنتيجة تكون كالتالي :</p>
+
+<p><img src="/dtmdeblog/images/perl/perl version linux.png" title="التأكد من وجود بيرل"/></p>
+
+<p>في حالة ما إذا كان العكس لديكم الإختيار :
+1. إعادة تجميعه المصادر متوفرة في perl.com، أو
+2. إتباع أوامر تحميل و تثبيث الActivPerl المتوفر في الصفحة : http://www.activestate.com/ حسب نوع النظام.</p>
+
+<h2>التحية ببيرل :</h2>
+
+<p>افتحو أي محرر و اكتبو الكود التالي :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#! /usr/bin/perl -w
+</span><span class='line'>use strict;
+</span><span class='line'>use warnings;
+</span><span class='line'>
+</span><span class='line'>print "Marhaba bikoum\n";</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/dtmdeblog/images/perl/example perl.png" title="المثال الأول لبيرل"/></p>
+
+<p>بعدها إحفظو الملف باسم example.pl ثم اجعلو البرنامج قابل للتنفيذ (chmod +x example.pl). بعدها في الterminal اذهبوا لمكان حفظ الملف ثم قوموا بارسال الأمر :  perl example.pl</p>
+
+<p>إذا تمت الأمور  على مايرام يمكنكم رؤية النص : &#8220;Marhaba bikoum&#8221;.</p>
+
+<p><img src="/dtmdeblog/images/perl/execution example perl.png" title="تنفيذ المثال"/></p>
+
+<h2>أهم الروابط التي يجب معرفتها لبيرل :</h2>
 
 <ol>
-<li>تثبيث ال git : كنت قد شرحت عملية تثبيث الgit على نظام الubuntu في <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2/">مقال سابق </a>  في مدونتي باستطاعتكم الإطلاع عليه و إن شئتم يمكنكم تتبع الخطوات المشروحة و بطريقة مفصلة حسب نوع النظام على الرابط <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">http://git-scm.com/book/en/Getting-Started-Installing-Git</a>.</li>
-<li>تثبيث Ruby : نفس الشيئ كنت قد وضحت هذه العملية في مقال سابق و إن كانت الغاية هي تثبيث Ruby On Rails. و لكن أنصح لتثبيث الRuby  ولتسهيل التعامل مع النسخ المختلفة تثبيث  <a href="https://rvm.io/rvm/install">RVM </a>أو الRuby Version Manager و الذي سيسهل لكم بشكل لن تتصورونه تثبيث ال Ruby و استعمال النسخة التي تريدونها لذلك.</li>
-<li>إنشاء المستودع الخاص بكم على الgithub، تسجيل الدخول و إنشاء المستودع للمزيد يمكنكم الإطلاع على <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/09/23/github/">مقال سابق
-</a> في مدونتي.</li>
-<li>إنشاء ملف داخلي يحتوي المدونة، لنفرض أنكم سميتموه &#8220;modawinaty&#8221;.</li>
+<li><a href="www.perl.com">الموقع الرسمي لبيرل</a></li>
+<li><a href="www.perl.org">موقع المجتمع البيرلي</a></li>
+<li><a href="www.cpan.org">موقع أهم الوحدات أو إن شئتم المكتبات البيرلية</a></li>
 </ol>
 
 
-<p>بعدها لم يبقى علينا سوى تثبيث المنصة على الملف الذي قمتم بإنشاءه، و ذلك باتباع الخطوات التالية :</p>
-
-<ol>
-<li>git remote add octopress git://github.com/imathis/octopress.git</li>
-<li>git pull octopress master</li>
-<li>git checkout -b source</li>
-<li>git remote add origin git@github.com:YourUserName/YourRepoName.git</li>
-<li>git push origin source</li>
-<li>rvm rvmrc trust و ذلك بعد تثبيث ال RVM</li>
-<li>rvm reload</li>
-<li>rake setup_github_pages في بعض الحالات يجب إرسال الأمرbundle install</li>
-<li>rake install
-بعدها يجب الذهاب إلى الملف config.yml و تحديث السطر المقابل للroot باسم المستودع الذي أنشأتموه في الgithub في مثالنا : moudawinaty.</li>
-<li>Rake Generate</li>
-<li>Rake Deploy</li>
-</ol>
-
-
-<p>و لأنني أحبكم في الله، فلقد سجلت لكم فيديو مفصل لجميع الخطوات التي ستسمح لكم بإنشاء أول مدونة باستعمال الoctopress و تحميلها على الgithub، في الرايط التالي :</p>
-
-<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/Bi8t6EmePD0 "></iframe></div>
-
-
-
+<p>يتبع إن شاء الله&#8230;</p>
 </div>
 
 
@@ -190,21 +200,15 @@
   
 
 
-<time datetime="2013-02-09T18:06:00+01:00" pubdate data-updated="true">Feb 9<span>th</span>, 2013</time>
+<time datetime="2013-02-11T22:23:00+01:00" pubdate data-updated="true">Feb 11<span>th</span>, 2013</time>
       
-
-<span class="categories">
-  
-    <a class='category' href='/dtmdeblog/blog/categories/blog-/'>blog,</a>, <a class='category' href='/dtmdeblog/blog/categories/git/'>git</a>, <a class='category' href='/dtmdeblog/blog/categories/github-/'>github,</a>, <a class='category' href='/dtmdeblog/blog/categories/octopress-/'>octopress,</a>, <a class='category' href='/dtmdeblog/blog/categories/rails-/'>rails,</a>
-  
-</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tayeb83.github.com/dtmdeblog/blog/2013/02/09/install-octopress/" data-via="dtmdeblog" data-counturl="http://tayeb83.github.com/dtmdeblog/blog/2013/02/09/install-octopress/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tayeb83.github.com/dtmdeblog/blog/2013/02/11/perl-introduction/" data-via="dtmdeblog" data-counturl="http://tayeb83.github.com/dtmdeblog/blog/2013/02/11/perl-introduction/" >Tweet</a>
   
   
   <div class="g-plusone" data-size="medium"></div>
@@ -223,14 +227,10 @@
     <ul class="pager">
       
       <li class="previous"><a class="basic-alignment left"
-        href="/dtmdeblog/blog/2013/02/05/unified-medical-language-system/" title="Previous Post:
-        Unified Medical Language System">&laquo; Unified Medical Language System</a></li>
+        href="/dtmdeblog/blog/2013/02/09/install-octopress/" title="Previous Post:
+        تثبيث الoctopress">&laquo; تثبيث الoctopress</a></li>
       
       <li><a href="/dtmdeblog/blog/archives">أرشيف المدونات</a></li>
-      
-      <li class="next"><a class="basic-alignment right" href="/dtmdeblog/blog/2013/02/11/perl-introduction/"
-        title="Next Post: مقدمة في Perl">مقدمة في Perl
-        &raquo;</a></li>
       
     </ul>
   </footer>
@@ -315,8 +315,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://tayeb83.github.com/dtmdeblog/blog/2013/02/09/install-octopress/';
-        var disqus_url = 'http://tayeb83.github.com/dtmdeblog/blog/2013/02/09/install-octopress/';
+        var disqus_identifier = 'http://tayeb83.github.com/dtmdeblog/blog/2013/02/11/perl-introduction/';
+        var disqus_url = 'http://tayeb83.github.com/dtmdeblog/blog/2013/02/11/perl-introduction/';
         var disqus_script = 'embed.js';
       
     (function () {

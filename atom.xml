@@ -4,7 +4,7 @@
   <title><![CDATA[مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-11T21:54:16+01:00</updated>
+  <updated>2013-02-11T23:29:32+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,68 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[مقدمة في Perl]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/11/perl-introduction/"/>
+    <updated>2013-02-11T22:23:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/11/perl-introduction</id>
+    <content type="html"><![CDATA[<p>في هذا المقال أردت أن أعرفكم عن أحد لغات البرمجة التي أحببتها و لا زلت أحبها كيف لا و قد كانت رفيقتي قبل الجافا في تسهيل مهامي في مجال البحث العلمي، إنها لغة بيرل Perl.</p>
+
+<p>لغة Perl : Practical Extracting and Reporting Language هي كما قلت لغة برمجة أنشأها Larry Wall في عام 1987 مدرجا ميزات عديدة للغة الc و لغات سكريبت كالsed و الawk لينوكس اللغة أنشأت في الأصل للتعامل بسهولة مع الملفات و السلاسل.</p>
+
+<h2>تثبيث الPerl :</h2>
+
+<p>فيما يخص تثبيث بيرل، فإذا كنتم من مستخدمي لينوكس أو ماك فالنسبة 95% لكي يكون البيرل متثبث للتأكد يمكنكم إرسال الأمر التالي :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>perl -v $</span></code></pre></td></tr></table></div></figure>
+
+
+<p>فإذا كان متبثا فالنتيجة تكون كالتالي :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/perl/perl version linux.png" title="التأكد من وجود بيرل"/></p>
+
+<p>في حالة ما إذا كان العكس لديكم الإختيار :
+1. إعادة تجميعه المصادر متوفرة في perl.com، أو
+2. إتباع أوامر تحميل و تثبيث الActivPerl المتوفر في الصفحة : http://www.activestate.com/ حسب نوع النظام.</p>
+
+<h2>التحية ببيرل :</h2>
+
+<p>افتحو أي محرر و اكتبو الكود التالي :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#! /usr/bin/perl -w
+</span><span class='line'>use strict;
+</span><span class='line'>use warnings;
+</span><span class='line'>
+</span><span class='line'>print "Marhaba bikoum\n";</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/perl/example perl.png" title="المثال الأول لبيرل"/></p>
+
+<p>بعدها إحفظو الملف باسم example.pl ثم اجعلو البرنامج قابل للتنفيذ (chmod +x example.pl). بعدها في الterminal اذهبوا لمكان حفظ الملف ثم قوموا بارسال الأمر :  perl example.pl</p>
+
+<p>إذا تمت الأمور  على مايرام يمكنكم رؤية النص : &#8220;Marhaba bikoum&#8221;.</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/perl/execution example perl.png" title="تنفيذ المثال"/></p>
+
+<h2>أهم الروابط التي يجب معرفتها لبيرل :</h2>
+
+<ol>
+<li><a href="www.perl.com">الموقع الرسمي لبيرل</a></li>
+<li><a href="www.perl.org">موقع المجتمع البيرلي</a></li>
+<li><a href="www.cpan.org">موقع أهم الوحدات أو إن شئتم المكتبات البيرلية</a></li>
+</ol>
+
+
+<p>يتبع إن شاء الله&#8230;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[تثبيث الoctopress]]></title>
@@ -58,7 +120,10 @@
 
 <p>و لأنني أحبكم في الله، فلقد سجلت لكم فيديو مفصل لجميع الخطوات التي ستسمح لكم بإنشاء أول مدونة باستعمال الoctopress و تحميلها على الgithub، في الرايط التالي :</p>
 
-<p><a href="http://www.youtube.com/watch?v=Bi8t6EmePD0">الفيديو على اليوتوب</a></p>
+<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/Bi8t6EmePD0 "></iframe></div>
+
+
+
 ]]></content>
   </entry>
   

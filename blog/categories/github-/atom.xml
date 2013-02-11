@@ -4,7 +4,7 @@
   <title><![CDATA[Category: github, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/github-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-11T21:54:16+01:00</updated>
+  <updated>2013-02-11T23:29:32+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -58,7 +58,7 @@
 
 <p>و لأنني أحبكم في الله، فلقد سجلت لكم فيديو مفصل لجميع الخطوات التي ستسمح لكم بإنشاء أول مدونة باستعمال الoctopress و تحميلها على الgithub، في الرايط التالي :</p>
 
-<p><a href="http://www.youtube.com/watch?v=Bi8t6EmePD0">الفيديو على اليوتوب</a></p>
+<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/Bi8t6EmePD0 "></iframe></div></p>
 ]]></content>
   </entry>
   

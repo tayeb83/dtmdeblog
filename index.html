@@ -9,7 +9,7 @@
   <meta name="author" content="طيب مرابطي">
 
   
-  <meta name="description" content="في هذا المقال سوف أشرح لكم كيفية تثبيث الoctopress و استعماله مع الgithub كمحرك و مولد لصفحات تابثة لكم بطريقة سهلة و بسيطة. أول سؤال ماهو &hellip;">
+  <meta name="description" content="في هذا المقال أردت أن أعرفكم عن أحد لغات البرمجة التي أحببتها و لا زلت أحبها كيف لا و قد كانت رفيقتي قبل الجافا في تسهيل مهامي في مجال البحث العلمي، &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -101,6 +101,97 @@
       
   <header class="page-header">
     
+      <h1 class="entry-title"><a href="/dtmdeblog/blog/2013/02/11/perl-introduction/">مقدمة في Perl</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-11T22:23:00+01:00" pubdate data-updated="true">Feb 11<span>th</span>, 2013</time>
+        
+         | <a href="/dtmdeblog/blog/2013/02/11/perl-introduction/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>في هذا المقال أردت أن أعرفكم عن أحد لغات البرمجة التي أحببتها و لا زلت أحبها كيف لا و قد كانت رفيقتي قبل الجافا في تسهيل مهامي في مجال البحث العلمي، إنها لغة بيرل Perl.</p>
+
+<p>لغة Perl : Practical Extracting and Reporting Language هي كما قلت لغة برمجة أنشأها Larry Wall في عام 1987 مدرجا ميزات عديدة للغة الc و لغات سكريبت كالsed و الawk لينوكس اللغة أنشأت في الأصل للتعامل بسهولة مع الملفات و السلاسل.</p>
+
+<h2>تثبيث الPerl :</h2>
+
+<p>فيما يخص تثبيث بيرل، فإذا كنتم من مستخدمي لينوكس أو ماك فالنسبة 95% لكي يكون البيرل متثبث للتأكد يمكنكم إرسال الأمر التالي :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>perl -v $</span></code></pre></td></tr></table></div></figure>
+
+
+<p>فإذا كان متبثا فالنتيجة تكون كالتالي :</p>
+
+<p><img src="/dtmdeblog/images/perl/perl version linux.png" title="التأكد من وجود بيرل"/></p>
+
+<p>في حالة ما إذا كان العكس لديكم الإختيار :
+1. إعادة تجميعه المصادر متوفرة في perl.com، أو
+2. إتباع أوامر تحميل و تثبيث الActivPerl المتوفر في الصفحة : http://www.activestate.com/ حسب نوع النظام.</p>
+
+<h2>التحية ببيرل :</h2>
+
+<p>افتحو أي محرر و اكتبو الكود التالي :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>#! /usr/bin/perl -w
+</span><span class='line'>use strict;
+</span><span class='line'>use warnings;
+</span><span class='line'>
+</span><span class='line'>print "Marhaba bikoum\n";</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/dtmdeblog/images/perl/example perl.png" title="المثال الأول لبيرل"/></p>
+
+<p>بعدها إحفظو الملف باسم example.pl ثم اجعلو البرنامج قابل للتنفيذ (chmod +x example.pl). بعدها في الterminal اذهبوا لمكان حفظ الملف ثم قوموا بارسال الأمر :  perl example.pl</p>
+
+<p>إذا تمت الأمور  على مايرام يمكنكم رؤية النص : &#8220;Marhaba bikoum&#8221;.</p>
+
+<p><img src="/dtmdeblog/images/perl/execution example perl.png" title="تنفيذ المثال"/></p>
+
+<h2>أهم الروابط التي يجب معرفتها لبيرل :</h2>
+
+<ol>
+<li><a href="www.perl.com">الموقع الرسمي لبيرل</a></li>
+<li><a href="www.perl.org">موقع المجتمع البيرلي</a></li>
+<li><a href="www.cpan.org">موقع أهم الوحدات أو إن شئتم المكتبات البيرلية</a></li>
+</ol>
+
+
+<p>يتبع إن شاء الله&#8230;</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
       <h1 class="entry-title"><a href="/dtmdeblog/blog/2013/02/09/install-octopress/">تثبيث الoctopress</a></h1>
     
     
@@ -166,7 +257,10 @@
 
 <p>و لأنني أحبكم في الله، فلقد سجلت لكم فيديو مفصل لجميع الخطوات التي ستسمح لكم بإنشاء أول مدونة باستعمال الoctopress و تحميلها على الgithub، في الرايط التالي :</p>
 
-<p><a href="http://www.youtube.com/watch?v=Bi8t6EmePD0">الفيديو على اليوتوب</a></p>
+<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/Bi8t6EmePD0 "></iframe></div>
+
+
+
 </div>
   
   
@@ -827,120 +921,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/dtmdeblog/blog/2012/07/08/gitinstallpart2/">إدارة الإصدارات-تثبيث و إعداد</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-08T08:43:00+02:00" pubdate data-updated="true">Jul 8<span>th</span>, 2012</time>
-        
-         | <a href="/dtmdeblog/blog/2012/07/08/gitinstallpart2/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>لتثبيث الGIT أنصحكم بتتبع الخطوات المشروحة بطريقة جيدة و مفصلة حسب نوع النظام على الرابط
- <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">http://git-scm.com/book/en/Getting-Started-Installing-Git</a>  , على سبيل المثال تثبيث الGIT على نظام الأبونتو يتم بالأمر التالي :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install git-core $</span></code></pre></td></tr></table></div></figure>
-
-
-<p>بعد تثبيث الGIT, تأتي المرحلة التالية و التي نقوم فيها بتهيئة الإعدادات و هي عبارة عن إعدادات خاصة بالنظام أي أنكم لن تنفذوها إلا مرة واحدة على نفس النظام :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git-config --global user.name "الإسم" $
-</span><span class='line'>git-config --global user.email "البريد الإلكتروني" $</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>تهيئة الإعدادات لل repository (المستودع)</h2>
-
-<p>تشمل هذه المرحلة مجموعة من العمليات الضرورية لتشكيل الrepository, و الذي هو عبارة عن &#8220;ملف أو نظام تحكم&#8221; تُوضع فيه الإصدارات الخاصة بالتطبيق :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git init $</span></code></pre></td></tr></table></div></figure>
-
-
-<p>بعدها يجب إضافة الملفات داخل الrepository, ولكن يكمن هنا مشكل بسيط و هو أن الGIT يتبع التغيرات التي تطرأ على كل الملفات حتى تلك التي لا نريد تتبعها, أخص بالذكر ملفات الlog على سبيل المثال وذلك أن هذه الملفات تتغير بكثرة و لسنا بحاجة لأن يقوم نظام إدارة الإصدارات بتتبع تغيراتها. لحسن الحظ فإن الGIT لديه القدرة على تجاهل مثل هذه الملفات و ذلك بالطريقة التالية :
-نضف إلى الملف الرئيسي للتطبيق ملف إسمه gitignore. و الذي سوف يحتوي على بعض القواعد تحدد لGIT الملفات التي يجب تجاهلها, اﻵن لو عدنا إلى الدرس   <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/06/25/first-application-rails">أول تطبيق برايلز</a>  فسوف تلاحظون أن رايلز قام بإنشاء ملف gitignore. داخل الملف الرئيسي مثل ما توضحه الصورة :</p>
-
-<p><img src="/dtmdeblog/images/gitginoreinapplication.png" title="ملف gitignore. داخل الملف الرئيسي"/></p>
-
-<p>اﻵن لو فتحنا gitignore. فسوف تلاحظون أن الملف يحتوي على مجموعة من القواعد تجبر الGIT على تجاهل التغيرات التي تطرأ على ملفات الlog, الملفات المؤقتة و قاعدة البيانات sqllite.</p>
-
-<p><img src="/dtmdeblog/images/gitigorefile.png" title=" محتوى ملف gitignore."/></p>
-
-<h2>الإضافة و الحفظ</h2>
-
-<p>و أخير وصلنا إلى المرحلة التي سوف نقوم من خلالها إضافة ملفات التطبيق إلى الGIT ثم حفظها (commit), يمكنكم إضافة كل الملفات (ماعدا التي تمت تجاهلها) بالطريقة التالية :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>. git add  $</span></code></pre></td></tr></table></div></figure>
-
-
-<p>النقطة (.) هنا تمثل الملف الجاري و الGIT ذكي بما فيه الكفاية لكي يقوم بإضافة كل الملفات بطريقة الإستدعاء الذاتي. هذه العملية تقوم بإضافة الملفات إلى &#8220;ساحة التخزين&#8221; (staging area) و التي تحتوي على التغيرات المؤقتة على المشروع. يمكنكم رؤيتها عن طريق تنفيذ الأمر &#8220;git status&#8221;  كما هو موضح في الصورة :</p>
-
-<p><img src="/dtmdeblog/images/gitstatus.png"/></p>
-
-<p>اﻵن إذا أردتم حفظ هذه التغيرات و تأكيدها فيجب إستعمال الأمر &#8220;commit -m&#8221; بحيث أن الخاصية &#8220;m-&#8221; تسمح لكم بإضافة تعليق يوضح مثلا سبب التغيير.</p>
-
-<h2>ماذا يستطيع الGIT القيام به من أجل مساعدتكم</h2>
-
-<p>بعد كل ما قمنا به في هذا الدرس أعتقد أن الفائدة من إستعمال الGIT لم تظهر بعد, لهذا دعونا نقوم بعمل تطبيقي يوضح لنا الأمور أكثر. أول شيء سوف نقوم به هو تدمير الملف app/controllers, عملية يمكن أن يقوم بها أي مطور بطريق الخطأ.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd first_app/ $
-</span><span class='line'> rm -rf app/controllers $</span></code></pre></td></tr></table></div></figure>
-
-
-<p>لمعرفة ما حصل سوف نفوم بإرسال الأمر &#8220;git status&#8221;.</p>
-
-<p><img src="/dtmdeblog/images/gitstatusrmrfcontrollers.png"/></p>
-
-<p>الصورة توضح التغيرات التي حصلت ولكن ما يجب معرفته أن هذه التغيرات لم تحفظ بعد على الGIT و بالتالي فإن بإمكاننا إلغاءها بطريقة سهلة و ربط الGIT مع الإصدار اﻷخير عن طريق تنفيذ اﻷمر  &#8220;git chekout -f&#8221;.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -f $
-</span><span class='line'>git status $
-</span><span class='line'># On branch master
-</span><span class='line'>nothing to commit (working directory clean)
-</span><span class='line'>ls app/controllers/ $
-</span><span class='line'>application_controller.rb</span></code></pre></td></tr></table></div></figure>
-
-
-<p>الحمد لله الملف المحذوف عاد مجددا.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/dtmdeblog/blog/page/2/">&larr; Older</a></li>
@@ -956,6 +936,10 @@
     <li class="nav-header">أخر التدوينات</li>
     
       <li class="post">
+        <a href="/dtmdeblog/blog/2013/02/11/perl-introduction/">مقدمة في Perl</a>
+      </li>
+    
+      <li class="post">
         <a href="/dtmdeblog/blog/2013/02/09/install-octopress/">تثبيث الoctopress</a>
       </li>
     
@@ -969,10 +953,6 @@
     
       <li class="post">
         <a href="/dtmdeblog/blog/2012/12/30/activerecord-part2/"> مدخل إلى  Activerecord: العلاقات</a>
-      </li>
-    
-      <li class="post">
-        <a href="/dtmdeblog/blog/2012/12/30/activerecord-part1/"> مدخل إلى Activerecord : CRUD</a>
       </li>
     
   </ul>
