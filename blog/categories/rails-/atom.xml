@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/rails-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-11T00:54:21+01:00</updated>
+  <updated>2013-02-11T13:36:37+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[تثبيث الoctopress]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/09/install-octopress/"/>
+    <updated>2013-02-09T18:06:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/09/install-octopress</id>
+    <content type="html"><![CDATA[<p>في هذا المقال سوف أشرح  لكم كيفية تثبيث ال<a href="http://octopress.org/">octopress</a> و استعماله مع الgithub كمحرك و مولد لصفحات تابثة لكم بطريقة  سهلة و بسيطة.</p>
+
+<h2>أول سؤال ماهو الOctorpress ؟ </h2>
+
+<p> هو عبارة عن منصة عمل طورها Brandon Mathis لل jekyll. للتدوين بالjekyll كان لابد من كتابة قوالب الhtml الخاصة، الCSS، الJavascript و إعداد التكوين الخاص بك. و لكن مع الOctopress كل هذا يصبح شفاف و المنصة تقوم بكل هذه الأعمال فور تثبيثها.
+شخصيا الشيئ الذي دفعني لاستعمال الOctopress هو فضولٌٌ أردت من خلاله التدرب و لمس كل مايتعلق بالgit و الgithub، و بالفعل فلقد ساعدني هذا الفضول إلى كسر حاجز الخوف بيني و بين أوامر الgit هذا من جانب أما الجانب الثاني هو امتلاك مدونة الكتابة فيها تشعرك كل يوم أنك فعلا hacker مع كل الأدوات التي استعملها و الأوامر التي أرسلها لكتابة مقال واحد، فرق سوف ترونه بلا شك لو استعملتم هذه المنصة.</p>
+
+<h2>تثبيث الOctopress :</h2>
+
+<p>أول شيئ قبل بدأ تثبيث المنصة هو إطلاعكم على مايجب تثبيثه قبل البدأ في تثبيث الOctopress.</p>
+
+<ol>
+<li>تثبيث ال git : كنت قد شرحت عملية تثبيث الgit على نظام الubuntu في <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2/">مقال سابق </a>  في مدونتي باستطاعتكم الإطلاع عليه و إن شئتم يمكنكم تتبع الخطوات المشروحة و بطريقة مفصلة حسب نوع النظام على الرابط <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">http://git-scm.com/book/en/Getting-Started-Installing-Git</a>.</li>
+<li>تثبيث Ruby : نفس الشيئ كنت قد وضحت هذه العملية في مقال سابق و إن كانت الغاية هي تثبيث Ruby On Rails. و لكن أنصح لتثبيث الRuby  ولتسهيل التعامل مع النسخ المختلفة تثبيث  <a href="https://rvm.io/rvm/install">RVM </a>أو الRuby Version Manager و الذي سيسهل لكم بشكل لن تتصورونه تثبيث ال Ruby و استعمال النسخة التي تريدونها لذلك.</li>
+<li>إنشاء المستودع الخاص بكم على الgithub، تسجيل الدخول و إنشاء المستودع للمزيد يمكنكم الإطلاع على <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/09/23/github/">مقال سابق
+</a> في مدونتي.</li>
+<li>إنشاء ملف داخلي يحتوي المدونة، لنفرض أنكم سميتموه "modawinaty".</li>
+</ol>
+
+
+<p>بعدها لم يبقى علينا سوى تثبيث المنصة على الملف الذي قمتم بإنشاءه، و ذلك باتباع الخطوات التالية :</p>
+
+<ol>
+<li>git remote add octopress git://github.com/imathis/octopress.git</li>
+<li>git pull octopress master</li>
+<li>git checkout -b source</li>
+<li>git remote add origin git@github.com:YourUserName/YourRepoName.git</li>
+<li>git push origin source</li>
+<li>rvm rvmrc trust و ذلك بعد تثبيث ال RVM</li>
+<li>rvm reload</li>
+<li>rake setup_github_pages في بعض الحالات يجب إرسال الأمرbundle install</li>
+<li>rake install
+بعدها يجب الذهاب إلى الملف config.yml و تحديث السطر المقابل للroot باسم المستودع الذي أنشأتموه في الgithub في مثالنا : moudawinaty.</li>
+<li>Rake Generate</li>
+<li>Rake Deploy</li>
+</ol>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[وضع مخطط لقاعدة بيانات]]></title>
@@ -182,73 +227,6 @@
  النتيجة أنه لدينا الآن تطبيق ويب شغال نستطيع الإعتماد عليه من أجل الذهاب بعيدا في مشروعنا النهائي.
  <img src="http://tayeb83.github.com/dtmdeblog/images/views_generated.png" title=" واجهات التطبيق"/>
 في النهاية يجب التنويه أن المطورين في رايلز يرون في السقالة مجرد بوابة إنطلاق تساعد في تطوير الجزء الكبير للبرنامج. بالنسبة للمبتدئين مثلي، فإن السقالة تعتبر تدريب فعال لفهم طريقة إشتغال منصة رايلز. لا تنسو أن الواجهات المتحصل عليها يمكن تحسينها عن طريق ال CSS، فالواجهات المتحصل عليها لا يُستحسن تقديمها كما هي للمستخدمين النهائيين.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[من البداية]]></title>
-    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/12/10/staticpageinrails/"/>
-    <updated>2012-12-10T23:09:00+01:00</updated>
-    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/12/10/staticpageinrails</id>
-    <content type="html"><![CDATA[<p>بعد غياب طويل نظرا لإنشغالاتي الكثيرة, أعود إليكم لمواصلة دروسنا الرايلزية. في هذا الدرس سوف نبدأ بمشروع جديد أحاول من خلاله شرح أهم ما يمكن معرفته لإنجاح أول مشروع ب ROR.
-رغم أن الهدف من  روبي رايلز هو تصميم مواقع و تطبيقات ويب ديناميكية فإن رايلز بارع في إنشاء صفحات ويب ساكنة. إستعمال ROR لتصميم مواقع ويب ساكنة له فوائد كثيرة بحيث أنه يمكننا إضافة و لو قليلا بعض الكود ديناميكي.
-في البداية و كما أوضحناه في درس سابق نقوم بإنشاء أول مشروع رايلز نسميه testproject كالتالي :</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails new testproject $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/railsNewTestproject.png" title="إنشاء مشروع على رايلز"/></p>
-
-<p>يمكن التنويه أنه في الإصدارات السابقة لرايلز كان لابد القيام بالأمر bundle install بعد إنشاء المشروع و لكن مع rails 3.2 أصبحت هذه الخطوة آلية عند المشروع, نُذكر أن الهدف من هذه الخطوة هو تثبيث الجيمات التي يحتاجها المشروع.</p>
-
-<h2>  الصفحات الساكنة</h2>
-
-<p>رايلز يقترح  طريقتين لإنشاء صفحات ويب ساكنة, الأولى بإستعمال صفحات ويب تحتوي على مجرد  الكود HTML, و الثانية, رايلز يتيح لنا تطوير واجهات (views) تحتوي على الHTML و التي يقوم رايلز بتحويلها إلى خادم الشبكة (web server).</p>
-
-<h2>الصفحات الساكنة الفعلية</h2>
-
-<p>لاحظتم أنه عند تشغيل مشروع رايلز للمرة الأولى ظهور صفحة بداية إفتراضية عند الذهاب إلى الرابط : http://localhost:3000
-<img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/testprojectfirstpage.png" title=" صفحة البداية على رايلز"/></p>
-
-<p>لمعرفة مصدر الصفحة يجب النظر إلى الملف public/index.html و الذي قام رايلز بإنشاءه بشكل إفتراضي, المهم أن رايلز يُرسل أي ملف في الpublic مباشرة على المتصفح, في حالة الملف
- الخاص index.html فإننا لن نحتاج لكتابة الإسم على الرابط لأن الإسم index.html يُعتبر ملف إفتراضي لصفحة البداية. إذن إذا فهمتم هذه الفقرة فإنه بإمكانكم الآن إنشاء صفحاتكم الخاصة ووضعها في الملف public, على سبيل المثال يمكننا إنشاء صفحة تحتوي على كلمة ترحيب.
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gedit public/marhaba.html $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/marhabaContent.png" title="marhaba.html محتوى"/></p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/marhabaPage.png" title=" إظهار الصفحة الترحيبية على السرفير"/></p>
-
-<h2>الصفحات الساكنة الرايلزية </h2>
-
-<p>القدرة على التعامل مع صفحات الHTML الساكنة ضروري ولكنه غير كافي بالدرجة الأولى خاصة من أجل إنشاء تطبيقات ديناميكية. في هذه الفقرة سوف نقوم بخطوة مهمة تسمح لنا بإنشاء صفحات ديناميكية و ذلك بإنشاء مانسميه مجموعة من "الأفعال" أو actions بحيث نستطيع من خلالهم تعريف الروابط بطريقة أقوى من الصفحات الساكنة. رايلز يتوفر على محرك يسمح بإنشاء وحدات التحكم "controller" إسمه "generate", كل ما يلزمه لذلك هو إسم وحدة التحكم. في مثالنا سوف نقوم بإنشاء وحدة التحكم من أجل صفحاتنا الساكنة و التي سنسميها safahates. والتي سوف تحتوي على "الأفعال" التي سوف تمثل صفحاتنا الساكنة مثل صفحة "البداية","الإتصال" أو صفحة "من نحن", و منه فإن السكريبت generate سوف يأخذ لائحة من الأفعال لإنشاء صفحاتنا.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate controller Safahates contact home $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>مع إنشاء الفعلين home و contact فإن التوجيه نحو هاذين الفعلين قد تمت إضافته بطريقة آلية داخل الملف config/routes.rb.
-<img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/railsGenerateController.png" title="generate تسلسل الملفات التي أنشأت عن بواسطة السكريبت "/></p>
-
-<p>لو أليقنا نظرة على الملف config/routes.rb سنلاحظ مثلا وجود العلاقة "get safahates/home", هذه العلاقة تتكفل بالأمر الموافق للرابط safahates/home لصفحة البداية, أكثر من ذلك, فإنه بإستعمالنا  لget فإن تطبيقنا يجيب على الأمر get و الذي هو عبارة عن واحد من الأفعال الأساسية للHTTP المستعملة من طرف HyperText Transfer Protocol. يمكنكم الآن مشاهدة النتيجة بإرسال اﻷمر rails server و تشغيل الرابط safahates/home. الآن لمعرفة منبع هذه الصفحات, يجب الذهاب إلى وحدة التحكم التي قمنا بإنشائها, سوف تلاحظون أن الملف safahates_controller يُعرف فئة تُسمى SahafatesController. الفئات هم عبارة عن طريقة سهلة و مرنة لترتيب الأفعال "الطرق" مثل الأفعال home  أو contact و التي تم تعريفها عن طريق الكلمة المفتاحية def, العلامة ">" تُشير إلى أن SahafatesController ترث من ApplicationController التي تعبر عن فئة رايلزية هذا يعني أن الفئة SahafatesController تحوي على الكثير من الميزات من رايلز. في روبي, هذه الأفعال لا تعني أي شيء بصفتها خالية, و لكن في رايلز الوضعية مختلفة : SahafatesController عبارة عن فئة روبية و لكن لكونها ترث من ApplicationController فإن سلوك هذه الأفعال ستكون خاصة برايلز, و لهذا عند تصفحنا الرابط safahates/home, يقوم رايلز بمراجعة وحدة التحكم safahates ثم بإرسال الأمر المقابل للفعل home ثم يرسل في الآخر الواجهة الموافقة. في المثال بماأن الفعل home خالي من أي أمر فإن كل الأوامر التي يتم إرسالها إلى safahates/home ترسل بدورها مجرد واجهات لا غير, و لكن أين هذه الواجهات ؟ الجواب موجود في الصورة السابقة التي تظهر نتيجة الأمر "rails generate Safahates contact home" و التي تظهر بكل وضوح الرابط  بين الواجهة ووحدة التحكم, فالفعل home يُقابله واجهة إسمها "home.html.erb" لاتحتوي على الكثير من الكود لإنها أُنشأت بطريقة إفتراضية.</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/RouteFile.png" title="config/routes.rb الملف "/></p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/safahateHome.png" title="sahahates/home"/></p>
-
-<h2> متغيرات الحالة و الروبي المتضمنن</h2>
-
-<p>الملفات من نوع "erb." يمكن أن تحتوي على الكود روبي, و الذي يمكننا إستعماله لجعل الصفحات أكثر ديناميكية. دعونا نجرب بعض الأمور السهلة بروبي داخل الصفحة  home مثل إضافة "1+1" و نلاحظ النتيجة في المتصفح. لإدماج الكود روبي داخل الhtml هناك طريقتين :</p>
-
-<ul>
-<li><p>عن طريق العلامات &lt;% %> لتنفيذ الكود روبي الموجود بين هاتين العلامتين ؛</p></li>
-<li><p>عن طريق  &lt;% =%> لتنفيذ الكود روبي و إظهار النتيجة مباشرة على المتصفح, بحيث أن الفرق مع الطريقة الأولى يكمن في إظهار النتيجة.
-<img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/rubyembeded.png" title="مثال عن الروبي المتضمنن"/></p></li>
-</ul>
-
-
-<p>أخر شيئ نتطرق له في هذا المقال هو مبدأ البرمجة من غير التكرار عن طريق الLayout. الملف application.html.erb الموجود فيapp/views/layout يعتبر من الملفات المهمة والتي تساعد بشكل كبير في تسريع البرمجة. الملف يحتوي على سطر في الظاهر بسيط ولكنه مفيد بدرجة كبيرة إنه :   &lt;% yield %> و الذي يسمح بإدخال أي واجهة, لهذا فإن الملف application.html.erb يستعمل بشكل كبير برسم الواجهة الأساسية لكل مشروع داخل رايلز, بحيث لو أن الصفحات داخل التطبيق تتقاسم بعض المحتوى فإن يمكن كتابتها مرة واحدة في هذا الLayout.</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/applicationlayout.png" title="application.html.erb الملف"/></p>
 ]]></content>
   </entry>
   
