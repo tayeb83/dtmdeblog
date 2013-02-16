@@ -4,7 +4,7 @@
   <title><![CDATA[مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-12T12:52:36+01:00</updated>
+  <updated>2013-02-16T01:48:04+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,22 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[مدخل إلى الgit بالفيديو]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/16/git-intro-video/"/>
+    <updated>2013-02-16T01:28:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/16/git-intro-video</id>
+    <content type="html"><![CDATA[<p>في هذا المقال و لأول مرة سوف أقدم  لكم فيديو تفصيلي حول درس تمهيدي للgit. الدرس عبارة عن مدخل للأساسيات الرئيسية التي يمكن البدأ بها في تعلم الgit.</p>
+
+<p>أتمنى أن الدرس سيفيدكم و أنا في الخدمة من أجل مناقشة الدرس أو تحسينه في المستقبل.</p>
+
+<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/OubKSavaG-U "></iframe></div>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[مقدمة في Perl]]></title>
