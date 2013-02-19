@@ -4,7 +4,7 @@
   <title><![CDATA[Category: elasticsearch, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/elasticsearch-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-19T23:11:35+01:00</updated>
+  <updated>2013-02-19T23:16:06+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -24,7 +24,7 @@
 الأمر sql على كامل النص يعتبر حلا سريعا و سهلا و لكن لا يعتبر بتاتا الحل الأمثل من ناحية الفعالية من جهة و من جهة ثانية أن الأمر ليس بالسهل لكتابة محرك بحث بواسطة الأوامر sql.
 هذا المقال سيعطيكم لائحة لمجموعة من محركات البحث يمكنكم تثبيتها على خادم الويب الخاص بموقعكم. بالاضافة للAPI روبي التي تقوم بذلك.</p>
 
-<h2> :Google CSE</h2>
+<h2>Google CSE</h2>
 
 <p>هو عبارة عن خدمة تقدمها جوجل لفهرسة الصفحات الخاصة بموقع ويب معين و عرض النتائج في صفحة من اختيارنا بواسطة تصميم اختياري. رغم كونها الحل الأقل فعالية إلا أن هذا المحرك من أسهل المحركات تثبيتا و استعمالا.</p>
 
@@ -32,7 +32,7 @@
 
 <p><a href="https://github.com/vodafon/google_cse">https://github.com/vodafon/google_cse</a></p>
 
-<h2>:Solr</h2>
+<h2>Solr</h2>
 
 <p>solr هو محرك البحث مفتوح المصدر الخاص ب
 apache سهل التثبيث خاصة على لينوكس يمكنكم استغلاله سريعا و لن تحتاجون إلى عمليات معقدة.</p>
@@ -41,7 +41,7 @@ apache سهل التثبيث خاصة على لينوكس يمكنكم استغ�
 
 <p><a href="http://sunspot.github.com/">http://sunspot.github.com/</a></p>
 
-<h2>:sphinx</h2>
+<h2>sphinx</h2>
 
 <p>sphinx هو محرك بحث أخر مفتوح المصدر مع جميع الخصائص التي يتمتع بها solr ولكن التثبيث أصعب و يتطلب بعض المعرفة بالنظام و خصائصه.</p>
 
@@ -49,12 +49,13 @@ apache سهل التثبيث خاصة على لينوكس يمكنكم استغ�
 
 <p><a href="http://pat.github.com/riddle/">http://pat.github.com/riddle/</a></p>
 
-<h2> :Elasticsearch </h2>
+<h2>Elasticsearch </h2>
 
 <p>عبارة  عن محرك بحث مبني ب <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/12/28/lucene-introduction/">lucene </a> مثله مثل solr هو لا يستعمل مخطط. الفهرسة  و البحث تتم عبر أوامر HTTP ب JSON لجعلها أكثر مرونة.</p>
 
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/searchengine/elasticsearch.jpg" title="UMLS"/>
-<a href="https://github.com/PoseBiz/stretcher">https://github.com/PoseBiz/stretcher</a></p>
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/searchengine/elasticsearch.jpg" title="UMLS"/></p>
+
+<p><a href="https://github.com/PoseBiz/stretcher">https://github.com/PoseBiz/stretcher</a></p>
 ]]></content>
   </entry>
   
