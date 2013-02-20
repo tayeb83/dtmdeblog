@@ -4,7 +4,7 @@
   <title><![CDATA[مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-20T12:01:23+01:00</updated>
+  <updated>2013-02-21T00:56:03+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,24 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[ التهيئة  والرجوع إلى الوراء في الgit بالفيديو]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/21/git-staged-and-reset-vid2/"/>
+    <updated>2013-02-21T00:28:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/21/git-staged-and-reset-vid2</id>
+    <content type="html"><![CDATA[<p>هذا المقال عبارة  عن تكملة لما بدأته مسبقا حول الgit بالفيديو. الدرس الثاني عبارة عن عرض لأهم الأوامر التس تساعد في التحكم بتهيئة الملفات و حفظها و كيفية  الغاءها و الرجوع إلى الوراء في حالة الخطأ أو لمجرد التغيير.</p>
+
+<p>أتمنى أن الدرس سيفيدكم و أنا في الخدمة من أجل مناقشة الدرس أو تحسينه في المستقبل.</p>
+
+<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/X-yqXZzd-YQ "></iframe></div>
+
+
+<p>و ملف الدرس قمت بتقاسمه في هذا الرابط</p>
+
+<p><a href="https://docs.google.com/file/d/0B7lpwrufznLMOThPSzlKbTdoaWM/edit">ملف الدرس </a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[بعض محركات البحث التي يمكن تثبيتها على موقعك]]></title>
@@ -899,17 +917,6 @@ apache سهل التثبيث خاصة على لينوكس يمكنكم استغ�
 <p>ه. ActionMailer : تسمح و تسهل ارسال و استقبال الايميلات.</p>
 
 <p>و. ActioWebService : تسمح بانشاء خدمات الويب (web services) بطريقة جد سهلة.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[المدونة الأولى]]></title>
-    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/05/19/premier-post/"/>
-    <updated>2012-05-19T19:40:00+02:00</updated>
-    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/05/19/premier-post</id>
-    <content type="html"><![CDATA[<p>بسم الله الرحمن الرحيم</p>
-
-<p>أول مدونة لي باللغة العربية، أرحب بكل من يزورني على مدونتي و اتمنى تبادلا شيقا بيني و بين الكل</p>
 ]]></content>
   </entry>
   
