@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: github | مدونة الطيب الضادي]]></title>
+  <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/github/atom.xml" rel="self"/>
+  <link href="http://tayeb83.github.com/dtmdeblog/"/>
+  <updated>2013-02-22T23:12:30+01:00</updated>
+  <id>http://tayeb83.github.com/dtmdeblog/</id>
+  <author>
+    <name><![CDATA[طيب مرابطي]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[بالفيديو كيفية تقاسم المستودعات باستعمال الgithub]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/22/git-and-github-vid3/"/>
+    <updated>2013-02-22T23:02:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/22/git-and-github-vid3</id>
+    <content type="html"><![CDATA[<p> هذا المقال عبارة  عن تكملة لما بدأته مسبقا حول الgit بالفيديو. الدرس الثالث يشرح  لكم كيفية  تقاسم المستودعات باستعمال خدمة الgithub.</p>
+
+<p>أتمنى أن الدرس سيفيدكم و أنا في الخدمة من أجل مناقشة الدرس أو تحسينه في المستقبل.</p>
+
+<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/rIZZ2YZdZew "></iframe></div></p>
+
+<p>و ملف الدرس قمت بتقاسمه في هذا الرابط</p>
+
+<p><a href="http://fr.slideshare.net/tayebmerabti/github-16704980">ملف الدرس </a></p>
+]]></content>
+  </entry>
+  
+</feed>
