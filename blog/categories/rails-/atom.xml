@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/rails-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-02-22T23:12:30+01:00</updated>
+  <updated>2013-03-01T00:36:29+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,33 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[موارد مفيدة لكل مبرمجRails]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/28/imporatenresourceforrails/"/>
+    <updated>2013-02-28T23:59:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/28/imporatenresourceforrails</id>
+    <content type="html"><![CDATA[<p>في هذا المقال أحببت أن أقدم لكم بعض الموارد التي انتقيتها من هنا و هناك و التي أرى أنها مفيدة إن لم نقل أساسية لكل مطور بمنصة Ruby On Rails.</p>
+
+<h2><a href="http://edgeguides.rubyonrails.org/">Railsguides</a></h2>
+
+<p>تعتبر المورد الرئيسي لكل مطور Rails و خاصة للمبيتدئين وهي تحتوي على كل ما نحتاجه للبدئ بالتطوير و العمل على المنصة.</p>
+
+<h2><a href="https://www.ruby-toolbox.com/">Rubytoolbox</a>  </h2>
+
+<p>هذه المنصة تحتوي على العديد من المكتبات البرمجية و التي تسمى الGem. يمكنكم البحث عن أي مكتبة بواسطة تصنيفها، اسمها...كما يمكنكم الحصول على الكثير من المعلومات المرفقة على شكل احصائيات مختلفة حول عدد التحميلات أو التوثيق الخاص بالمكتبة.</p>
+
+<h2><a href="http://railscasts.com/">Railscasts</a></h2>
+
+<p>تعتبر قاعدة بيانات كبيرة لعدة دروس مصغرة حول Rails على شكل تسجيلات شاشة (screencast)، مفيدة جدا خاصة إذا أردنا لمحة سريعة عن كيفية عمل مكتبة معينة.</p>
+
+<h2><a href="http://www.codeschool.com/">CodeSchool</a></h2>
+
+<p>عبارة عن منصة تعلم تسمح باكتساب مهارات في مجالات متنوعة في برمجة الويب. الفكرة جميلة و الدروس مقسمة لمجموعات من التسجيلات المصورة و بعد كل درس هناك مجموعة من التمارين تسمح بعد حلها طبعا بالانتقال إلى مستوى أعلى في الدرس. أغلب الدروس مدفوعة الثمن و لكن هناك بعض الدروس مجانية و خاصة الدرس الخاص بRails  <a href="http://www.codeschool.com/courses/rails-for-zombies-redux/">RailsforZombies</a> أما من أراد كل الدروس فيمكنم مشاهدتها عن طريق دفع اشتراك شهري،</p>
+
+<p>في الأخير آنوه لقلة الموارد العربية في هذا المجال و ان كانت هناك بعض الموارد القليلة حول Rails مع هذا و بالاضافة لمدونتي و التي اكتب فيها مقالات تطبيقية حول المنصة هناك عمل جميل يقوم به الأخ محمد الشيخ في  <a href="http://blog.msheikh.me/">مدونته</a> أيضا لتوصيل و لتعليم التقنية باللغة العربية.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[تثبيث الoctopress]]></title>
@@ -198,39 +225,6 @@
 <p>هذا الفعل يُستعمل من أجل حذف الكائن و الذي يقوم بحذف سطر من داخل قاعدة البيانات بواسطة الأمر : DELETE.</p>
 
 <p>في الجزء الثاني من المقال  إن شاء الله سأقوم بشرح العلاقات التي يمكن إنشاءها بين الكائنات و كيف يُمكن  إدارتها بالActiverecord</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[السقالة في روبي أون رايلز(scaffolding)]]></title>
-    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/12/23/scaffolding-base/"/>
-    <updated>2012-12-23T11:36:00+01:00</updated>
-    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/12/23/scaffolding-base</id>
-    <content type="html"><![CDATA[<p>ماهي السقالة أو الscaffolding في رايلز ؟ لشرح هذا المفهوم لنبدأ بطرح المشكل التالي :
-أنت مطور و عندك فكرة لمشروع ما، قمت برسم المخطط لقاعدة البيانات و تريد إنشاء تطبيق بسيط و شغال بأسرع ما يمكن. الحل ب Ruby On Rails سهل :</p>
-
-<p>بعد إنشاء قاعدة البيانات و ربط الإتصال بينها و بين رايلز، يمكنننا الطلب من رايلز إنشاء السقالة (scaffolding). إذا تمكنتم من ذلك فإنه يكون بحوزتكم تطبيق مُكون من وحدة تحكم و الكود من أجل الواجهة حتى يتم التواصل مع قاعدة البيانات. التطبيق شغال و لكن مُبسط لدرجة السماح لكم الإنطلاق بتطوير معمق لباقي التطبيق.
-فيمايلي سأقوم بشرح تفصيلي للسقالة من خلال مثال بسيط. المثال عبارة عن تطبيق رايلز يحفظ مجموعة من لغات البرمجة مع تعريف مُختصر لكل لغة.
-الخُطوة الأولى تكمن في تهيئة قاعدة البيانات، من أجل ذلك نقُوم بإنشاء سكريبت الmigration  بواسطة الأمر التالي :</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate build_db $</span></code></pre></td></tr></table></div></figure></notextile></div>
-الأمر ينشأ لنا الملف 20121223181308_build_db.rb في المجلد db/migrate داخل التطبيق. بعد فتح الملف يجب إضافة بعض الأسطر ليصبح كالتالي :
-<img src="http://tayeb83.github.com/dtmdeblog/images/build_db_text.png" title="إنشاء قاعدة البيانات"/></p>
-
-<p>بعدها يجب تنفيذ السكريبت لإنشاء جدول لغات البرمجة داخل قاعدة البيانات :
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:migrate $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>بعد إنشاء قاعدة البيانات يمكننا إنشاء السقالة عن طريق الأمر التالي :
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails  generate scaffold languages$</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>كما توضح الصورة المٌرفقة، فإن الأمر ينشأ مجموعة من الملفات داخل شجرة المشروع و خاصة النموذج (model)، وحدة التحكم (controller) و مجموعة من ملفات الواجهة.
-<img src="http://tayeb83.github.com/dtmdeblog/images/rails_scaffold_generate.png" title="إنشاء السقالة"/>
- النتيجة أنه لدينا الآن تطبيق ويب شغال نستطيع الإعتماد عليه من أجل الذهاب بعيدا في مشروعنا النهائي.
- <img src="http://tayeb83.github.com/dtmdeblog/images/views_generated.png" title=" واجهات التطبيق"/>
-في النهاية يجب التنويه أن المطورين في رايلز يرون في السقالة مجرد بوابة إنطلاق تساعد في تطوير الجزء الكبير للبرنامج. بالنسبة للمبتدئين مثلي، فإن السقالة تعتبر تدريب فعال لفهم طريقة إشتغال منصة رايلز. لا تنسو أن الواجهات المتحصل عليها يمكن تحسينها عن طريق ال CSS، فالواجهات المتحصل عليها لا يُستحسن تقديمها كما هي للمستخدمين النهائيين.</p>
 ]]></content>
   </entry>
   
