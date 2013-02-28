@@ -14,7 +14,7 @@ categories: git
 
 و ملف الدرس قمت بتقاسمه في هذا الرابط 
 
-[ملف الدرس ](https://docs.google.com/file/d/0B7lpwrufznLMNlBpUVVBTVF4cEE/edit?usp=sharing)
+[ملف الدرس ](http://fr.slideshare.net/tayebmerabti/git-introduction-16688778)
 
 
 
