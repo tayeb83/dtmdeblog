@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/git-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-03-01T00:36:29+01:00</updated>
+  <updated>2013-03-20T10:24:08+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[التكملة التلقائية للgit ]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/03/20/git-automcompletion/"/>
+    <updated>2013-03-20T09:29:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/03/20/git-automcompletion</id>
+    <content type="html"><![CDATA[<p>في هذا المقال سأشرح  لكم الطريقة التي يمكنكم من خلالها الاستفادة من التكملة التلقائية لأوامر الgit داخل الbash أو مفسر سطر الأوامر.</p>
+
+<p>أول شيئ يجب القيام به هو تحميل السكريبت : <code>git-completion.bash</code> و حفظه داخل المجلد البيت الخاص بكم كالتالي :
+ <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>تحميل السكريبت داخل الملف الخاص   </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>بعدها يجب إضافة الأسطر التالية داخل ملف bash_profile. الموجود داخل المجلد البيت الخاص بكم، هذه الأسطر تُعلم الbash بتنفيذ السكريبت الخاص بالتكملة التلقائية إذا وجد :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>تحميل السكريبت داخل الملف الخاص   </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p>if [ -f ~/.git-completion.bash ]; then
+</span><span class='line'>  . ~/.git-completion.bash
+</span><span class='line'>fi&lt;/p>
+</span><span class='line'>
+</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>الأن ماعليكم فعله الا فتح الbash و البدأ في كتابة أمر git و التكملة باستعمال الTAB، كماماهو موضح في الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/gitautocompletion/gitexamplecommand.png" title="مثال لتكملة تلقائية لgit"/></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[بالفيديو كيفية تقاسم المستودعات باستعمال الgithub]]></title>
@@ -195,23 +239,6 @@
 </span><span class='line'>application_controller.rb</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <p>الحمد لله الملف المحذوف عاد مجددا.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ إدارة الإصدارات-مقدمة]]></title>
-    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/07/07/gitinitialisation/"/>
-    <updated>2012-07-07T00:09:00+02:00</updated>
-    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/07/07/gitinitialisation</id>
-    <content type="html"><![CDATA[<p>الأن و لقد قمنا بتشغيل أول تطبيق على رايلز, سوف نقوم بتسليط الضوء على جانب ثانوي في الحقيقة و لكن أساسي في نظر أغلب المطورين على رايلز أو على غيره من اللغات و الإطارات الأخرى ألا و هو إدارة الإصدارات.</p>
-
-<p>أنظمة إدارة الإصدارات تسمح لنا بتغيير الكود أو الملفات داخل التطبيقات, التقاسم مع مطورين أخرين مع الرجوع إلى الوراء في حالات الخطأ (كحذف ملف بالخطأ مثلا) أو مجرد الرجوع إلى مرحلة معينة. لهذا فإن تعلم التعامل مع أي نظام إدارة الإصدارات كفاءة أساسية يجب توفرها لدى كل متطور محترف.</p>
-
-<p>هناك خيارات عديدة من أجل إدارة الإصدارات و لكن المجتمع الرايلزي يفضل استعمال الGIT و الذي هو عبارة عن نظام إدارة الإصدارات طور في الأصل من طرف لينوس تروفالد (مصمم نواة اللينوكس) لإستقبال نواة اللينوكس. GIT عبارة عن موسوعة كبيرة و لا نستطيع تغطية كل جوانبه و لكننا سوف نقوم بسرد المهم منها لباقي الدروس و لكن بإمكانكم الإطلاع عليه بعمق إن أردتم من خلال الموارد الكثيرة المتواجدة على مستوى الويب و خاصة كتاب <a href="http://git-scm.com/book/ar">البروجيت</a> و الذي تُرجمت منه بعض الصفحات إلى اللغة العربية.</p>
-
-<p>عموما, وضع أي تطبيف (كود+ملفات) تحت إدارة الإصدارات GIT عملية ضرورية ليس لكونها مشهورة فحسب في عالم الرايلز و لكن لمنحها إمكانية تقاسم, تبادل و تشغيل الكود بطريقة سهلة جدا.</p>
-
-<p>في الدرس القادم إن شاء الله سنقوم بتثبيث و إعداد ال GIT من أجل حفظ التطبيق.</p>
 ]]></content>
   </entry>
   
