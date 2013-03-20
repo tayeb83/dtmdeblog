@@ -4,7 +4,7 @@
   <title><![CDATA[Category: autocomplete, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/autocomplete-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-03-20T10:27:33+01:00</updated>
+  <updated>2013-03-20T10:30:43+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -35,20 +35,7 @@
 
 <p>بعدها يجب إضافة الأسطر التالية داخل ملف bash_profile. الموجود داخل المجلد البيت الخاص بكم، هذه الأسطر تُعلم الbash بتنفيذ السكريبت الخاص بالتكملة التلقائية إذا وجد :</p>
 
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p>if [ -f ~/.git-completion.bash ]; then
-</span><span class='line'>  . ~/.git-completion.bash
-</span><span class='line'>fi&lt;/p>
-</span><span class='line'>
-</span><span class='line'>&lt;p></span></code></pre></td></tr></table></div></figure></notextile></div></p>
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/gitautocompletion/linesaddedtoscript.png" title="اضافة الأسطر التالية للbash_profile"/></p>
 
 <p>الأن ماعليكم فعله الا فتح الbash و البدأ في كتابة أمر git و التكملة باستعمال الTAB، كماماهو موضح في الصورة :</p>
 
