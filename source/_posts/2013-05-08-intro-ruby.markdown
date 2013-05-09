@@ -16,18 +16,26 @@ categories: ruby, روبي, intro Ruby, مدخل إلى روبي
 ----------------------
 
 الطريقة الأمثل لتعلم لغة جديدة هو استعمالها و لاستعمالها فلا بد من تثبيتها. روبي متوفر في كل الأنظمة (linux/unix، Windows، Mac OS X، OS/2...). النسخة الثابتة الحالية لروبي هي النسخة ١.٩.٣ و إن كانت النسخة ٢.٠.٠ قد ظهرت من بضعة أيام.
-على الWindows النسخة يمكن تحمليها من الموقع http://rubyinstaller.org/downloads. في لينوكس، روبي متوفر الآن في شكل حزم لأغلبية التوزيعات في حالة عدم توفره للتوزيعة الخاصة بكم يمكنكم تحمليه و تثبيته "يدويا" من الموقع www.ruby-lang.org باستعمال الطريقة المعتادة : "make; make install". بالنسبة للMac فإنه وبعد النسخة ١٠.٤ فهو يحوي روبي داخل حزمة أدوات التطوير  (development kit ).
+على الWindows النسخة يمكن تحمليها من الموقع [http://rubyinstaller.org/downloads](http://rubyinstaller.org/downloads) . في لينوكس، روبي متوفر الآن في شكل حزم لأغلبية التوزيعات في حالة عدم توفره للتوزيعة الخاصة بكم يمكنكم تحمليه و تثبيته "يدويا" من الموقع    [www.ruby-lang.org](www.ruby-lang.org) باستعمال الطريقة المعتادة : "make; make install". بالنسبة للMac فإنه وبعد النسخة ١٠.٤ فهو يحوي روبي داخل حزمة أدوات التطوير  (development kit ).
 
 الخطوات الأولى :
 ----------------------
 
 لتجاربنا الأولية سوف نستعمل برنامج من أهم البرامج الروبية وهو الIRB لInteractive Ruby ، لنفرض أنكم قمتم و بجدارة بتثبيت روبي، يمكنكم التأكد من النسخة التي قمتم بتثبيتها عن طريق الأمر :
+
+
 <img src="/images/ruby/rubyVersion.png" title="rubyversion"/>
+
+
 نفس الشيء بالنسبة لIRB :
+
 
 <img src="/images/ruby/irbVersion.png" title="irbversion"/>
 
+
 يمكنكم الإقلاع الآن، لنبدأ بكتابة المثال التالي على المحرر الذي تريدون كما في الصورة، بعدها احفظوه  باسم example.rb مثلا. 
+
+
 
 <img src="/images/ruby/exampleRuby.png" title="exampleRuby"/>
 
@@ -43,6 +51,7 @@ categories: ruby, روبي, intro Ruby, مدخل إلى روبي
 
 لعل التوثيق هو أكبر مشكل في روبي و ماعدا الموجود في المكتبة الرئيسية سوف ترون بأنفسكم أنه مشكل لديه حل وحيد و هو قراءة الأمثلة المرفقة و في بعض الأحيان قراءة مصدر الحزم.
 عندما قمتم بتثبيت روبي فقد قمتم بتثبيت RI : Ruby Interactive Reference. البحث يواسطة هذا البرنامج سهل، بحيث أنه يلزمكم فقط طلبه مرفقا بالنص الذي تريدون البحث عليه. مثلا، لو أردتم البحث على التوثيق الخاص بالArray، فإنه يجب ارسال الأمر كالتالي : ri Array، و سوف تحصلون على ما تريدونه. 
+<img src="/images/ruby/arrayhelp.png" title="arrayHelp"/>
 
 
 قبل الذهاب بعيدا :
@@ -50,10 +59,10 @@ categories: ruby, روبي, intro Ruby, مدخل إلى روبي
 
 في الأخير إليكم بعض الموارد التي يمكن مطالعتها و اللجوء إليها لتعلم المزيد عن هذه اللغة :
 
-1. http://www.ruby-lang.org
-2. http://raa.ruby-lang.org
-3. http://rubyforge.org
-4. https://www.ruby-toolbox.com
+1. [http://www.ruby-lang.org](http://www.ruby-lang.org)
+2. [http://raa.ruby-lang.org](http://raa.ruby-lang.org)
+3. [http://rubyforge.org](http://rubyforge.org)
+4. [https://www.ruby-toolbox.com](https://www.ruby-toolbox.com)
 
 
 
