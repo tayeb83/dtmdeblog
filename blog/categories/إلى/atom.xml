@@ -4,7 +4,7 @@
   <title><![CDATA[Category: إلى | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/إلى/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-05-09T20:23:38+02:00</updated>
+  <updated>2013-05-09T21:16:24+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -53,6 +53,8 @@
 
 <p>لعل التوثيق هو أكبر مشكل في روبي و ماعدا الموجود في المكتبة الرئيسية سوف ترون بأنفسكم أنه مشكل لديه حل وحيد و هو قراءة الأمثلة المرفقة و في بعض الأحيان قراءة مصدر الحزم.
 عندما قمتم بتثبيت روبي فقد قمتم بتثبيت RI : Ruby Interactive Reference. البحث يواسطة هذا البرنامج سهل، بحيث أنه يلزمكم فقط طلبه مرفقا بالنص الذي تريدون البحث عليه. مثلا، لو أردتم البحث على التوثيق الخاص بالArray، فإنه يجب ارسال الأمر كالتالي : ri Array، و سوف تحصلون على ما تريدونه.</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/ruby/arrayhelp.png" title="arrayHelp"/></p>
 
 <h2>قبل الذهاب بعيدا :</h2>
 
