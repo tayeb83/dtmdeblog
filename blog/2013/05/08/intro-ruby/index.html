@@ -1,0 +1,355 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>مدخل إلى روبي - مدونة الطيب الضادي</title>
+  <meta name="author" content="طيب مرابطي">
+
+  
+  <meta name="description" content="نبذة عامة عن روبي : كان أول ظهور لRuby سنة 1995 بفضل مطوره Yukihiro Matsumoto، جامعي ياباني، مما جعل هذه اللغة أكثر شهرة في اليابان من Perl أو Python &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://tayeb83.github.com/dtmdeblog/blog/2013/05/08/intro-ruby">
+  <link href="/dtmdeblog/favicon.png" rel="icon">
+  <link href="/dtmdeblog/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/dtmdeblog/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/dtmdeblog/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    body {
+      padding-bottom: 40px;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    .page-footer p {
+      text-align: center;
+    }
+  </style>
+  <script src="/dtmdeblog/javascripts/libs/jquery.js"></script>
+  <script src="/dtmdeblog/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/dtmdeblog/javascripts/libs/bootstrap.js"></script>
+  <script src="/dtmdeblog/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/dtmdeblog/atom.xml" rel="alternate" title="مدونة الطيب الضادي" type="application/atom+xml">
+  
+  
+
+</head>
+
+<body    style="direction: rtl">
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+     
+
+      <div class="nav-collapse">
+         
+        <ul class="nav pull-right">
+  <li><a href="/dtmdeblog/blog/archives">الأرشيف</a></li>
+  <li><a href="/dtmdeblog/">المدونة</a></li>
+  <li><a href="/dtmdeblog/about">من أنا؟</a></li>
+  <a class="brand" href="/dtmdeblog/">مدونة الطيب الضادي</a>
+</ul>
+
+
+        <ul class="nav pull-right" data-subscription="rss">
+          <li><a href="/dtmdeblog/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+          
+        </ul>
+
+        
+          <form class="pull-right navbar-search" action="http://google.com/search" method="get">
+            <fieldset role="search">
+              <input type="hidden" name="q" value="site:tayeb83.github.com/dtmdeblog" />
+              <input class="search-query" type="text" name="q" results="0" placeholder="ابحث"/>
+            </fieldset>
+          </form>
+        
+      </div>
+     
+    </div>
+  </div>
+</div>
+</nav>
+  <div class="container">
+    <div class="row-fluid">
+      
+<article class="hentry span9" role="article">
+
+  
+  <header class="page-header">
+    
+      <h1 class="entry-title">مدخل إلى روبي</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-08T18:29:00+02:00" pubdate data-updated="true">May 8<span>th</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><h2>نبذة عامة  عن روبي :</h2>
+
+<p>كان أول ظهور لRuby سنة 1995 بفضل مطوره Yukihiro Matsumoto، جامعي ياباني، مما جعل هذه اللغة أكثر شهرة في اليابان من Perl أو Python. يأخذ Ruby تركيبه من لغات مختلفة : الجانب البراغماتي من Perl، التوجه الكائني من الSmaltalk ، و الوضوح من الPython. أما عن أصل التسمية فهذا يرجع لكون Ruby يقتبس أفكارا كثيرة من Perl، لهذا فإن المطورين في Perl لن يجدو صعوبة كبيرة  في تعلم هذه اللغة.</p>
+
+<p><img src="/dtmdeblog/images/ruby/YukihiroMatsumoto.JPG" title="Matz"/></p>
+
+<h2>تثبيت و تجربة روبي :</h2>
+
+<p>الطريقة الأمثل لتعلم لغة جديدة هو استعمالها و لاستعمالها فلا بد من تثبيتها. روبي متوفر في كل الأنظمة (linux/unix، Windows، Mac OS X، OS/2&#8230;). النسخة الثابتة الحالية لروبي هي النسخة ١.٩.٣ و إن كانت النسخة ٢.٠.٠ قد ظهرت من بضعة أيام.
+على الWindows النسخة يمكن تحمليها من الموقع http://rubyinstaller.org/downloads. في لينوكس، روبي متوفر الآن في شكل حزم لأغلبية التوزيعات في حالة عدم توفره للتوزيعة الخاصة بكم يمكنكم تحمليه و تثبيته &#8220;يدويا&#8221; من الموقع www.ruby-lang.org باستعمال الطريقة المعتادة : &#8220;make; make install&#8221;. بالنسبة للMac فإنه وبعد النسخة ١٠.٤ فهو يحوي روبي داخل حزمة أدوات التطوير  (development kit ).</p>
+
+<h2>الخطوات الأولى :</h2>
+
+<p>لتجاربنا الأولية سوف نستعمل برنامج من أهم البرامج الروبية وهو الIRB لInteractive Ruby ، لنفرض أنكم قمتم و بجدارة بتثبيت روبي، يمكنكم التأكد من النسخة التي قمتم بتثبيتها عن طريق الأمر :
+<img src="/dtmdeblog/images/ruby/rubyVersion.png" title="rubyversion"/>
+نفس الشيء بالنسبة لIRB :</p>
+
+<p><img src="/dtmdeblog/images/ruby/irbVersion.png" title="irbversion"/></p>
+
+<p>يمكنكم الإقلاع الآن، لنبدأ بكتابة المثال التالي على المحرر الذي تريدون كما في الصورة، بعدها احفظوه  باسم example.rb مثلا.</p>
+
+<p><img src="/dtmdeblog/images/ruby/exampleRuby.png" title="exampleRuby"/></p>
+
+<p>بعدها افتحوا الterminal على مكان الملف و قومو بارسال الأمر ruby example.rb النتيجة توضحها الصورة :</p>
+
+<p><img src="/dtmdeblog/images/ruby/examplerubyexecution.png" title="executeRubyversion"/></p>
+
+<p>هذا المثال جد بسيط لكل من له بعض المفاهيم في البرمجة، لهذا فهو لا يحتاج لشرح مفصل و لكننا سنشرح فقط ما قمنا به من الجانب البرمجي، في السطر الثالث استعملنا الوظيفة print التي تسمح بطباعة النص على الشاشة، هذه الوظيفة تستقبل وسيطا واحدا و هو عبارة عن سلسلة محارف بين علامتي التنصيص &#8220;&#8221;. في السطر الرابع، البرنامج ينتظر الإجابة على السؤال ا لمطروح سابقا و الذي هو اسم المستخدم، لهذا الغرض نستعمل الوظيفة readline و التي لها دور القراءة على جهاز الإدخال القياسي (STDIN) إلى أن نقوم بالضغط على المفتاح ENTER، النتيجة ستحفظ داخل المتغير name. الآن المتغير سيحتوي على الإسم و علامة الرجوع إلى السطر&#8221; n&#34;، لهذا قمنا باستعمال chomp قبل الطبع لحذف العودة إلى السطر.</p>
+
+<h2>أين تجدون المساعدة :</h2>
+
+<p>لعل التوثيق هو أكبر مشكل في روبي و ماعدا الموجود في المكتبة الرئيسية سوف ترون بأنفسكم أنه مشكل لديه حل وحيد و هو قراءة الأمثلة المرفقة و في بعض الأحيان قراءة مصدر الحزم.
+عندما قمتم بتثبيت روبي فقد قمتم بتثبيت RI : Ruby Interactive Reference. البحث يواسطة هذا البرنامج سهل، بحيث أنه يلزمكم فقط طلبه مرفقا بالنص الذي تريدون البحث عليه. مثلا، لو أردتم البحث على التوثيق الخاص بالArray، فإنه يجب ارسال الأمر كالتالي : ri Array، و سوف تحصلون على ما تريدونه.</p>
+
+<h2>قبل الذهاب بعيدا :</h2>
+
+<p>في الأخير إليكم بعض الموارد التي يمكن مطالعتها و اللجوء إليها لتعلم المزيد عن هذه اللغة :</p>
+
+<ol>
+<li>http://www.ruby-lang.org</li>
+<li>http://raa.ruby-lang.org</li>
+<li>http://rubyforge.org</li>
+<li>https://www.ruby-toolbox.com</li>
+</ol>
+
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">طيب مرابطي</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-05-08T18:29:00+02:00" pubdate data-updated="true">May 8<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/dtmdeblog/blog/categories/ruby-مدخل/'>Ruby, مدخل</a>, <a class='category' href='/dtmdeblog/blog/categories/intro/'>intro</a>, <a class='category' href='/dtmdeblog/blog/categories/ruby-/'>ruby,</a>, <a class='category' href='/dtmdeblog/blog/categories/إلى/'>إلى</a>, <a class='category' href='/dtmdeblog/blog/categories/روبي/'>روبي</a>, <a class='category' href='/dtmdeblog/blog/categories/روبي-/'>روبي,</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tayeb83.github.com/dtmdeblog/blog/2013/05/08/intro-ruby/" data-via="dtmdeblog" data-counturl="http://tayeb83.github.com/dtmdeblog/blog/2013/05/08/intro-ruby/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    
+    <section>
+      <h1>التعليقات</h1>
+      <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+    <ul class="pager">
+      
+      <li class="previous"><a class="basic-alignment left"
+        href="/dtmdeblog/blog/2013/03/20/git-automcompletion/" title="Previous Post:
+        التكملة التلقائية للgit ">&laquo; التكملة التلقائية للgit </a></li>
+      
+      <li><a href="/dtmdeblog/blog/archives">أرشيف المدونات</a></li>
+      
+    </ul>
+  </footer>
+</article>
+
+<aside class="sidebar-nav span3">
+  
+    <section class="well">
+  <ul id="recent_posts" class="nav nav-list">
+    <li class="nav-header">أخر التدوينات</li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2013/05/08/intro-ruby/">مدخل إلى روبي</a>
+      </li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2013/03/20/git-automcompletion/">التكملة التلقائية للgit </a>
+      </li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2013/02/28/imporatenresourceforrails/">موارد مفيدة لكل مبرمجRails</a>
+      </li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2013/02/22/git-and-github-vid3/">بالفيديو كيفية تقاسم المستودعات باستعمال الgithub</a>
+      </li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2013/02/21/git-staged-and-reset-vid2/"> التهيئة  والرجوع إلى الوراء في الgit بالفيديو</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section class="well">
+  <ul id="tweets" class="nav">
+    <li class="nav-header">أخر التغريدات</li>
+    <li class="loading">تحديث ...</li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      getTwitterFeed("dtmdeblog", 4, false);
+    });
+  </script>
+  <script src="/dtmdeblog/javascripts/asides/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/dtmdeblog" class="twitter-follow-button" data-show-count="false">تابع @dtmdeblog</a>
+  
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/101099896157910648102?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo" class="page-footer"><hr>
+<p>
+  جميع الحقوق محفوظة &copy; 2013 - طيب مرابطي -
+  <span class="credit">انجز باستعمال <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'dtmdeblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://tayeb83.github.com/dtmdeblog/blog/2013/05/08/intro-ruby/';
+        var disqus_url = 'http://tayeb83.github.com/dtmdeblog/blog/2013/05/08/intro-ruby/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
