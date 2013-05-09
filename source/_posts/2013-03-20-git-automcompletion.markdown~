@@ -16,15 +16,9 @@ curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bas
 
 بعدها يجب إضافة الأسطر التالية داخل ملف bash_profile. الموجود داخل المجلد البيت الخاص بكم، هذه الأسطر تُعلم الbash بتنفيذ السكريبت الخاص بالتكملة التلقائية إذا وجد :
 
-{% codeblock تحميل السكريبت داخل الملف الخاص   %}
-      
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
+<img src="/images/gitautocompletion/linesaddedtoscript.png" title="اضافة الأسطر التالية للbash_profile"/>
 
- {% endcodeblock %}
-
-الأن ماعليكم فعله الا فتح الbash و البدأ في كتابة أمر git و التكملة باستعمال الTAB، مثل ماهو موضح في الصورة :
+الأن ماعليكم فعله الا فتح الbash و البدأ في كتابة أمر git و التكملة باستعمال الTAB، كماماهو موضح في الصورة :
 
 <img src="/images/gitautocompletion/gitexamplecommand.png" title="مثال لتكملة تلقائية لgit"/>
 
