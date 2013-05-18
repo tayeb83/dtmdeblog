@@ -2,7 +2,7 @@
   <li><a href="{{ root_url }}/blog/archives">الأرشيف</a></li>
   <li><a href="{{ root_url }}/">المدونة</a></li>
   <li><a href="{{ root_url }}/about">من أنا؟</a></li>
-  <a href="{{ root_url }}/"><img src="/lowres.jpg"></a>
+  <a href="{{ root_url }}/"><img src="/images/lowres.jpg"></a>
   <a class="brand" href="{{ root_url }}/">{{ site.title }}</a>
 
 </ul>
