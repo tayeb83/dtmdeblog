@@ -9,7 +9,7 @@
   <meta name="author" content="طيب مرابطي">
 
   
-  <meta name="description" content="في هذا المقال الجديد و الذي من خلاله أفتح صفحة جديدة و نوعا آخر من المقالات أبدأ الكتابة في مجال البحث العلمي الخاص بعلم الحاسوب في المجال الطبي من &hellip;">
+  <meta name="description" content="في هذا المقال سوف أشرح لكم كيفية تثبيث الoctopress و استعماله مع الgithub كمحرك و مولد لصفحات تابثة لكم بطريقة سهلة و بسيطة. أول سؤال ماهو &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,87 @@
     <div class="row-fluid">
       <div class="span9">
   
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/dtmdeblog/blog/2013/02/09/install-octopress/">تثبيث الoctopress</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-09T18:06:00+01:00" pubdate data-updated="true">Feb 9<span>th</span>, 2013</time>
+        
+         | <a href="/dtmdeblog/blog/2013/02/09/install-octopress/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>في هذا المقال سوف أشرح  لكم كيفية تثبيث ال<a href="http://octopress.org/">octopress</a> و استعماله مع الgithub كمحرك و مولد لصفحات تابثة لكم بطريقة  سهلة و بسيطة.</p>
+
+<h2>أول سؤال ماهو الOctorpress ؟ </h2>
+
+<p> هو عبارة عن منصة عمل طورها Brandon Mathis لل jekyll. للتدوين بالjekyll كان لابد من كتابة قوالب الhtml الخاصة، الCSS، الJavascript و إعداد التكوين الخاص بك. و لكن مع الOctopress كل هذا يصبح شفاف و المنصة تقوم بكل هذه الأعمال فور تثبيثها.
+شخصيا الشيء الذي دفعني لاستعمال الOctopress هو فضولٌٌ أردت من خلاله التدرب و لمس كل مايتعلق بالgit و الgithub، و بالفعل فلقد ساعدني هذا الفضول إلى كسر حاجز الخوف بيني و بين أوامر الgit هذا من جانب أما الجانب الثاني هو امتلاك مدونة الكتابة فيها تشعرك كل يوم أنك فعلا hacker مع كل الأدوات التي استعملها و الأوامر التي أرسلها لكتابة مقال واحد، فرق سوف ترونه بلا شك لو استعملتم هذه المنصة.</p>
+
+<h2>تثبيث الOctopress :</h2>
+
+<p>أول شيء قبل بدأ تثبيث المنصة هو إطلاعكم على مايجب تثبيثه قبل البدأ في تثبيث الOctopress.</p>
+
+<ol>
+<li>تثبيث ال git : كنت قد شرحت عملية تثبيث الgit على نظام الubuntu في <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2/">مقال سابق </a>  في مدونتي باستطاعتكم الإطلاع عليه و إن شئتم يمكنكم تتبع الخطوات المشروحة و بطريقة مفصلة حسب نوع النظام على الرابط <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">http://git-scm.com/book/en/Getting-Started-Installing-Git</a>.</li>
+<li>تثبيث Ruby : نفس الشيئ كنت قد وضحت هذه العملية في مقال سابق و إن كانت الغاية هي تثبيث Ruby On Rails. و لكن أنصح لتثبيث الRuby  ولتسهيل التعامل مع النسخ المختلفة تثبيث  <a href="https://rvm.io/rvm/install">RVM </a>أو الRuby Version Manager و الذي سيسهل لكم بشكل لن تتصورونه تثبيث ال Ruby و استعمال النسخة التي تريدونها لذلك.</li>
+<li>إنشاء المستودع الخاص بكم على الgithub، تسجيل الدخول و إنشاء المستودع للمزيد يمكنكم الإطلاع على <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/09/23/github/">مقال سابق
+</a> في مدونتي.</li>
+<li>إنشاء ملف داخلي يحتوي المدونة، لنفرض أنكم سميتموه &#8220;modawinaty&#8221;.</li>
+</ol>
+
+
+<p>بعدها لم يبقى علينا سوى تثبيث المنصة على الملف الذي قمتم بإنشاءه، و ذلك باتباع الخطوات التالية :</p>
+
+<ol>
+<li>git remote add octopress git://github.com/imathis/octopress.git</li>
+<li>git pull octopress master</li>
+<li>git checkout -b source</li>
+<li>git remote add origin git@github.com:YourUserName/YourRepoName.git</li>
+<li>git push origin source</li>
+<li>rvm rvmrc trust و ذلك بعد تثبيث ال RVM</li>
+<li>rvm reload</li>
+<li>rake setup_github_pages في بعض الحالات يجب إرسال الأمرbundle install</li>
+<li>rake install
+بعدها يجب الذهاب إلى الملف config.yml و تحديث السطر المقابل للroot باسم المستودع الذي أنشأتموه في الgithub في مثالنا : moudawinaty.</li>
+<li>Rake Generate</li>
+<li>Rake Deploy</li>
+</ol>
+
+
+<p>و لأنني أحبكم في الله، فلقد سجلت لكم فيديو مفصل لجميع الخطوات التي ستسمح لكم بإنشاء أول مدونة باستعمال الoctopress و تحميلها على الgithub، في الرايط التالي :</p>
+
+<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/Bi8t6EmePD0 "></iframe></div>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -866,52 +947,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/dtmdeblog/blog/2012/07/07/gitinitialisation/">إدارة الإصدارات-مقدمة</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-07-07T00:09:00+02:00" pubdate data-updated="true">Jul 7<span>th</span>, 2012</time>
-        
-         | <a href="/dtmdeblog/blog/2012/07/07/gitinitialisation/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>الأن و لقد قمنا بتشغيل أول تطبيق على رايلز, سوف نقوم بتسليط الضوء على جانب ثانوي في الحقيقة و لكن أساسي في نظر أغلب المطورين على رايلز أو على غيره من اللغات و الإطارات الأخرى ألا و هو إدارة الإصدارات.</p>
-
-<p>أنظمة إدارة الإصدارات تسمح لنا بتغيير الكود أو الملفات داخل التطبيقات, التقاسم مع مطورين أخرين مع الرجوع إلى الوراء في حالات الخطأ (كحذف ملف بالخطأ مثلا) أو مجرد الرجوع إلى مرحلة معينة. لهذا فإن تعلم التعامل مع أي نظام إدارة الإصدارات كفاءة أساسية يجب توفرها لدى كل متطور محترف.</p>
-
-<p>هناك خيارات عديدة من أجل إدارة الإصدارات و لكن المجتمع الرايلزي يفضل استعمال الGIT و الذي هو عبارة عن نظام إدارة الإصدارات طور في الأصل من طرف لينوس تروفالد (مصمم نواة اللينوكس) لإستقبال نواة اللينوكس. GIT عبارة عن موسوعة كبيرة و لا نستطيع تغطية كل جوانبه و لكننا سوف نقوم بسرد المهم منها لباقي الدروس و لكن بإمكانكم الإطلاع عليه بعمق إن أردتم من خلال الموارد الكثيرة المتواجدة على مستوى الويب و خاصة كتاب <a href="http://git-scm.com/book/ar">البروجيت</a> و الذي تُرجمت منه بعض الصفحات إلى اللغة العربية.</p>
-
-<p>عموما, وضع أي تطبيف (كود+ملفات) تحت إدارة الإصدارات GIT عملية ضرورية ليس لكونها مشهورة فحسب في عالم الرايلز و لكن لمنحها إمكانية تقاسم, تبادل و تشغيل الكود بطريقة سهلة جدا.</p>
-
-<p>في الدرس القادم إن شاء الله سنقوم بتثبيث و إعداد ال GIT من أجل حفظ التطبيق.</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/dtmdeblog/blog/page/3/">&larr; Older</a></li>
@@ -929,6 +964,10 @@
     <li class="nav-header">أخر التدوينات</li>
     
       <li class="post">
+        <a href="/dtmdeblog/blog/2013/06/10/regexp-ruby-p2/">التعابير النمطية و روبي - الجزء الثاني</a>
+      </li>
+    
+      <li class="post">
         <a href="/dtmdeblog/blog/2013/05/21/regexp-ruby/">التعابير النمطية و روبي - الجزء الأول</a>
       </li>
     
@@ -942,10 +981,6 @@
     
       <li class="post">
         <a href="/dtmdeblog/blog/2013/02/28/imporatenresourceforrails/">موارد مفيدة لكل مبرمجRails</a>
-      </li>
-    
-      <li class="post">
-        <a href="/dtmdeblog/blog/2013/02/22/git-and-github-vid3/">بالفيديو كيفية تقاسم المستودعات باستعمال الgithub</a>
       </li>
     
   </ul>

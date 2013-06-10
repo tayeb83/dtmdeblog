@@ -4,7 +4,7 @@
   <title><![CDATA[Category: النمطية | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/النمطية/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-05-21T23:21:53+02:00</updated>
+  <updated>2013-06-10T23:25:02+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,51 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[التعابير النمطية و روبي - الجزء الثاني]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/06/10/regexp-ruby-p2/"/>
+    <updated>2013-06-10T19:49:00+02:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/06/10/regexp-ruby-p2</id>
+    <content type="html"><![CDATA[<p>هذا المقال هو تكملة للمقال السابق الذي بدأته حول التعابير النمطية في روبي. في هذا المقال سأبدأ بتكملة الأمثلة التي بدأتها سابقا ثم أنتقل إلى طريقة البحث و الاستبدال.</p>
+
+<h2>تكملة  الأمثلة</h2>
+
+<h2>التكرار الجشع : </h2>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/regexp_ruby/repetition_gourmande.png" title="ruby_Regexp_gorumande"/></p>
+
+<h2>التجميع بواسطة الحاضنتين :</h2>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/regexp_ruby/group_parentese.png" title="ruby_Regexp_grouping"/></p>
+
+<h2>البدائل :</h2>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/regexp_ruby/replacement.png" title="ruby_Regexp_replacement"/></p>
+
+<h2>المراسي anchors :</h2>
+
+<p>المراسي عبارة عن أحرف أو بالأحرى رموز تساعد في حصر موقع التعبير النمطي :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/regexp_ruby/anchor.png" title="ruby_Regexp_anchor"/></p>
+
+<h2>البحث و الاستبدال :</h2>
+
+<p>من أهم الطرق أو العمليات الخاصة بالسلاسل في روبي العمليتين  sub و gsub. هاتين العمليتين تقومان بالبحث و الاستبدال على سلاسل الحروف باستعمال التعابير النمطية. أين sub تستبدل الحدوث الأول بينما gsub تستبدل كل الحوادث داخل السلسلة، لنأخذ أمثلة على ذلك :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/regexp_ruby/example_sub_gsub_1.png" title="ruby_Regexp_gsub1"/></p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/regexp_ruby/results_sub_gsub_1.png" title="ruby_Regexp_gsub1_result"/></p>
+
+<p>في المثال الأول النتيجة موضحة في الصورة المرفقة أين قمنا بحذف التعليقات بالsub  بينما قمنا بحذف كل مل هو حرف ماعدا  الأرقام بواسطة gsub.</p>
+
+<p>في المثال الثاني و بطريقتين مختلفتين باستعمال gsub فقط،  قمنابتكبير الحرف الأول من  كلمة tayeb إلى Tayeb.</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/regexp_ruby/example_sub_gsub_2.png" title="ruby_Regexp_gsub_2"/></p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/regexp_ruby/result_sub_gsub_2.png" title="ruby_Regexp_gsub2_result"/></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[التعابير النمطية و روبي - الجزء الأول]]></title>
