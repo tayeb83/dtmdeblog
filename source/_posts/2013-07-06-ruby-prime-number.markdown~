@@ -7,7 +7,7 @@ categories: روبي، الاعداد الاولية
 ---
 بعد مقالين حول التعابير النمطية، اليكم هذا التعبير النمطي القاتل.
  
-<img src="/images/rubyprimenumber/nombre premier ruby.png" title="rubyregexp.png"/>
+<img src="/images/rubyprimenumber/rubyregexp.png" title="rubyregexp.png"/>
 
 
 ماهي فائدته؟ الجواب في العنوان، أي أنه و إذا استعمل بطريقة سليمة سوف يساعد في تحديد ما إن كان العدد أولي أم لا.
