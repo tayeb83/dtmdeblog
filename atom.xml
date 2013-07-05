@@ -4,7 +4,7 @@
   <title><![CDATA[مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-06-10T23:25:02+02:00</updated>
+  <updated>2013-07-06T01:21:57+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[تعبير نمطي بروبي يساعدك في تحديد ما إذا كان أي عدد أولي أم لا]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/07/06/ruby-prime-number/"/>
+    <updated>2013-07-06T01:13:00+02:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/07/06/ruby-prime-number</id>
+    <content type="html"><![CDATA[<p>بعدمقالين حول التعابير النمطية، اليكم هذا التعبير النمطي القاتل.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/^1?$|^(11 ?)\1 $/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ماهي فائدته؟ الجواب في العنوان، أي أنه و إذا استعمل بطريقة سليمة سوف يساعد في تحديد ما إن كان العدد أولي أم لا.</p>
+
+<p>استعماله بطريقة سليمة يقتضي اجراء تعديل بسيط على العدد و هو تحويله إلى متتاليات من الرقم 1. مثال ذلك، 7 ستحول إلى 1111111.</p>
+
+<p>في روبي النتيجة كالتالي :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyprimenumber/nombre premier ruby.png" title="ruby_primer_number"/></p>
+
+<p>سحر الخوارزميات&#8230;</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[التعابير النمطية و روبي - الجزء الثاني]]></title>
@@ -856,91 +879,6 @@ apache سهل التثبيث خاصة على لينوكس يمكنكم استغ�
 <p>لم يتبقى الأن إلى تحميل التغيرات على الgithub من أجل رؤية النتائج كما توضح الصورة :</p>
 
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/READMEONGITHUB.png" title=" githubبعد تغييره على ال README الملف  "/></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ إدارة الإصدارات-تثبيث و إعداد ]]></title>
-    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2/"/>
-    <updated>2012-07-08T08:43:00+02:00</updated>
-    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2</id>
-    <content type="html"><![CDATA[<p>لتثبيث الGIT أنصحكم بتتبع الخطوات المشروحة بطريقة جيدة و مفصلة حسب نوع النظام على الرابط
- <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">http://git-scm.com/book/en/Getting-Started-Installing-Git</a>  , على سبيل المثال تثبيث الGIT على نظام الأبونتو يتم بالأمر التالي :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install git-core $</span></code></pre></td></tr></table></div></figure>
-
-
-<p>بعد تثبيث الGIT, تأتي المرحلة التالية و التي نقوم فيها بتهيئة الإعدادات و هي عبارة عن إعدادات خاصة بالنظام أي أنكم لن تنفذوها إلا مرة واحدة على نفس النظام :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git-config --global user.name "الإسم" $
-</span><span class='line'>git-config --global user.email "البريد الإلكتروني" $</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>تهيئة الإعدادات لل repository (المستودع)</h2>
-
-<p>تشمل هذه المرحلة مجموعة من العمليات الضرورية لتشكيل الrepository, و الذي هو عبارة عن &#8220;ملف أو نظام تحكم&#8221; تُوضع فيه الإصدارات الخاصة بالتطبيق :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git init $</span></code></pre></td></tr></table></div></figure>
-
-
-<p>بعدها يجب إضافة الملفات داخل الrepository, ولكن يكمن هنا مشكل بسيط و هو أن الGIT يتبع التغيرات التي تطرأ على كل الملفات حتى تلك التي لا نريد تتبعها, أخص بالذكر ملفات الlog على سبيل المثال وذلك أن هذه الملفات تتغير بكثرة و لسنا بحاجة لأن يقوم نظام إدارة الإصدارات بتتبع تغيراتها. لحسن الحظ فإن الGIT لديه القدرة على تجاهل مثل هذه الملفات و ذلك بالطريقة التالية :
-نضف إلى الملف الرئيسي للتطبيق ملف إسمه gitignore. و الذي سوف يحتوي على بعض القواعد تحدد لGIT الملفات التي يجب تجاهلها, اﻵن لو عدنا إلى الدرس   <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/06/25/first-application-rails">أول تطبيق برايلز</a>  فسوف تلاحظون أن رايلز قام بإنشاء ملف gitignore. داخل الملف الرئيسي مثل ما توضحه الصورة :</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/gitginoreinapplication.png" title="ملف gitignore. داخل الملف الرئيسي"/></p>
-
-<p>اﻵن لو فتحنا gitignore. فسوف تلاحظون أن الملف يحتوي على مجموعة من القواعد تجبر الGIT على تجاهل التغيرات التي تطرأ على ملفات الlog, الملفات المؤقتة و قاعدة البيانات sqllite.</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/gitigorefile.png" title=" محتوى ملف gitignore."/></p>
-
-<h2>الإضافة و الحفظ</h2>
-
-<p>و أخير وصلنا إلى المرحلة التي سوف نقوم من خلالها إضافة ملفات التطبيق إلى الGIT ثم حفظها (commit), يمكنكم إضافة كل الملفات (ماعدا التي تمت تجاهلها) بالطريقة التالية :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>. git add  $</span></code></pre></td></tr></table></div></figure>
-
-
-<p>النقطة (.) هنا تمثل الملف الجاري و الGIT ذكي بما فيه الكفاية لكي يقوم بإضافة كل الملفات بطريقة الإستدعاء الذاتي. هذه العملية تقوم بإضافة الملفات إلى &#8220;ساحة التخزين&#8221; (staging area) و التي تحتوي على التغيرات المؤقتة على المشروع. يمكنكم رؤيتها عن طريق تنفيذ الأمر &#8220;git status&#8221;  كما هو موضح في الصورة :</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/gitstatus.png"/></p>
-
-<p>اﻵن إذا أردتم حفظ هذه التغيرات و تأكيدها فيجب إستعمال الأمر &#8220;commit -m&#8221; بحيث أن الخاصية &#8220;m-&#8221; تسمح لكم بإضافة تعليق يوضح مثلا سبب التغيير.</p>
-
-<h2>ماذا يستطيع الGIT القيام به من أجل مساعدتكم</h2>
-
-<p>بعد كل ما قمنا به في هذا الدرس أعتقد أن الفائدة من إستعمال الGIT لم تظهر بعد, لهذا دعونا نقوم بعمل تطبيقي يوضح لنا الأمور أكثر. أول شيء سوف نقوم به هو تدمير الملف app/controllers, عملية يمكن أن يقوم بها أي مطور بطريق الخطأ.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>cd first_app/ $
-</span><span class='line'> rm -rf app/controllers $</span></code></pre></td></tr></table></div></figure>
-
-
-<p>لمعرفة ما حصل سوف نفوم بإرسال الأمر &#8220;git status&#8221;.</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/gitstatusrmrfcontrollers.png"/></p>
-
-<p>الصورة توضح التغيرات التي حصلت ولكن ما يجب معرفته أن هذه التغيرات لم تحفظ بعد على الGIT و بالتالي فإن بإمكاننا إلغاءها بطريقة سهلة و ربط الGIT مع الإصدار اﻷخير عن طريق تنفيذ اﻷمر  &#8220;git chekout -f&#8221;.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -f $
-</span><span class='line'>git status $
-</span><span class='line'># On branch master
-</span><span class='line'>nothing to commit (working directory clean)
-</span><span class='line'>ls app/controllers/ $
-</span><span class='line'>application_controller.rb</span></code></pre></td></tr></table></div></figure>
-
-
-<p>الحمد لله الملف المحذوف عاد مجددا.</p>
 ]]></content>
   </entry>
   

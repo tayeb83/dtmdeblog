@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: الاعداد | مدونة الطيب الضادي]]></title>
+  <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/الاعداد/atom.xml" rel="self"/>
+  <link href="http://tayeb83.github.com/dtmdeblog/"/>
+  <updated>2013-07-06T01:21:57+02:00</updated>
+  <id>http://tayeb83.github.com/dtmdeblog/</id>
+  <author>
+    <name><![CDATA[طيب مرابطي]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[تعبير نمطي بروبي يساعدك في تحديد ما إذا كان أي عدد أولي أم لا]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/07/06/ruby-prime-number/"/>
+    <updated>2013-07-06T01:13:00+02:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/07/06/ruby-prime-number</id>
+    <content type="html"><![CDATA[<p>بعدمقالين حول التعابير النمطية، اليكم هذا التعبير النمطي القاتل.
+<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/&lt;sup>1?$|&lt;sup>(11&lt;/sup>&lt;/sup> ?)\1 $/</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>ماهي فائدته؟ الجواب في العنوان، أي أنه و إذا استعمل بطريقة سليمة سوف يساعد في تحديد ما إن كان العدد أولي أم لا.</p>
+
+<p>استعماله بطريقة سليمة يقتضي اجراء تعديل بسيط على العدد و هو تحويله إلى متتاليات من الرقم 1. مثال ذلك، 7 ستحول إلى 1111111.</p>
+
+<p>في روبي النتيجة كالتالي :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyprimenumber/nombre premier ruby.png" title="ruby_primer_number"/></p>
+
+<p>سحر الخوارزميات...</p>
+]]></content>
+  </entry>
+  
+</feed>
