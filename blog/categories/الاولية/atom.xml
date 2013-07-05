@@ -4,7 +4,7 @@
   <title><![CDATA[Category: الاولية | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/الاولية/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-07-06T01:35:20+02:00</updated>
+  <updated>2013-07-06T01:37:47+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -20,7 +20,7 @@
     <id>http://tayeb83.github.com/dtmdeblog/blog/2013/07/06/ruby-prime-number</id>
     <content type="html"><![CDATA[<p>بعد مقالين حول التعابير النمطية، اليكم هذا التعبير النمطي القاتل.</p>
 
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyprimenumber/nombre premier ruby.png" title="rubyregexp.png"/></p>
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyprimenumber/rubyregexp.png" title="rubyregexp.png"/></p>
 
 <p>ماهي فائدته؟ الجواب في العنوان، أي أنه و إذا استعمل بطريقة سليمة سوف يساعد في تحديد ما إن كان العدد أولي أم لا.</p>
 
