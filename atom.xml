@@ -4,7 +4,7 @@
   <title><![CDATA[مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-07-06T01:21:57+02:00</updated>
+  <updated>2013-07-06T01:26:50+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -20,9 +20,7 @@
     <id>http://tayeb83.github.com/dtmdeblog/blog/2013/07/06/ruby-prime-number</id>
     <content type="html"><![CDATA[<p>بعدمقالين حول التعابير النمطية، اليكم هذا التعبير النمطي القاتل.</p>
 
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>/^1?$|^(11 ?)\1 $/</span></code></pre></td></tr></table></div></figure>
-
+<p>/<sup>1?$|<sup>(11</sup></sup> ?)\1 $/</p>
 
 <p>ماهي فائدته؟ الجواب في العنوان، أي أنه و إذا استعمل بطريقة سليمة سوف يساعد في تحديد ما إن كان العدد أولي أم لا.</p>
 
