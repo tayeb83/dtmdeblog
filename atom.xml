@@ -4,7 +4,7 @@
   <title><![CDATA[مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-07-06T01:41:33+02:00</updated>
+  <updated>2013-07-06T08:46:59+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[تعبير نمطي بروبي يساعدك في تحديد ما إذا كان أي عدد أولي أم لا]]></title>
+    <title type="html"><![CDATA[تعبير نمطي بروبي يساعدك في معرفة ما إذا كان أي عدد أولي أم لا]]></title>
     <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/07/06/ruby-prime-number/"/>
     <updated>2013-07-06T01:13:00+02:00</updated>
     <id>http://tayeb83.github.com/dtmdeblog/blog/2013/07/06/ruby-prime-number</id>
@@ -22,7 +22,7 @@
 
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyprimenumber/rubyregexp.png" title="ruby regexp"/></p>
 
-<p>ماهي فائدته؟ الجواب في العنوان، أي أنه و إذا استعمل بطريقة سليمة سوف يساعد في تحديد ما إن كان العدد أولي أم لا.</p>
+<p>ماهي فائدته؟ الجواب في العنوان، أي أنه و إذا استعمل بطريقة سليمة سوف يساعد في معرفة ما إن كان العدد أولي أم لا.</p>
 
 <p>استعماله بطريقة سليمة يقتضي اجراء تعديل بسيط على العدد و هو تحويله إلى متتاليات من الرقم 1. مثال ذلك، 7 ستحول إلى 1111111.</p>
 
