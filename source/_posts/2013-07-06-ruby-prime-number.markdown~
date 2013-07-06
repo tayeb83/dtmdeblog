@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "تعبير نمطي بروبي يساعدك في تحديد ما إذا كان أي عدد أولي أم لا"
+title: "تعبير نمطي بروبي يساعدك في معرفة ما إذا كان أي عدد أولي أم لا"
 date: 2013-07-06 01:13
 comments: true
 categories: روبي، الاعداد الاولية
 ---
 بعد مقالين حول التعابير النمطية، اليكم هذا التعبير النمطي القاتل.
  
-<img src="/images/rubyprimenumber/rubyregexp.png" title="rubyregexp.png"/>
+<img src="/images/rubyprimenumber/rubyregexp.png" title="ruby regexp"/>
 
 
 ماهي فائدته؟ الجواب في العنوان، أي أنه و إذا استعمل بطريقة سليمة سوف يساعد في تحديد ما إن كان العدد أولي أم لا.
