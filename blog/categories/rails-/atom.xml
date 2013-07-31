@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/rails-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-07-31T17:46:14+02:00</updated>
+  <updated>2013-07-31T20:59:35+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -29,7 +29,7 @@
 <p>يمكنكم تثبيث هذا الجيم بالطريقة المعتمدة في تثبيث الجيمات في روبي و ذلك بارسال الأمر التالي :</p>
 
 <p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem insall zeus</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem install zeus</span></code></pre></td></tr></table></div></figure></notextile></div></p>
 
 <h2>تفعيل zeus :</h2>
 
