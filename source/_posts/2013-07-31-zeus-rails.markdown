@@ -19,7 +19,7 @@ zeus عبارة عن gem يساعد بعد تثبيثه في تسريع تنفي
 
 
 {% codeblock %}
- $ gem insall zeus
+ $ gem install zeus
 {% endcodeblock %}
 
 تفعيل zeus :
