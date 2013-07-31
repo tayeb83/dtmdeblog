@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>تسريع التعامل مع أوامر rails - مدونة الطيب الضادي</title>
+  <meta name="author" content="طيب مرابطي">
+
+  
+  <meta name="description" content="المتعامل مع رايلز لاحظ بطأ ارسال الأوامر و أخذها و قت كبير للتنفيذ، للآسف هذه الوضعية تصعب من مهمة المبرمج و تعطل عجلة الإنتاجية و روح العمل لديه. &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://tayeb83.github.com/dtmdeblog/blog/2013/07/31/zeus-rails">
+  <link href="/dtmdeblog/favicon.png" rel="icon">
+  <link href="/dtmdeblog/stylesheets/bootstrap/bootstrap.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/dtmdeblog/stylesheets/bootstrap/responsive.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/dtmdeblog/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <style type="text/css">
+    body {
+      padding-bottom: 40px;
+    }
+    h1 {
+      margin-bottom: 15px;
+    }
+    img {
+      max-width: 100%;
+    }
+    .sharing, .meta, .pager {
+      margin: 20px 0px 20px 0px;
+    }
+    .page-footer p {
+      text-align: center;
+    }
+  </style>
+  <script src="/dtmdeblog/javascripts/libs/jquery.js"></script>
+  <script src="/dtmdeblog/javascripts/libs/modernizr-2.0.js"></script>
+  <script src="/dtmdeblog/javascripts/libs/bootstrap.js"></script>
+  <script src="/dtmdeblog/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/dtmdeblog/atom.xml" rel="alternate" title="مدونة الطيب الضادي" type="application/atom+xml">
+  
+  
+
+</head>
+
+<body    style="direction: rtl">
+  <nav role="navigation"><div class="navbar">
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+
+     
+
+      <div class="nav-collapse">
+         
+        <ul class="nav pull-right">
+  <li><a href="/dtmdeblog/blog/archives">الأرشيف</a></li>
+  <li><a href="/dtmdeblog/">المدونة</a></li>
+  <li><a href="/dtmdeblog/about">من أنا؟</a></li>
+  <a href="/dtmdeblog/"><img src="/dtmdeblog/images/lowres.jpg"></a>
+
+</ul>
+
+
+        <ul class="nav pull-right" data-subscription="rss email">
+          <li><a href="/dtmdeblog/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+          
+            <li><a href="tayeb.merabti@gmail.com" rel="subscribe-email" title="subscribe via email">Email</a></li>
+          
+        </ul>
+
+        
+          <form class="pull-right navbar-search" action="http://google.com/search" method="get">
+            <fieldset role="search">
+              <input type="hidden" name="q" value="site:tayeb83.github.com/dtmdeblog" />
+              <input class="search-query" type="text" name="q" results="0" placeholder="ابحث"/>
+            </fieldset>
+          </form>
+        
+      </div>
+     
+    </div>
+  </div>
+</div>
+</nav>
+  <div class="container">
+    <div class="row-fluid">
+      
+<article class="hentry span9" role="article">
+
+  
+  <header class="page-header">
+    
+      <h1 class="entry-title">تسريع التعامل مع أوامر Rails</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-31T16:56:00+02:00" pubdate data-updated="true">Jul 31<span>st</span>, 2013</time>
+        
+         | <a href="#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>المتعامل مع رايلز لاحظ بطأ ارسال الأوامر و أخذها و قت كبير للتنفيذ، للآسف هذه الوضعية تصعب من مهمة  المبرمج و تعطل عجلة الإنتاجية و روح العمل لديه.</p>
+
+<p>هذا المشكل اشتكى منه الكثير من المطورين على مستوى منصة العمل، مما عجل بظهور بعض الجيمات لعل أبرزها zeus و الذي سأقوم بشرحه في هذا المقال بايجاز.</p>
+
+<p>zeus عبارة عن gem يساعد بعد تثبيثه في تسريع تنفيذ الأوامر داخل rails.</p>
+
+<h2>تثبيث zeus :</h2>
+
+<p>يمكنكم تثبيث هذا الجيم بالطريقة المعتمدة في تثبيث الجيمات في روبي و ذلك بارسال الأمر التالي :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ gem insall zeus</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>تفعيل zeus :</h2>
+
+<p>لتفعيل الجيم و العمل به ما يجب القيام به هو الدخول في ملف مشروعكم rails و ارسال الأمر التالي :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ zeus start</span></code></pre></td></tr></table></div></figure>
+
+
+<p>هذا الأمر سيرسل أوامر أخرى يسعى من خلالها الجيم إلى تحميل المشروع حتى يمكننا إرسال الأوامر رايلز المعروفة من خلاله، و هذا كما توضحه  الصورة، للإشارة إلى أن اللون الأخضر يشير إلى كل الأوامر التي يمكننا ارسالهابواسطة الجيم. مع العلم أنه عند إرسال الأمر يتغير لون الأوامر من البرتقالي إلى الأخضر حسب سرعة تحميل المشروع من الجيم.</p>
+
+<p><img src="/dtmdeblog/images/zeusgem/zeus_start.png" title="zeus starting"/></p>
+
+<p>بعدها لم يبقى إلى ارسال الأوامر الكلاسيكية لرايلز مسبقة بكلمة zeus كما هو موضح في الصور :</p>
+
+<p><img src="/dtmdeblog/images/zeusgem/zeus_server.png" title="zeus server"/></p>
+
+<p><img src="/dtmdeblog/images/zeusgem/zeus_console.png" title="zeus console"/></p>
+
+<p>لحد الآن الأمور عادية و لكن الفرق كبير بين سرعة ارسال الأوامر بالطريقة العادية وباستعمال هذا الجيم. و الدليل هي هذه المقارنة البسيطة بين سرعة تنفيذ الأوامر بدون و باستعمال الجيم zeus، فإذا أرسلنا مثلا الأمر :</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ rails console</span></code></pre></td></tr></table></div></figure>
+
+
+<p>فالوقت الذي تستغرقه موضح في الصورة :</p>
+
+<p><img src="/dtmdeblog/images/zeusgem/time_rails_c.png" title="rails console time"/></p>
+
+<p>و هو وقت كبير مقارنة بالأمر المرسل بواسطة الجيم zeus كما هو موضح في الصورة :</p>
+
+<p><img src="/dtmdeblog/images/zeusgem/zeus_time_console.png" title="zeus console time"/></p>
+
+<p>تقبل الله صيامكم و قيامكم&#8230;.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">طيب مرابطي</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-07-31T16:56:00+02:00" pubdate data-updated="true">Jul 31<span>st</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/dtmdeblog/blog/categories/on/'>on</a>, <a class='category' href='/dtmdeblog/blog/categories/rails-/'>rails,</a>, <a class='category' href='/dtmdeblog/blog/categories/ruby/'>ruby</a>, <a class='category' href='/dtmdeblog/blog/categories/zeus/'>zeus</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://tayeb83.github.com/dtmdeblog/blog/2013/07/31/zeus-rails/" data-via="dtmdeblog" data-counturl="http://tayeb83.github.com/dtmdeblog/blog/2013/07/31/zeus-rails/" >Tweet</a>
+  
+  
+  <div class="g-plusone" data-size="medium"></div>
+  
+  
+</div>
+
+    
+    
+    <section>
+      <h1>التعليقات</h1>
+      <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+    <ul class="pager">
+      
+      <li class="previous"><a class="basic-alignment left"
+        href="/dtmdeblog/blog/2013/07/06/ruby-prime-number/" title="Previous Post:
+        تعبير نمطي بروبي يساعدك في معرفة ما إذا كان أي عدد أولي أم لا">&laquo; تعبير نمطي بروبي يساعدك في معرفة ما إذا كان أي عدد أولي أم لا</a></li>
+      
+      <li><a href="/dtmdeblog/blog/archives">أرشيف المدونات</a></li>
+      
+    </ul>
+  </footer>
+</article>
+
+<aside class="sidebar-nav span3">
+  
+    <section class="well">
+  <ul id="recent_posts" class="nav nav-list">
+    <li class="nav-header">أخر التدوينات</li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2013/07/31/zeus-rails/">تسريع التعامل مع أوامر rails</a>
+      </li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2013/07/06/ruby-prime-number/">تعبير نمطي بروبي يساعدك في معرفة ما إذا كان أي عدد أولي أم لا</a>
+      </li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2013/06/10/regexp-ruby-p2/">التعابير النمطية و روبي - الجزء الثاني</a>
+      </li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2013/05/21/regexp-ruby/">التعابير النمطية و روبي - الجزء الأول</a>
+      </li>
+    
+      <li class="post">
+        <a href="/dtmdeblog/blog/2013/05/08/intro-ruby/">مدخل إلى روبي</a>
+      </li>
+    
+  </ul>
+</section>
+
+
+<section class="well">
+  <ul id="tweets" class="nav">
+    <li class="nav-header">أخر التغريدات</li>
+    <li class="loading">تحديث ...</li>
+  </ul>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      getTwitterFeed("dtmdeblog", 4, false);
+    });
+  </script>
+  <script src="/dtmdeblog/javascripts/asides/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/dtmdeblog" class="twitter-follow-button" data-show-count="false">تابع @dtmdeblog</a>
+  
+</section>
+
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/101099896157910648102?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo" class="page-footer"><hr>
+<p>
+  جميع الحقوق محفوظة &copy; 2013 - طيب مرابطي -
+  <span class="credit">انجز باستعمال <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'dtmdeblog';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://tayeb83.github.com/dtmdeblog/blog/2013/07/31/zeus-rails/';
+        var disqus_url = 'http://tayeb83.github.com/dtmdeblog/blog/2013/07/31/zeus-rails/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function() {
+      var script = document.createElement('script'); script.type = 'text/javascript'; script.async = true;
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
+    })();
+  </script>
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
