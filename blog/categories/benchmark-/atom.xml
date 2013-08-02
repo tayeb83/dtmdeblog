@@ -4,7 +4,7 @@
   <title><![CDATA[Category: benchmark, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/benchmark-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-08-02T13:30:20+02:00</updated>
+  <updated>2013-08-02T20:35:03+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[تطبيق عملي لقياس سرعةالكود بروبي]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/08/02/benchmarking-profiling-ruby-example/"/>
+    <updated>2013-08-02T19:56:00+02:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/08/02/benchmarking-profiling-ruby-example</id>
+    <content type="html"><![CDATA[<p>في هذا المقال و كتطبيق وتتمة للمقال السابق سنقوم بدراسة بسيطة نقوم من خلالهابمقارنة أسرع خوارزمية لحساب متتالية fibonacci المعروفة.</p>
+
+<p>في المثال سنستعمل طريقتين لحساب المتتالية و نقوم  بمقارنة الأسرع بينهما من خلال تطبيق ما شرحناه في المقال السابق حول الbenchmarking.</p>
+
+<p>متتالية فيبوناتشي أو أعداد فيبوناتشي في الرياضيات هي الأرقام التي تكون في المتتالية التالية:</p>
+
+<p>0,1,1,2,3,5,8,13,21...</p>
+
+<p>و التي تحسب يالطريقة  التالية :</p>
+
+<p>Fn=Fn-1 + Fn-2</p>
+
+<p>مع القيم الناتجة منها : F0=1 و F1=1</p>
+
+<p>في المثال سنقوم بعرض طريقتين :  الأولى باستعمال المقارنة العادية  و الثانية باستعمال include كما هو موضح  في الصورة.
+<img src="http://tayeb83.github.com/dtmdeblog/images/rubyBenchmark/fibonacci_algorithm.png" title="fibonacci_algorithm"/></p>
+
+<p>لمقارنة و لقياس السرعة  سنقوم باستعمال المقياس benchmark الذي شرحناه سابقا كما هو موضح  في الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyBenchmark/benchmark_fibonacci.png" title="benchmark_fibonacci"/></p>
+
+<p>للقياس سنقوم  بتغيير n من خلال أخذ ثلاث قيم مختلفة : 15, 25, 35. النتيجة موضحة في الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyBenchmark/benchmark_fibonacci_result.png" title="benchmark_fibonacci_result"/></p>
+
+<p>النتيجة توضح أن وبعد ما يكون n أكبر من 25 نلاحظ تباين في سرعة تنفيذ المتتالية بين الطريقتين بحيث أن الطريقة التي تستعمل الinclude تأخد أكبر وقت من الطريقة التي تستعمل طريقة المقارنة البديهية.</p>
+
+<p>أتمنى بهذا التطبيق أنه تكونت لديكم فكرة أكثر وضوحا حول استعمال الbenchmarking بروبي.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[قياس و اختبار سرعة الكود بروبي]]></title>

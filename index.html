@@ -9,7 +9,7 @@
   <meta name="author" content="طيب مرابطي">
 
   
-  <meta name="description" content="في البرمجة بعد تصحيح كل الأخطاء و التأكد من عمل الكود من الطبيعي أن نفكر بعدها أن الكود جاهز للعمل؛ و لكن عمليا الكود و في كثير من الأحيان يشتغل ببطأ &hellip;">
+  <meta name="description" content="في هذا المقال و كتطبيق وتتمة للمقال السابق سنقوم بدراسة بسيطة نقوم من خلالهابمقارنة أسرع خوارزمية لحساب متتالية fibonacci المعروفة. في المثال سنستعمل &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,71 @@
     <div class="row-fluid">
       <div class="span9">
   
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/dtmdeblog/blog/2013/08/02/benchmarking-profiling-ruby-example/">تطبيق عملي لقياس سرعةالكود بروبي</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-08-02T19:56:00+02:00" pubdate data-updated="true">Aug 2<span>nd</span>, 2013</time>
+        
+         | <a href="/dtmdeblog/blog/2013/08/02/benchmarking-profiling-ruby-example/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>في هذا المقال و كتطبيق وتتمة للمقال السابق سنقوم بدراسة بسيطة نقوم من خلالهابمقارنة أسرع خوارزمية لحساب متتالية fibonacci المعروفة.</p>
+
+<p>في المثال سنستعمل طريقتين لحساب المتتالية و نقوم  بمقارنة الأسرع بينهما من خلال تطبيق ما شرحناه في المقال السابق حول الbenchmarking.</p>
+
+<p>متتالية فيبوناتشي أو أعداد فيبوناتشي في الرياضيات هي الأرقام التي تكون في المتتالية التالية:</p>
+
+<p>0,1,1,2,3,5,8,13,21&#8230;</p>
+
+<p>و التي تحسب يالطريقة  التالية :</p>
+
+<p>Fn=Fn-1 + Fn-2</p>
+
+<p>مع القيم الناتجة منها : F0=1 و F1=1</p>
+
+<p>في المثال سنقوم بعرض طريقتين :  الأولى باستعمال المقارنة العادية  و الثانية باستعمال include كما هو موضح  في الصورة.
+<img src="/dtmdeblog/images/rubyBenchmark/fibonacci_algorithm.png" title="fibonacci_algorithm"/></p>
+
+<p>لمقارنة و لقياس السرعة  سنقوم باستعمال المقياس benchmark الذي شرحناه سابقا كما هو موضح  في الصورة :</p>
+
+<p><img src="/dtmdeblog/images/rubyBenchmark/benchmark_fibonacci.png" title="benchmark_fibonacci"/></p>
+
+<p>للقياس سنقوم  بتغيير n من خلال أخذ ثلاث قيم مختلفة : 15, 25, 35. النتيجة موضحة في الصورة :</p>
+
+<p><img src="/dtmdeblog/images/rubyBenchmark/benchmark_fibonacci_result.png" title="benchmark_fibonacci_result"/></p>
+
+<p>النتيجة توضح أن وبعد ما يكون n أكبر من 25 نلاحظ تباين في سرعة تنفيذ المتتالية بين الطريقتين بحيث أن الطريقة التي تستعمل الinclude تأخد أكبر وقت من الطريقة التي تستعمل طريقة المقارنة البديهية.</p>
+
+<p>أتمنى بهذا التطبيق أنه تكونت لديكم فكرة أكثر وضوحا حول استعمال الbenchmarking بروبي.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -737,53 +802,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/dtmdeblog/blog/2013/02/22/git-and-github-vid3/">بالفيديو كيفية تقاسم المستودعات باستعمال الgithub</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2013-02-22T23:02:00+01:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2013</time>
-        
-         | <a href="/dtmdeblog/blog/2013/02/22/git-and-github-vid3/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p> هذا المقال عبارة  عن تكملة لما بدأته مسبقا حول الgit بالفيديو. الدرس الثالث يشرح  لكم كيفية  تقاسم المستودعات باستعمال خدمة الgithub.</p>
-
-<p>أتمنى أن الدرس سيفيدكم و أنا في الخدمة من أجل مناقشة الدرس أو تحسينه في المستقبل.</p>
-
-<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/rIZZ2YZdZew "></iframe></div>
-
-
-<p>و ملف الدرس قمت بتقاسمه في هذا الرابط</p>
-
-<p><a href="http://fr.slideshare.net/tayebmerabti/github-16704980">ملف الدرس </a></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/dtmdeblog/blog/page/2/">&larr; Older</a></li>
@@ -799,6 +817,10 @@
     <li class="nav-header">أخر التدوينات</li>
     
       <li class="post">
+        <a href="/dtmdeblog/blog/2013/08/02/benchmarking-profiling-ruby-example/">تطبيق عملي لقياس سرعةالكود بروبي</a>
+      </li>
+    
+      <li class="post">
         <a href="/dtmdeblog/blog/2013/08/02/benchmarking-profiling-ruby/">قياس و اختبار سرعة الكود بروبي</a>
       </li>
     
@@ -812,10 +834,6 @@
     
       <li class="post">
         <a href="/dtmdeblog/blog/2013/07/06/ruby-prime-number/">تعبير نمطي بروبي يساعدك في معرفة ما إذا كان أي عدد أولي أم لا</a>
-      </li>
-    
-      <li class="post">
-        <a href="/dtmdeblog/blog/2013/06/10/regexp-ruby-p2/">التعابير النمطية و روبي - الجزء الثاني</a>
       </li>
     
   </ul>

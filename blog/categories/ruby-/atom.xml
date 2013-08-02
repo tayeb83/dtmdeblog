@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/ruby-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-08-02T13:30:20+02:00</updated>
+  <updated>2013-08-02T20:35:03+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[تطبيق عملي لقياس سرعةالكود بروبي]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/08/02/benchmarking-profiling-ruby-example/"/>
+    <updated>2013-08-02T19:56:00+02:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/08/02/benchmarking-profiling-ruby-example</id>
+    <content type="html"><![CDATA[<p>في هذا المقال و كتطبيق وتتمة للمقال السابق سنقوم بدراسة بسيطة نقوم من خلالهابمقارنة أسرع خوارزمية لحساب متتالية fibonacci المعروفة.</p>
+
+<p>في المثال سنستعمل طريقتين لحساب المتتالية و نقوم  بمقارنة الأسرع بينهما من خلال تطبيق ما شرحناه في المقال السابق حول الbenchmarking.</p>
+
+<p>متتالية فيبوناتشي أو أعداد فيبوناتشي في الرياضيات هي الأرقام التي تكون في المتتالية التالية:</p>
+
+<p>0,1,1,2,3,5,8,13,21...</p>
+
+<p>و التي تحسب يالطريقة  التالية :</p>
+
+<p>Fn=Fn-1 + Fn-2</p>
+
+<p>مع القيم الناتجة منها : F0=1 و F1=1</p>
+
+<p>في المثال سنقوم بعرض طريقتين :  الأولى باستعمال المقارنة العادية  و الثانية باستعمال include كما هو موضح  في الصورة.
+<img src="http://tayeb83.github.com/dtmdeblog/images/rubyBenchmark/fibonacci_algorithm.png" title="fibonacci_algorithm"/></p>
+
+<p>لمقارنة و لقياس السرعة  سنقوم باستعمال المقياس benchmark الذي شرحناه سابقا كما هو موضح  في الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyBenchmark/benchmark_fibonacci.png" title="benchmark_fibonacci"/></p>
+
+<p>للقياس سنقوم  بتغيير n من خلال أخذ ثلاث قيم مختلفة : 15, 25, 35. النتيجة موضحة في الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyBenchmark/benchmark_fibonacci_result.png" title="benchmark_fibonacci_result"/></p>
+
+<p>النتيجة توضح أن وبعد ما يكون n أكبر من 25 نلاحظ تباين في سرعة تنفيذ المتتالية بين الطريقتين بحيث أن الطريقة التي تستعمل الinclude تأخد أكبر وقت من الطريقة التي تستعمل طريقة المقارنة البديهية.</p>
+
+<p>أتمنى بهذا التطبيق أنه تكونت لديكم فكرة أكثر وضوحا حول استعمال الbenchmarking بروبي.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[قياس و اختبار سرعة الكود بروبي]]></title>
@@ -240,73 +276,6 @@
 <li><a href="https://www.ruby-toolbox.com">https://www.ruby-toolbox.com</a></li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[من البداية]]></title>
-    <link href="http://tayeb83.github.com/dtmdeblog/blog/2012/12/10/staticpageinrails/"/>
-    <updated>2012-12-10T23:09:00+01:00</updated>
-    <id>http://tayeb83.github.com/dtmdeblog/blog/2012/12/10/staticpageinrails</id>
-    <content type="html"><![CDATA[<p>بعد غياب طويل نظرا لإنشغالاتي الكثيرة, أعود إليكم لمواصلة دروسنا الرايلزية. في هذا الدرس سوف نبدأ بمشروع جديد أحاول من خلاله شرح أهم ما يمكن معرفته لإنجاح أول مشروع ب ROR.
-رغم أن الهدف من  روبي رايلز هو تصميم مواقع و تطبيقات ويب ديناميكية فإن رايلز بارع في إنشاء صفحات ويب ساكنة. إستعمال ROR لتصميم مواقع ويب ساكنة له فوائد كثيرة بحيث أنه يمكننا إضافة و لو قليلا بعض الكود ديناميكي.
-في البداية و كما أوضحناه في درس سابق نقوم بإنشاء أول مشروع رايلز نسميه testproject كالتالي :</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails new testproject $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/railsNewTestproject.png" title="إنشاء مشروع على رايلز"/></p>
-
-<p>يمكن التنويه أنه في الإصدارات السابقة لرايلز كان لابد القيام بالأمر bundle install بعد إنشاء المشروع و لكن مع rails 3.2 أصبحت هذه الخطوة آلية عند المشروع, نُذكر أن الهدف من هذه الخطوة هو تثبيث الجيمات التي يحتاجها المشروع.</p>
-
-<h2>  الصفحات الساكنة</h2>
-
-<p>رايلز يقترح  طريقتين لإنشاء صفحات ويب ساكنة, الأولى بإستعمال صفحات ويب تحتوي على مجرد  الكود HTML, و الثانية, رايلز يتيح لنا تطوير واجهات (views) تحتوي على الHTML و التي يقوم رايلز بتحويلها إلى خادم الشبكة (web server).</p>
-
-<h2>الصفحات الساكنة الفعلية</h2>
-
-<p>لاحظتم أنه عند تشغيل مشروع رايلز للمرة الأولى ظهور صفحة بداية إفتراضية عند الذهاب إلى الرابط : http://localhost:3000
-<img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/testprojectfirstpage.png" title=" صفحة البداية على رايلز"/></p>
-
-<p>لمعرفة مصدر الصفحة يجب النظر إلى الملف public/index.html و الذي قام رايلز بإنشاءه بشكل إفتراضي, المهم أن رايلز يُرسل أي ملف في الpublic مباشرة على المتصفح, في حالة الملف
- الخاص index.html فإننا لن نحتاج لكتابة الإسم على الرابط لأن الإسم index.html يُعتبر ملف إفتراضي لصفحة البداية. إذن إذا فهمتم هذه الفقرة فإنه بإمكانكم الآن إنشاء صفحاتكم الخاصة ووضعها في الملف public, على سبيل المثال يمكننا إنشاء صفحة تحتوي على كلمة ترحيب.
-<div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>gedit public/marhaba.html $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/marhabaContent.png" title="marhaba.html محتوى"/></p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/marhabaPage.png" title=" إظهار الصفحة الترحيبية على السرفير"/></p>
-
-<h2>الصفحات الساكنة الرايلزية </h2>
-
-<p>القدرة على التعامل مع صفحات الHTML الساكنة ضروري ولكنه غير كافي بالدرجة الأولى خاصة من أجل إنشاء تطبيقات ديناميكية. في هذه الفقرة سوف نقوم بخطوة مهمة تسمح لنا بإنشاء صفحات ديناميكية و ذلك بإنشاء مانسميه مجموعة من "الأفعال" أو actions بحيث نستطيع من خلالهم تعريف الروابط بطريقة أقوى من الصفحات الساكنة. رايلز يتوفر على محرك يسمح بإنشاء وحدات التحكم "controller" إسمه "generate", كل ما يلزمه لذلك هو إسم وحدة التحكم. في مثالنا سوف نقوم بإنشاء وحدة التحكم من أجل صفحاتنا الساكنة و التي سنسميها safahates. والتي سوف تحتوي على "الأفعال" التي سوف تمثل صفحاتنا الساكنة مثل صفحة "البداية","الإتصال" أو صفحة "من نحن", و منه فإن السكريبت generate سوف يأخذ لائحة من الأفعال لإنشاء صفحاتنا.</p>
-
-<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails generate controller Safahates contact home $</span></code></pre></td></tr></table></div></figure></notextile></div></p>
-
-<p>مع إنشاء الفعلين home و contact فإن التوجيه نحو هاذين الفعلين قد تمت إضافته بطريقة آلية داخل الملف config/routes.rb.
-<img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/railsGenerateController.png" title="generate تسلسل الملفات التي أنشأت عن بواسطة السكريبت "/></p>
-
-<p>لو أليقنا نظرة على الملف config/routes.rb سنلاحظ مثلا وجود العلاقة "get safahates/home", هذه العلاقة تتكفل بالأمر الموافق للرابط safahates/home لصفحة البداية, أكثر من ذلك, فإنه بإستعمالنا  لget فإن تطبيقنا يجيب على الأمر get و الذي هو عبارة عن واحد من الأفعال الأساسية للHTTP المستعملة من طرف HyperText Transfer Protocol. يمكنكم الآن مشاهدة النتيجة بإرسال اﻷمر rails server و تشغيل الرابط safahates/home. الآن لمعرفة منبع هذه الصفحات, يجب الذهاب إلى وحدة التحكم التي قمنا بإنشائها, سوف تلاحظون أن الملف safahates_controller يُعرف فئة تُسمى SahafatesController. الفئات هم عبارة عن طريقة سهلة و مرنة لترتيب الأفعال "الطرق" مثل الأفعال home  أو contact و التي تم تعريفها عن طريق الكلمة المفتاحية def, العلامة ">" تُشير إلى أن SahafatesController ترث من ApplicationController التي تعبر عن فئة رايلزية هذا يعني أن الفئة SahafatesController تحوي على الكثير من الميزات من رايلز. في روبي, هذه الأفعال لا تعني أي شيء بصفتها خالية, و لكن في رايلز الوضعية مختلفة : SahafatesController عبارة عن فئة روبية و لكن لكونها ترث من ApplicationController فإن سلوك هذه الأفعال ستكون خاصة برايلز, و لهذا عند تصفحنا الرابط safahates/home, يقوم رايلز بمراجعة وحدة التحكم safahates ثم بإرسال الأمر المقابل للفعل home ثم يرسل في الآخر الواجهة الموافقة. في المثال بماأن الفعل home خالي من أي أمر فإن كل الأوامر التي يتم إرسالها إلى safahates/home ترسل بدورها مجرد واجهات لا غير, و لكن أين هذه الواجهات ؟ الجواب موجود في الصورة السابقة التي تظهر نتيجة الأمر "rails generate Safahates contact home" و التي تظهر بكل وضوح الرابط  بين الواجهة ووحدة التحكم, فالفعل home يُقابله واجهة إسمها "home.html.erb" لاتحتوي على الكثير من الكود لإنها أُنشأت بطريقة إفتراضية.</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/RouteFile.png" title="config/routes.rb الملف "/></p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/safahateHome.png" title="sahahates/home"/></p>
-
-<h2> متغيرات الحالة و الروبي المتضمنن</h2>
-
-<p>الملفات من نوع "erb." يمكن أن تحتوي على الكود روبي, و الذي يمكننا إستعماله لجعل الصفحات أكثر ديناميكية. دعونا نجرب بعض الأمور السهلة بروبي داخل الصفحة  home مثل إضافة "1+1" و نلاحظ النتيجة في المتصفح. لإدماج الكود روبي داخل الhtml هناك طريقتين :</p>
-
-<ul>
-<li><p>عن طريق العلامات &lt;% %> لتنفيذ الكود روبي الموجود بين هاتين العلامتين ؛</p></li>
-<li><p>عن طريق  &lt;% =%> لتنفيذ الكود روبي و إظهار النتيجة مباشرة على المتصفح, بحيث أن الفرق مع الطريقة الأولى يكمن في إظهار النتيجة.
-<img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/rubyembeded.png" title="مثال عن الروبي المتضمنن"/></p></li>
-</ul>
-
-
-<p>أخر شيئ نتطرق له في هذا المقال هو مبدأ البرمجة من غير التكرار عن طريق الLayout. الملف application.html.erb الموجود فيapp/views/layout يعتبر من الملفات المهمة والتي تساعد بشكل كبير في تسريع البرمجة. الملف يحتوي على سطر في الظاهر بسيط ولكنه مفيد بدرجة كبيرة إنه :   &lt;% yield %> و الذي يسمح بإدخال أي واجهة, لهذا فإن الملف application.html.erb يستعمل بشكل كبير برسم الواجهة الأساسية لكل مشروع داخل رايلز, بحيث لو أن الصفحات داخل التطبيق تتقاسم بعض المحتوى فإن يمكن كتابتها مرة واحدة في هذا الLayout.</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/StaticPagesRails/applicationlayout.png" title="application.html.erb الملف"/></p>
 ]]></content>
   </entry>
   
