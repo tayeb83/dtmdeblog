@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/ruby-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-08-01T04:06:58+02:00</updated>
+  <updated>2013-08-02T13:25:00+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,69 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[قياس و اختبار سرعة الكود بروبي]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/08/02/benchmarking-profiling-ruby/"/>
+    <updated>2013-08-02T12:45:00+02:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/08/02/benchmarking-profiling-ruby</id>
+    <content type="html"><![CDATA[<p>في البرمجة بعد تصحيح كل الأخطاء و التأكد من عمل الكود من الطبيعي أن نفكر بعدها أن الكود جاهز للعمل؛ و لكن عمليا الكود و في كثير من الأحيان يشتغل ببطأ أو يكون أقل فعالة من ما هو منتظر. و رغم التطور الملحوظ من جانب السرعة مع تطور النسخ المختلفة لروبي منذ ال1.8 إلى ال2.0 حاليا إلا اننا سنحتاج لأدوات تسمح لنا بقياس و اختبار سرعة و فعالية الكود كليا أو في بعض أجزاءه.</p>
+
+<p>الbenchmark  أو اختبار السرعة يمثل الخطوات المتبعة التي تجعل من الكود أو التطبيق يقوم بعملية أو وظيفة معينة و من خلالها نقوم بقياس سرعة تنفيذ هذه العملية. يمكنكم بعدها و من خلال حساب هذا الوقت تحسين أداء الكود أو البرنامج الخاص بكم و تقليله إلى أبعد حد ممكن.</p>
+
+<h2>الطريقة البديهية </h2>
+
+<p>للقيام بعملية القياس، ruby يحوي مكتبة تسمى benchmark. هذه المكتبة تتوفر على وظائف عديدة يمكنها قياس سرعة التنفيد للكود كليا. على سبيل المثال :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyBenchmark/rubyBenchmark1.png" title="benchmark1"/></p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyBenchmark/rubyBenchmarkResult1.png" title="benchmarkresult1"/></p>
+
+<p>الخانات و من اليسار تعبر بالترتيب عن :</p>
+
+<ul>
+<li>الوقت cpu للمستخدم</li>
+<li>الوقت cpu للنظام</li>
+<li>الوقت cpu الكلي</li>
+<li>الوقت الفعلي (الذي يهمنا كثيرا)</li>
+</ul>
+
+
+<p>و بما أن الوظيفة measure بامكانها التعامل مع كتل أو مجموعات منفصلة داخل نفس الكود، فإنه بإمكاننا كتابة قياسات بشكل أحسن و أدق مثل ما هو موضح في الكود التالي :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyBenchmark/rubyBenchmark2.png" title="rubyBenchmark2"/></p>
+
+<p>في هذا المثال قمنا بقياس كتلتين مختلفتين داخل نفس الكود، و النتيجة قياسان لكل كتلة كما هو موضح في الصورة:</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyBenchmark/benchmarkRubyResult2.png" title="benchmarkRubyResult2"/></p>
+
+<p>النتيجة و إن أردنا تحليلها توضح اختلاف صغير بين الوظيفتين : for  و times و إن كانت النتيجة توضح أن times تستهلك وقتcpu مستخدم أكثر من for.</p>
+
+<h2>الProfilng لاكثر دقة في القياس :</h2>
+
+<p>إذا كان الbenchmarking يقوم بقياس الوقت الكلي لتنفيذ أمر ما و مقارنته مع نسخ أخرى للكود، فإن الprofiling هو العملية التي ستعطينا المعلومة التالية : "وقت تنفيذ لكل كود داخل الكود الاجمالي"" ، على سببل المثال إذا فرضنا أن في داخل الكود هناك سطر يشوش في أداء البرنامج، باستعمال  الprofiling يمكنكم تحديد و مباشرة المشكل الذي يسبب بطأ البرنامج.</p>
+
+<p>ruby يحوي على خاصية الprofiling، ما علينا سوى إضافة :</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>require "profile"</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>في بداية الكود و انتهى الأمر.</p>
+
+<p>لنأخذ مثال كامل :
+<img src="http://tayeb83.github.com/dtmdeblog/images/rubyBenchmark/rubyProfiling1.png" title="profiling1"/></p>
+
+<p>النتيجة موضحة في الصورة المرفقة، معلومات كثيرة تمت كتابتها و لكن قراءتها جد سهلة.</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/rubyBenchmark/rubyProfilingResult1.png" title="profilingresult"/></p>
+
+<p>الخانة الأولى من اليسار تعبر عن نسبة الوقت المستغرق للوظيفة التي توجد على أقصى اليمين، في المثال الprofiler  أخبرنا بأن 100% من الاجمالي لوقت التنفيذ تم استهلاكه من الوظيفة times في الinteger كلاس. الخانة الثانية تمثل الوقت المستغرق بالثواني.
+الخانة calls تحدد عدد المرات التي ارسلت للوظيفة. في هذه الحالة الوظيفة times تم ارسالها مرتين.
+خلاصة القول، أنه يمكنكم استعمال نتيجة الprofiler لتحديد نقطة الضعف في الكود و تحسينها.</p>
+
+<p>تقبل الله الصيام  والقيام...</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[التعابير النمطية و روبي - الجزء الثاني]]></title>
