@@ -39,7 +39,7 @@ categories: ruby, benchmark, profiling
 <img src="/images/rubyBenchmark/benchmarkRubyResult2.png" title="benchmarkRubyResult2"/>
 
 
-النتيجة و إن أردنا تحليلها توضح اختلاف صغير بين الوظيفتين : for  و times و إن كانت النتيجة توضح أن times تستهلك وقتcpu مستخدم أكثر من for.
+النتيجة و إن أردنا تحليلها توضح اختلاف صغير بين الوظيفتين : for  و times و إن كانت النتيجة توضح أن for تستهلك وقتcpu مستخدم أكثر من times.
 
 
 الProfilng لاكثر دقة في القياس :
