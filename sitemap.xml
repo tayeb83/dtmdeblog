@@ -132,7 +132,11 @@
         <loc>
             http://tayeb83.github.com/dtmdeblog/blog/2013/08/02/benchmarking-profiling-ruby-example/
         </loc>
-        <lastmod>2013-08-02T20:34:11+02:00</lastmod>
+        <lastmod>2013-08-03T03:24:38+02:00</lastmod>
+    </url>
+    <url>
+        <loc>http://tayeb83.github.com/dtmdeblog/blog/2013/08/12/questions-entreprneur/</loc>
+        <lastmod>2013-08-12T08:33:00+02:00</lastmod>
     </url>
     <url>
         <loc>http://tayeb83.github.com/dtmdeblog/about/</loc>
@@ -140,10 +144,10 @@
     </url>
     <url>
         <loc>http://tayeb83.github.com/dtmdeblog/</loc>
-        <lastmod>2013-08-02T20:34:11+02:00</lastmod>
+        <lastmod>2013-08-12T08:33:00+02:00</lastmod>
     </url>
     <url>
         <loc>http://tayeb83.github.com/dtmdeblog/blog/archives/</loc>
-        <lastmod>2013-08-02T20:34:11+02:00</lastmod>
+        <lastmod>2013-08-12T08:33:00+02:00</lastmod>
     </url>
 </urlset>

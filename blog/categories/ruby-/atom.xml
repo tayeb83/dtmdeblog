@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/ruby-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-08-02T20:35:03+02:00</updated>
+  <updated>2013-08-12T08:33:54+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -45,7 +45,7 @@
 
 <p>النتيجة توضح أن وبعد ما يكون n أكبر من 25 نلاحظ تباين في سرعة تنفيذ المتتالية بين الطريقتين بحيث أن الطريقة التي تستعمل الinclude تأخد أكبر وقت من الطريقة التي تستعمل طريقة المقارنة البديهية.</p>
 
-<p>أتمنى بهذا التطبيق أنه تكونت لديكم فكرة أكثر وضوحا حول استعمال الbenchmarking بروبي.</p>
+<p>أتمنى بهذا التطبيق و المقال السابق أنها تكونت لديكم فكرة أكثر وضوحا حول استعمال الbenchmarking بروبي.</p>
 ]]></content>
   </entry>
   
