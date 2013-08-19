@@ -9,7 +9,7 @@
   <meta name="author" content="طيب مرابطي">
 
   
-  <meta name="description" content="قاعدة بيانات علائقية بدون تبادل مرجعي (cross-referencing) بين الجداول لا يعني الشيء الكثير. في مثال الجزء الأول المقال داخل المدونة (Post) يمكن أن &hellip;">
+  <meta name="description" content="نحن بصدد تطوير تطبيق رايلز و نريد توزيع التطبيق للجميع، كما نريد من بياناتنا أن تشتغل على أكبر عدد ممكن من قاعدة البيانات تستطيع التعامل مع رايلز مثل &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -98,6 +98,61 @@
     <div class="row-fluid">
       <div class="span9">
   
+  
+  
+    <article>
+      
+  <header class="page-header">
+    
+      <h1 class="entry-title"><a href="/dtmdeblog/blog/2013/02/01/schema-definition/">وضع مخطط لقاعدة بيانات</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-02-01T21:25:00+01:00" pubdate data-updated="true">Feb 1<span>st</span>, 2013</time>
+        
+         | <a href="/dtmdeblog/blog/2013/02/01/schema-definition/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>نحن بصدد تطوير تطبيق رايلز و نريد توزيع التطبيق للجميع، كما نريد من بياناتنا أن تشتغل على أكبر عدد ممكن من قاعدة البيانات تستطيع التعامل مع رايلز مثل MySQL،PostregSQL، SQLite، SQLServer و Oracle. بعبارة أخرى نريد تعريف لمخطط البيانات من غير التفكير في كيفية و طريقة كتابة الSQL.
+أول مايجب القيام به و بعد إنشاء التطبيق هو إرسال الأمر من داخل الملف الرئيسي للبرنامج كالتالي :</p>
+
+<p><img src="/dtmdeblog/images/databseschema/railsgeneratemigration.png" title="إنشاء سكريبت الmigration"/></p>
+
+<p>هذا الأمر سيقوم بإنشاء سكريبت الmigration و الذي إسمه يشبه هذا الإسم :  &#8220;20130201212100_create_database.rb&#8221;، عند فتح السكريبت نجد إحتوائه على وظيفتين up و down. في الوظيفة up سنقوم بإضافة الأوامر الخاصة بإنشاء المخطط البياني بواسطة الأوامر الموجودة في الActive Record الخاصة بإنشاء المخططات البيانية، مثل إنشاء الجداول. العكس يجب فعله في الوظيفة down، بمعنى الأوامر التي تُستعمل من أجل تدمير الجداول التي أنشأتها الوظيفة up.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake db:migrate $</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="/dtmdeblog/images/databseschema/executionrakedbmigrate.png" title="مراحل إنشاء الجداول عن طريق السكريبت"/></p>
+
+<p>الأن يمكننا التأكد داخل قاعدة بياناتنا (SQLLite) بأن الجداول تم إنشاءها بطريقة صحيحة.</p>
+
+<p><img src="/dtmdeblog/images/databseschema/sqliteshowtables.png" title="رؤية الجداول داخل قاعدة البيانات"/></p>
+
+<p>الفائدة أنه قمنا بإنشاء مخطط بيانات داخل قاعدة البيانات من دون كتابة سطر SQL واحد ومن دون التفكير في أي نوع من القواعد، وهذا من أهم مميزات الActive Record الذي قمنا بتقديمه في درس سابق،</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -845,152 +900,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header class="page-header">
-    
-      <h1 class="entry-title"><a href="/dtmdeblog/blog/2012/06/25/first-application-rails/">أول تطبيق ب Rails</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-06-25T22:04:00+02:00" pubdate data-updated="true">Jun 25<span>th</span>, 2012</time>
-        
-         | <a href="/dtmdeblog/blog/2012/06/25/first-application-rails/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>في هذا الدرس سوف نقوم بانشاء أول تطبيق باستعمال رايلز. كل الأوامر التي سوف أنفذها تعمل بشكل طبيعي على نظام لينوكس أبونتو.</p>
-
-<p>أول ما يجب القيام به هو انشاء ملف يحتوي على التطبيق الذي سوف نقوم بتطويره, على سبيل المثال &#8220;DemoApp&#8221;, بعدها يجب التمركز في هذا الملف و ارسال هذا الأمر rails new first_app, أين first_app تمثل اسم التطبيق.</p>
-
-<figure class='code'><figcaption><span>مقطع من الأوامر من أجل انشاء تطبيق   </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-<span class='line-number'>17</span>
-<span class='line-number'>18</span>
-<span class='line-number'>19</span>
-<span class='line-number'>20</span>
-<span class='line-number'>21</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>mkdir DemoApp $
-</span><span class='line'>      cd DemoApp $
-</span><span class='line'>      rails new first_app $
-</span><span class='line'>      create  
-</span><span class='line'>      create  README
-</span><span class='line'>      create  .gitignore
-</span><span class='line'>      create  Rakefile
-</span><span class='line'>      create  config.ru
-</span><span class='line'>      create  Gemfile
-</span><span class='line'>      create  app
-</span><span class='line'>      create  app/controllers/application_controller.rb
-</span><span class='line'>      create  app/helpers/application_helper.rb
-</span><span class='line'>      create  app/views/layouts/application.html.erb
-</span><span class='line'>      create  app/models
-</span><span class='line'>      create  config
-</span><span class='line'>      create  config/routes.rb
-</span><span class='line'>      create  config/application.rb
-</span><span class='line'>      create  config/environment.rb
-</span><span class='line'>                                  .
-</span><span class='line'>                                  .
-</span><span class='line'>                                  .</span></code></pre></td></tr></table></div></figure>
-
-
-<p>اﻷمر الملاحظ بعد ارسال الأمر هو العدد الكبير من الملفات التي تم انشاءها. هذه البنية النموذجية للملفات تعتبر ميزة من عديد الميزات التي يتمتع بها رايلز, لأنها تسمح بالانتقال من الصفر الى تطبيق يعمل بشكل طبيعي حتى و ان كان التطبيق جد مصغر. زيادة على ذلك وبما أن هذه البنية مشتركة بين جميع التطبيقات التي تعمل برايلز فانه بامكانكم أخذ معالمكم بالاطلاع على تطبيقات أخرى مطورة على الويب و بالخصوص على Github. و فيمايلي ملخص عن كل الملفات التي تم انشاءها :</p>
-
-<ul>
-<li>الملف /app : يعتبر قلب التطبيق يحتوي على النماذج (models), الواجهات (views) ووحدات التحكم(controllers).</li>
-<li>الملف /config : يحتوي على ملفات التكوين الخاصة بالتطبيق.</li>
-<li>الملف /db: ملفات التعامل مع قاعدة البيانات.</li>
-<li>الملف /doc: الوثائق الخاصة بالتطبيق.</li>
-<li>الملف /lib:  وحدات المكتبة البرمجية.</li>
-<li>الملف /log: يحتوي على ملفات تتبع عمليات التطبيق.</li>
-<li>الملف /public: البيانات العامة التي يمكن الوصول اليها من طرف المتصفحات مثل الصور و أوراق الأنماط.</li>
-<li>الملف /script/rails : يحتوي على أمر نصي من أجل تسيير البرامج أو  فتح جلسة عمل وحدة التحكم.</li>
-<li>الملف /test: من أجل اختبار التطبيق.</li>
-<li>الملف /tmp: الملفات المؤقتة.</li>
-<li>الملف /vendor: البرامج الهامشية مثل ال gem أو ال plugins.</li>
-<li>الملف README: نبذة عن التطبيق.</li>
-<li>الملف Rakefile: المهام المساعدة و التي يمكن الوصول اليها عن طريق الأمر Rake.</li>
-<li>الملف Gemfile: يحتوي على الجيمات المستعملة و الاساسية للتطبيق.</li>
-<li>الملف config.ru: عبارة عن ملف التكوين لل Rake middleware.</li>
-</ul>
-
-
-<h1><img src="/dtmdeblog/images/application_view.png" title="البنية النموذجية للتطبيق بواسطة رايلز"/></h1>
-
-<h2>Bundler</h2>
-
-<p>بعد انشاء التطبيق, نستعمل الBundler من أجل تثبيث و ادراج الجيمات المستعملة و التي يحتاجها التطبيق. الصورة التالية توضح مثال لملف Gemfile و الذي يحتوي على الجيمات التي سوف نقوم بتثبيثها عن طريق ال Bundler. أغلب سطور الملف عبارة عن تعليقات (#) و هذا من أجل المساعدة و اعطاء نظرة عن أغلب الجيمات التي يمكن استعمالها و اعطاء نظرة أيضا عن الكتابة المستعملة في ال Bundler. في هذه المرحلة من الدرس نحن  بحاجة إلا للجيمات الأساسية مثل : rails و جيم للتحكم في قاعدة بيانات اختيارية.(slqlite ,mysql أو postgresql).</p>
-
-<p><img src="/dtmdeblog/images/geditgemfile.png" title="الملف Gemfile عند فتحه لأول مرة"/></p>
-
-<p>اﻷن وقد اطلعتم على الجيمات و مكان وضعها يمكنكم ارسال اﻷمر الذي سوف يقوم بتثبيثها  :</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>bundle install $</span></code></pre></td></tr></table></div></figure>
-
-
-<h2>rails server</h2>
-
-<p>بفضل الأوامر rails new و bundle install عندنا الأن تطبيق يمكننا تشغيله, و لكن كيف ؟ لحسن الحظ رايلز يوفر تطبيق أو سكريبت يسمح بتشغيل حاجز ألي (web server) محلي لا يمكن الوصول اليه الا بواسطة اﻷلة المحلية.</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>rails server $
-</span><span class='line'>=> Booting WEBrick
-</span><span class='line'>=> Rails 3.2.1 application starting in development on http://0.0.0.0:3000
-</span><span class='line'>=> Call with -d to detach
-</span><span class='line'>=> Ctrl-C to shutdown server
-</span><span class='line'>[2012-07-04 13:32:49] INFO  WEBrick 1.3.1
-</span><span class='line'>[2012-07-04 13:32:49] INFO  ruby 1.9.3 (2012-04-20) [i686-linux]
-</span><span class='line'>[2012-07-04 13:32:49] INFO  WEBrick::HTTPServer#start: pid=18106 port=3000</span></code></pre></td></tr></table></div></figure>
-
-
-<p>بعد ارسال الأمر rails server يخبرنا رايلز كما هو موضح أنا التطبيق شغال على الباب 3000 على العنوان 0.0.0.0 . هذا العنوان يرشد الألة للانصات على كل العناوين IP المكونة على الالة, مثل 127.0.0.1 و المعروف ب localhost. يمكنكم ملاحظة النتيجة على العنوان http://localhost:3000, مثل الصورة التالية :</p>
-
-<p><img src="/dtmdeblog/images/railsserver.png" title="صفحة البداية بعد تشغيل الحاجز الالي"/></p>
-</div>
-  
-  
-
-
-    </article>
-  
   <ul class="pager">
     
     <li class="previous"><a href="/dtmdeblog/blog/page/4/">&larr; Older</a></li>
@@ -1008,6 +917,10 @@
     <li class="nav-header">أخر التدوينات</li>
     
       <li class="post">
+        <a href="/dtmdeblog/blog/2013/08/19/startup-definition/">ما هو المعنى الحقيقي لستارتب؟</a>
+      </li>
+    
+      <li class="post">
         <a href="/dtmdeblog/blog/2013/08/14/erreurs-employes/">أخطاء ترتكبها كرائد للمشروع  تُحبط الموظفين و تعجل برحليهم من مشروعك</a>
       </li>
     
@@ -1021,10 +934,6 @@
     
       <li class="post">
         <a href="/dtmdeblog/blog/2013/08/02/benchmarking-profiling-ruby/">قياس و اختبار سرعة الكود بروبي</a>
-      </li>
-    
-      <li class="post">
-        <a href="/dtmdeblog/blog/2013/08/01/achiaa-tmanyt-t3lmha-1/">أشياء تمنيت تعلمها في الجامعة</a>
       </li>
     
   </ul>
