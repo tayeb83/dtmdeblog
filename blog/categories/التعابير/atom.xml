@@ -4,7 +4,7 @@
   <title><![CDATA[Category: التعابير | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/التعابير/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-09-09T22:42:19+02:00</updated>
+  <updated>2013-09-09T22:48:15+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -19,6 +19,9 @@
     <updated>2013-06-10T19:49:00+02:00</updated>
     <id>http://tayeb83.github.com/dtmdeblog/blog/2013/06/10/regexp-ruby-p2</id>
     <content type="html"><![CDATA[<p>هذا المقال هو تكملة للمقال السابق الذي بدأته حول التعابير النمطية في روبي. في هذا المقال سأبدأ بتكملة الأمثلة التي بدأتها سابقا ثم أنتقل إلى طريقة البحث و الاستبدال.</p>
+
+<!-- more -->
+
 
 <h2>تكملة  الأمثلة</h2>
 

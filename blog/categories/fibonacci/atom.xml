@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fibonacci | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/fibonacci/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-09-09T22:42:19+02:00</updated>
+  <updated>2013-09-09T22:48:15+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -21,6 +21,9 @@
     <content type="html"><![CDATA[<p>في هذا المقال و كتطبيق وتتمة للمقال السابق سنقوم بدراسة بسيطة نقوم من خلالهابمقارنة أسرع خوارزمية لحساب متتالية fibonacci المعروفة.</p>
 
 <p>في المثال سنستعمل طريقتين لحساب المتتالية و نقوم  بمقارنة الأسرع بينهما من خلال تطبيق ما شرحناه في المقال السابق حول الbenchmarking.</p>
+
+<!-- more -->
+
 
 <p>متتالية فيبوناتشي أو أعداد فيبوناتشي في الرياضيات هي الأرقام التي تكون في المتتالية التالية:</p>
 

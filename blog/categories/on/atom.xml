@@ -4,7 +4,7 @@
   <title><![CDATA[Category: on | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/on/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-09-09T22:42:19+02:00</updated>
+  <updated>2013-09-09T22:48:15+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -21,6 +21,9 @@
     <content type="html"><![CDATA[<p>المتعامل مع رايلز لاحظ بطأ ارسال الأوامر و أخذها و قت كبير للتنفيذ، للآسف هذه الوضعية تصعب من مهمة  المبرمج و تعطل عجلة الإنتاجية و روح العمل لديه.</p>
 
 <p>هذا المشكل اشتكى منه الكثير من المطورين على مستوى منصة العمل، مما عجل بظهور بعض الجيمات لعل أبرزها zeus و الذي سأقوم بشرحه في هذا المقال بايجاز.</p>
+
+<!-- more -->
+
 
 <p>zeus عبارة عن gem يساعد بعد تثبيثه في تسريع تنفيذ الأوامر داخل rails.</p>
 

@@ -198,44 +198,9 @@
       <h1 class="link"><a href="/dtmdeblog/blog/2013/06/10/regexp-ruby-p2/">التعابير النمطية و روبي - الجزء الثاني</a></h1>
       <p>هذا المقال هو تكملة للمقال السابق الذي بدأته حول التعابير النمطية في روبي. في هذا المقال سأبدأ بتكملة الأمثلة التي بدأتها سابقا ثم أنتقل إلى طريقة البحث و الاستبدال.</p>
 
-<h2>تكملة  الأمثلة</h2>
-
-<h2>التكرار الجشع : </h2>
-
-<p><img src="/dtmdeblog/images/regexp_ruby/repetition_gourmande.png" title="ruby_Regexp_gorumande"/></p>
-
-<h2>التجميع بواسطة الحاضنتين :</h2>
-
-<p><img src="/dtmdeblog/images/regexp_ruby/group_parentese.png" title="ruby_Regexp_grouping"/></p>
-
-<h2>البدائل :</h2>
-
-<p><img src="/dtmdeblog/images/regexp_ruby/replacement.png" title="ruby_Regexp_replacement"/></p>
-
-<h2>المراسي anchors :</h2>
-
-<p>المراسي عبارة عن أحرف أو بالأحرى رموز تساعد في حصر موقع التعبير النمطي :</p>
-
-<p><img src="/dtmdeblog/images/regexp_ruby/anchor.png" title="ruby_Regexp_anchor"/></p>
-
-<h2>البحث و الاستبدال :</h2>
-
-<p>من أهم الطرق أو العمليات الخاصة بالسلاسل في روبي العمليتين  sub و gsub. هاتين العمليتين تقومان بالبحث و الاستبدال على سلاسل الحروف باستعمال التعابير النمطية. أين sub تستبدل الحدوث الأول بينما gsub تستبدل كل الحوادث داخل السلسلة، لنأخذ أمثلة على ذلك :</p>
-
-<p><img src="/dtmdeblog/images/regexp_ruby/example_sub_gsub_1.png" title="ruby_Regexp_gsub1"/></p>
-
-<p><img src="/dtmdeblog/images/regexp_ruby/results_sub_gsub_1.png" title="ruby_Regexp_gsub1_result"/></p>
-
-<p>في المثال الأول النتيجة موضحة في الصورة المرفقة أين قمنا بحذف التعليقات بالsub  بينما قمنا بحذف كل مل هو حرف ماعدا  الأرقام بواسطة gsub.</p>
-
-<p>في المثال الثاني و بطريقتين مختلفتين باستعمال gsub فقط،  قمنابتكبير الحرف الأول من  كلمة tayeb إلى Tayeb.</p>
-
-<p><img src="/dtmdeblog/images/regexp_ruby/example_sub_gsub_2.png" title="ruby_Regexp_gsub_2"/></p>
-
-<p><img src="/dtmdeblog/images/regexp_ruby/result_sub_gsub_2.png" title="ruby_Regexp_gsub2_result"/></p>
 
       
-      
+       <a href="/dtmdeblog/blog/2013/06/10/regexp-ruby-p2/">Read on &rarr;</a> 
     </div>
   </div>
 
@@ -408,52 +373,9 @@
 
 <p><img src="/dtmdeblog/images/ruby/YukihiroMatsumoto.JPG" title="Matz"/></p>
 
-<h2>تثبيت و تجربة روبي :</h2>
-
-<p>الطريقة الأمثل لتعلم لغة جديدة هو استعمالها و لاستعمالها فلا بد من تثبيتها. روبي متوفر في كل الأنظمة (linux/unix، Windows، Mac OS X، OS/2&#8230;). النسخة الثابتة الحالية لروبي هي النسخة ١.٩.٣ و إن كانت النسخة ٢.٠.٠ قد ظهرت من بضعة أيام.
-على الWindows النسخة يمكن تحمليها من الموقع <a href="http://rubyinstaller.org/downloads">http://rubyinstaller.org/downloads</a> . في لينوكس، روبي متوفر الآن في شكل حزم لأغلبية التوزيعات في حالة عدم توفره للتوزيعة الخاصة بكم يمكنكم تحمليه و تثبيته &#8220;يدويا&#8221; من الموقع    <a href="www.ruby-lang.org">www.ruby-lang.org</a> باستعمال الطريقة المعتادة : &#8220;make; make install&#8221;. بالنسبة للMac فإنه وبعد النسخة ١٠.٤ فهو يحوي روبي داخل حزمة أدوات التطوير  (development kit ).</p>
-
-<h2>الخطوات الأولى :</h2>
-
-<p>لتجاربنا الأولية سوف نستعمل برنامج من أهم البرامج الروبية وهو الIRB لInteractive Ruby ، لنفرض أنكم قمتم و بجدارة بتثبيت روبي، يمكنكم التأكد من النسخة التي قمتم بتثبيتها عن طريق الأمر :</p>
-
-<p><img src="/dtmdeblog/images/ruby/rubyVersion.png" title="rubyversion"/></p>
-
-<p>نفس الشيء بالنسبة لIRB :</p>
-
-<p><img src="/dtmdeblog/images/ruby/irbVersion.png" title="irbversion"/></p>
-
-<p>يمكنكم الإقلاع الآن، لنبدأ بكتابة المثال التالي على المحرر الذي تريدون كما في الصورة، بعدها احفظوه  باسم example.rb مثلا.</p>
-
-<p><img src="/dtmdeblog/images/ruby/exampleRuby.png" title="exampleRuby"/></p>
-
-<p>بعدها افتحوا الterminal على مكان الملف و قومو بارسال الأمر ruby example.rb النتيجة توضحها الصورة :</p>
-
-<p><img src="/dtmdeblog/images/ruby/examplerubyexecution.png" title="executeRubyversion"/></p>
-
-<p>هذا المثال جد بسيط لكل من له بعض المفاهيم في البرمجة، لهذا فهو لا يحتاج لشرح مفصل و لكننا سنشرح فقط ما قمنا به من الجانب البرمجي، في السطر الثالث استعملنا الوظيفة print التي تسمح بطباعة النص على الشاشة، هذه الوظيفة تستقبل وسيطا واحدا و هو عبارة عن سلسلة محارف بين علامتي التنصيص &#8220;&#8221;. في السطر الرابع، البرنامج ينتظر الإجابة على السؤال ا لمطروح سابقا و الذي هو اسم المستخدم، لهذا الغرض نستعمل الوظيفة readline و التي لها دور القراءة على جهاز الإدخال القياسي (STDIN) إلى أن نقوم بالضغط على المفتاح ENTER، النتيجة ستحفظ داخل المتغير name. الآن المتغير سيحتوي على الإسم و علامة الرجوع إلى السطر&#8221; n&#34;، لهذا قمنا باستعمال chomp قبل الطبع لحذف العودة إلى السطر.</p>
-
-<h2>أين تجدون المساعدة :</h2>
-
-<p>لعل التوثيق هو أكبر مشكل في روبي و ماعدا الموجود في المكتبة الرئيسية سوف ترون بأنفسكم أنه مشكل لديه حل وحيد و هو قراءة الأمثلة المرفقة و في بعض الأحيان قراءة مصدر الحزم.
-عندما قمتم بتثبيت روبي فقد قمتم بتثبيت RI : Ruby Interactive Reference. البحث يواسطة هذا البرنامج سهل، بحيث أنه يلزمكم فقط طلبه مرفقا بالنص الذي تريدون البحث عليه. مثلا، لو أردتم البحث على التوثيق الخاص بالArray، فإنه يجب ارسال الأمر كالتالي : ri Array، و سوف تحصلون على ما تريدونه.</p>
-
-<p><img src="/dtmdeblog/images/ruby/arrayhelp.png" title="arrayHelp"/></p>
-
-<h2>قبل الذهاب بعيدا :</h2>
-
-<p>في الأخير إليكم بعض الموارد التي يمكن مطالعتها و اللجوء إليها لتعلم المزيد عن هذه اللغة :</p>
-
-<ol>
-<li><a href="http://www.ruby-lang.org">http://www.ruby-lang.org</a></li>
-<li><a href="http://raa.ruby-lang.org">http://raa.ruby-lang.org</a></li>
-<li><a href="http://rubyforge.org">http://rubyforge.org</a></li>
-<li><a href="https://www.ruby-toolbox.com">https://www.ruby-toolbox.com</a></li>
-</ol>
-
 
       
-      
+       <a href="/dtmdeblog/blog/2013/05/08/intro-ruby/">Read on &rarr;</a> 
     </div>
   </div>
 
