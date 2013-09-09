@@ -4,7 +4,7 @@
   <title><![CDATA[Category: rails, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/rails-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-09-09T22:54:53+02:00</updated>
+  <updated>2013-09-09T23:00:47+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -75,6 +75,9 @@
     <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/28/imporatenresourceforrails</id>
     <content type="html"><![CDATA[<p>في هذا المقال أحببت أن أقدم لكم بعض الموارد التي انتقيتها من هنا و هناك و التي أرى أنها مفيدة إن لم نقل أساسية لكل مطور بمنصة Ruby On Rails.</p>
 
+<!-- more -->
+
+
 <h2><a href="http://edgeguides.rubyonrails.org/">Railsguides</a></h2>
 
 <p>تعتبر المورد الرئيسي لكل مطور Rails و خاصة للمبيتدئين وهي تحتوي على كل ما نحتاجه للبدئ بالتطوير و العمل على المنصة.</p>
@@ -103,6 +106,9 @@
     <content type="html"><![CDATA[<p>في هذا المقال سوف أشرح  لكم كيفية تثبيث ال<a href="http://octopress.org/">octopress</a> و استعماله مع الgithub كمحرك و مولد لصفحات تابثة لكم بطريقة  سهلة و بسيطة.</p>
 
 <h2>أول سؤال ماهو الOctorpress ؟ </h2>
+
+<!-- more -->
+
 
 <p> هو عبارة عن منصة عمل طورها Brandon Mathis لل jekyll. للتدوين بالjekyll كان لابد من كتابة قوالب الhtml الخاصة، الCSS، الJavascript و إعداد التكوين الخاص بك. و لكن مع الOctopress كل هذا يصبح شفاف و المنصة تقوم بكل هذه الأعمال فور تثبيثها.
 شخصيا الشيء الذي دفعني لاستعمال الOctopress هو فضولٌٌ أردت من خلاله التدرب و لمس كل مايتعلق بالgit و الgithub، و بالفعل فلقد ساعدني هذا الفضول إلى كسر حاجز الخوف بيني و بين أوامر الgit هذا من جانب أما الجانب الثاني هو امتلاك مدونة الكتابة فيها تشعرك كل يوم أنك فعلا hacker مع كل الأدوات التي استعملها و الأوامر التي أرسلها لكتابة مقال واحد، فرق سوف ترونه بلا شك لو استعملتم هذه المنصة.</p>
@@ -149,8 +155,12 @@
     <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/01/schema-definition/"/>
     <updated>2013-02-01T21:25:00+01:00</updated>
     <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/01/schema-definition</id>
-    <content type="html"><![CDATA[<p>نحن بصدد تطوير تطبيق رايلز و نريد توزيع التطبيق للجميع، كما نريد من بياناتنا أن تشتغل على أكبر عدد ممكن من قاعدة البيانات تستطيع التعامل مع رايلز مثل MySQL،PostregSQL، SQLite، SQLServer و Oracle. بعبارة أخرى نريد تعريف لمخطط البيانات من غير التفكير في كيفية و طريقة كتابة الSQL.
-أول مايجب القيام به و بعد إنشاء التطبيق هو إرسال الأمر من داخل الملف الرئيسي للبرنامج كالتالي :</p>
+    <content type="html"><![CDATA[<p>نحن بصدد تطوير تطبيق رايلز و نريد توزيع التطبيق للجميع، كما نريد من بياناتنا أن تشتغل على أكبر عدد ممكن من قاعدة البيانات تستطيع التعامل مع رايلز مثل MySQL،PostregSQL، SQLite، SQLServer و Oracle. بعبارة أخرى نريد تعريف لمخطط البيانات من غير التفكير في كيفية و طريقة كتابة الSQL.</p>
+
+<!-- more -->
+
+
+<p>أول مايجب القيام به و بعد إنشاء التطبيق هو إرسال الأمر من داخل الملف الرئيسي للبرنامج كالتالي :</p>
 
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/databseschema/railsgeneratemigration.png" title="إنشاء سكريبت الmigration"/></p>
 

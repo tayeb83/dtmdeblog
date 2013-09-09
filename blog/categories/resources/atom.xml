@@ -4,7 +4,7 @@
   <title><![CDATA[Category: resources | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/resources/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-09-09T22:54:53+02:00</updated>
+  <updated>2013-09-09T23:00:47+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -19,6 +19,9 @@
     <updated>2013-02-28T23:59:00+01:00</updated>
     <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/28/imporatenresourceforrails</id>
     <content type="html"><![CDATA[<p>في هذا المقال أحببت أن أقدم لكم بعض الموارد التي انتقيتها من هنا و هناك و التي أرى أنها مفيدة إن لم نقل أساسية لكل مطور بمنصة Ruby On Rails.</p>
+
+<!-- more -->
+
 
 <h2><a href="http://edgeguides.rubyonrails.org/">Railsguides</a></h2>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/git-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-09-09T22:54:53+02:00</updated>
+  <updated>2013-09-09T23:00:47+02:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -19,6 +19,9 @@
     <updated>2013-03-20T09:29:00+01:00</updated>
     <id>http://tayeb83.github.com/dtmdeblog/blog/2013/03/20/git-automcompletion</id>
     <content type="html"><![CDATA[<p>في هذا المقال سأشرح  لكم الطريقة التي يمكنكم من خلالها الاستفادة من التكملة التلقائية لأوامر الgit داخل الbash أو مفسر سطر الأوامر.</p>
+
+<!-- more -->
+
 
 <p>أول شيئ يجب القيام به هو تحميل السكريبت : <code>git-completion.bash</code> و حفظه داخل المجلد البيت الخاص بكم كالتالي :
  <div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>تحميل السكريبت داخل الملف الخاص   </span></figcaption>
