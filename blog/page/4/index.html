@@ -8,9 +8,10 @@
   <title>مدونة الطيب الضادي</title>
   <meta name="author" content="طيب مرابطي">
 
+   
+  <meta name="description" content="">
   
-  <meta name="description" content="لتثبيث الGIT أنصحكم بتتبع الخطوات المشروحة بطريقة جيدة و مفصلة حسب نوع النظام على الرابط http://git-scm.com/book/en/Getting-Started-Installing-Git , &hellip;">
-  
+  <meta name="keywords" content="">
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -20,11 +21,16 @@
   
   <link rel="canonical" href="http://tayeb83.github.com/dtmdeblog/blog/page/4">
   <link href="/dtmdeblog/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
   <link href="/dtmdeblog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/dtmdeblog/javascripts/modernizr-2.0.js"></script>
-  <script src="/dtmdeblog/javascripts/ender.js"></script>
-  <script src="/dtmdeblog/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/dtmdeblog/atom.xml" rel="alternate" title="مدونة الطيب الضادي" type="application/atom+xml">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap-collapse.js"></script>
+  <script src="/dtmdeblog/js/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/dtmdeblog/js/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -34,49 +40,56 @@
 </head>
 
 <body   >
-  <header role="banner"><hgroup>
-  <h1><a href="/dtmdeblog/">مدونة الطيب الضادي</a></h1>
-  
-    <h2>A blogging framework for hackers.</h2>
-  
-</hgroup>
-
-</header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss email">
-  <li><a href="/dtmdeblog/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
-  
-    <li><a href="tayeb.merabti@gmail.com" rel="subscribe-email" title="subscribe via email">Email</a></li>
-  
-</ul>
-  
-<form action="http://google.com/search" method="get">
-  <fieldset role="search">
-    <input type="hidden" name="q" value="site:tayeb83.github.com/dtmdeblog" />
-    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
-  </fieldset>
-</form>
-  
-<ul class="main-navigation">
-  <li><a href="/dtmdeblog/">Blog</a></li>
-  <li><a href="/dtmdeblog/blog/archives">Archives</a></li>
+  <div class="navbar navbar-inverse navbar-static-top">
+  	<div class="navbar-inner">
+  	  <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="fui-menu-24"></span>
+        </a>
+  	  	<div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
+  	      <ul class="nav">
+    
 </ul>
 
-</nav>
-  <div id="main">
-    <div id="content">
-      <div class="blog-index">
+<ul class="nav pull-right">
+    
+    
+    
+    <li><a href="http://twitter.com/dtmdeblog" title="Twitter Profile"><i class="icon-twitter-sign social-navbar"></i></a></li>
+    
+    
+    <li><a href="http://plus.google.com/101099896157910648102" title="Google+ Profile"><i class="icon-google-plus-sign social-navbar"></i></a></li>
+    
+    
+    
+</ul>
+
+  	    </div>
+  	  </div>
+  	</div>
+  </div>
+  <div class="container" id="main">
+    <div class="span12">
+      <div class="row-fluid">
+        <div id="content">
+          <div class="jumbotron">
+  <div class="container">
+    Hi. I&#8217;m طيب مرابطي.
+    <h3 class="tagline">Here are some thoughts of mine.</h3>
+  </div>
+</div>
+
+
+<div class="blog-index">
   
   
   
     <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/dtmdeblog/blog/2012/07/08/gitinstallpart2/">إدارة الإصدارات-تثبيث و إعداد</a></h1>
-    
-    
-      <p class="meta">
-        
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
 
 
 
@@ -88,16 +101,27 @@
   
 
 
-<time datetime="2012-07-08T08:43:00+02:00" pubdate data-updated="true">Jul 8<span>th</span>, 2012</time>
-        
-         | <a href="/dtmdeblog/blog/2012/07/08/gitinstallpart2/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>لتثبيث الGIT أنصحكم بتتبع الخطوات المشروحة بطريقة جيدة و مفصلة حسب نوع النظام على الرابط
+<i class="icon-calendar-empty"></i> <time datetime="2012-07-08T08:43:00+02:00" pubdate data-updated="true">Jul 8<span>th</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/dtmdeblog/blog/categories/git,/"><span class="badge">git,</span></a>
+          
+          <a href="/dtmdeblog/blog/categories/github,/"><span class="badge">github,</span></a>
+          
+          <a href="/dtmdeblog/blog/categories/rails/"><span class="badge">rails</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/dtmdeblog/blog/2012/07/08/gitinstallpart2/"> إدارة الإصدارات-تثبيث و إعداد </a></h1>
+      <p>لتثبيث الGIT أنصحكم بتتبع الخطوات المشروحة بطريقة جيدة و مفصلة حسب نوع النظام على الرابط
  <a href="http://git-scm.com/book/en/Getting-Started-Installing-Git">http://git-scm.com/book/en/Getting-Started-Installing-Git</a>  , على سبيل المثال تثبيث الGIT على نظام الأبونتو يتم بالأمر التالي :</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -174,23 +198,26 @@
 
 
 <p>الحمد لله الملف المحذوف عاد مجددا.</p>
-</div>
-  
-  
+
+      
+      
+    </div>
+  </div>
+
 
 
     </article>
+    
+    <hr>
+    
   
   
     <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/dtmdeblog/blog/2012/07/07/gitinitialisation/">إدارة الإصدارات-مقدمة</a></h1>
-    
-    
-      <p class="meta">
-        
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
 
 
 
@@ -202,16 +229,25 @@
   
 
 
-<time datetime="2012-07-07T00:09:00+02:00" pubdate data-updated="true">Jul 7<span>th</span>, 2012</time>
-        
-         | <a href="/dtmdeblog/blog/2012/07/07/gitinitialisation/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>الأن و لقد قمنا بتشغيل أول تطبيق على رايلز, سوف نقوم بتسليط الضوء على جانب ثانوي في الحقيقة و لكن أساسي في نظر أغلب المطورين على رايلز أو على غيره من اللغات و الإطارات الأخرى ألا و هو إدارة الإصدارات.</p>
+<i class="icon-calendar-empty"></i> <time datetime="2012-07-07T00:09:00+02:00" pubdate data-updated="true">Jul 7<span>th</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/07/07/gitinitialisation/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/dtmdeblog/blog/categories/git,/"><span class="badge">git,</span></a>
+          
+          <a href="/dtmdeblog/blog/categories/rails/"><span class="badge">rails</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/dtmdeblog/blog/2012/07/07/gitinitialisation/"> إدارة الإصدارات-مقدمة</a></h1>
+      <p>الأن و لقد قمنا بتشغيل أول تطبيق على رايلز, سوف نقوم بتسليط الضوء على جانب ثانوي في الحقيقة و لكن أساسي في نظر أغلب المطورين على رايلز أو على غيره من اللغات و الإطارات الأخرى ألا و هو إدارة الإصدارات.</p>
 
 <p>أنظمة إدارة الإصدارات تسمح لنا بتغيير الكود أو الملفات داخل التطبيقات, التقاسم مع مطورين أخرين مع الرجوع إلى الوراء في حالات الخطأ (كحذف ملف بالخطأ مثلا) أو مجرد الرجوع إلى مرحلة معينة. لهذا فإن تعلم التعامل مع أي نظام إدارة الإصدارات كفاءة أساسية يجب توفرها لدى كل متطور محترف.</p>
 
@@ -220,23 +256,26 @@
 <p>عموما, وضع أي تطبيف (كود+ملفات) تحت إدارة الإصدارات GIT عملية ضرورية ليس لكونها مشهورة فحسب في عالم الرايلز و لكن لمنحها إمكانية تقاسم, تبادل و تشغيل الكود بطريقة سهلة جدا.</p>
 
 <p>في الدرس القادم إن شاء الله سنقوم بتثبيث و إعداد ال GIT من أجل حفظ التطبيق.</p>
-</div>
-  
-  
+
+      
+      
+    </div>
+  </div>
+
 
 
     </article>
+    
+    <hr>
+    
   
   
     <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/dtmdeblog/blog/2012/07/05/architercturemvc/">نمط-عرض-متحكم (MVC)</a></h1>
-    
-    
-      <p class="meta">
-        
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
 
 
 
@@ -248,37 +287,51 @@
   
 
 
-<time datetime="2012-07-05T23:52:00+02:00" pubdate data-updated="true">Jul 5<span>th</span>, 2012</time>
-        
-         | <a href="/dtmdeblog/blog/2012/07/05/architercturemvc/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>بالرغم من أننا لم نتقدم كثيرا في درسنا, إلا أنه من المهم جدا أن نلقي نظرة عامة عن النظام الذي تعمل به التطبيقات على رايلز. لعلكم لاحظتم في الدرس السابق أن البنية النموذجية لأي تطبيق رايلز تحتوي على الملف /app و الذي يحتوي بدوره على ثلاث ملفات فرعية و هي :  النماذج (models), الواجهات (views) و وحدات التحكم    (controllers). هذه التركيبة و إن دلت على شيء فإنها تدل على أن رايلز يتبع النموذج &#8220;نمط-عرض-متحكم&#8221; (MVC) والذي هو قائم على مبدأ عزل &#8220;منطق العمل&#8221; عن &#8220;واجهات الإستخدام&#8221;.</p>
+<i class="icon-calendar-empty"></i> <time datetime="2012-07-05T23:52:00+02:00" pubdate data-updated="true">Jul 5<span>th</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/07/05/architercturemvc/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/dtmdeblog/blog/categories/MVC,/"><span class="badge">MVC,</span></a>
+          
+          <a href="/dtmdeblog/blog/categories/rails,/"><span class="badge">rails,</span></a>
+          
+          <a href="/dtmdeblog/blog/categories/ruby/"><span class="badge">ruby</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/dtmdeblog/blog/2012/07/05/architercturemvc/">نمط-عرض-متحكم (MVC)</a></h1>
+      <p>بالرغم من أننا لم نتقدم كثيرا في درسنا, إلا أنه من المهم جدا أن نلقي نظرة عامة عن النظام الذي تعمل به التطبيقات على رايلز. لعلكم لاحظتم في الدرس السابق أن البنية النموذجية لأي تطبيق رايلز تحتوي على الملف /app و الذي يحتوي بدوره على ثلاث ملفات فرعية و هي :  النماذج (models), الواجهات (views) و وحدات التحكم    (controllers). هذه التركيبة و إن دلت على شيء فإنها تدل على أن رايلز يتبع النموذج &#8220;نمط-عرض-متحكم&#8221; (MVC) والذي هو قائم على مبدأ عزل &#8220;منطق العمل&#8221; عن &#8220;واجهات الإستخدام&#8221;.</p>
 
 <p>لعلكم اﻷن تتسألون عن معنى المفهومين  &#8220;منطق العمل&#8221; و &#8220;واجهات الإستخدام&#8221;, أما اﻷول فماهو إلا النموذج الذي يتحكم في البيانات الخاصة بالتطبيق مثل : المستعملين, المقالات أو المنتجات و المفهوم الثاني فإنه يعبر في حقيقة الأمر عن صفحة الويب التي تظهرها المتصفحات.</p>
 
 <p>عمليا, عند التعامل مع أي تطبيق على رايلز, يقوم المتصفح بإرسال طلب يتلقاه الحاجز الألي و الذي يحوله بدوره إلى المتحكم و الذي هو المسؤول عن إدارة العمليات التي تتوالى. في بعض الحالات يقوم المتحكم بإرسال واجهة مباشرة بعد تلقي اﻷمر والتي هي في الواقع تمثل نموذج ترجم إلى ال HTML و حول إلى المتصفح. أما في الحالات الإعتيادية فإن المتحكم يقوم بالتفاعل مع النموذج و الذي هو عبارة عن مكون روبي يمثل عنصرا من الموقع (كالمستعمل على سبيل المثال) و الذي يقوم بالتواصل مع قاعدة البيانات, بعدها يُكون المتحكم واجهة و يُحولها إلى صفحة ويب نهائية قابلة للنشر من طرف أي متصفح متخصص.</p>
-</div>
-  
-  
+
+      
+      
+    </div>
+  </div>
+
 
 
     </article>
+    
+    <hr>
+    
   
   
     <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/dtmdeblog/blog/2012/06/25/first-application-rails/">أول تطبيق ب Rails</a></h1>
-    
-    
-      <p class="meta">
-        
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
 
 
 
@@ -290,16 +343,27 @@
   
 
 
-<time datetime="2012-06-25T22:04:00+02:00" pubdate data-updated="true">Jun 25<span>th</span>, 2012</time>
-        
-         | <a href="/dtmdeblog/blog/2012/06/25/first-application-rails/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>في هذا الدرس سوف نقوم بانشاء أول تطبيق باستعمال رايلز. كل الأوامر التي سوف أنفذها تعمل بشكل طبيعي على نظام لينوكس أبونتو.</p>
+<i class="icon-calendar-empty"></i> <time datetime="2012-06-25T22:04:00+02:00" pubdate data-updated="true">Jun 25<span>th</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/06/25/first-application-rails/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/dtmdeblog/blog/categories/gems/"><span class="badge">gems</span></a>
+          
+          <a href="/dtmdeblog/blog/categories/rails/"><span class="badge">rails</span></a>
+          
+          <a href="/dtmdeblog/blog/categories/rake/"><span class="badge">rake</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/dtmdeblog/blog/2012/06/25/first-application-rails/">أول تطبيق ب Rails</a></h1>
+      <p>في هذا الدرس سوف نقوم بانشاء أول تطبيق باستعمال رايلز. كل الأوامر التي سوف أنفذها تعمل بشكل طبيعي على نظام لينوكس أبونتو.</p>
 
 <p>أول ما يجب القيام به هو انشاء ملف يحتوي على التطبيق الذي سوف نقوم بتطويره, على سبيل المثال &#8220;DemoApp&#8221;, بعدها يجب التمركز في هذا الملف و ارسال هذا الأمر rails new first_app, أين first_app تمثل اسم التطبيق.</p>
 
@@ -408,23 +472,26 @@
 <p>بعد ارسال الأمر rails server يخبرنا رايلز كما هو موضح أنا التطبيق شغال على الباب 3000 على العنوان 0.0.0.0 . هذا العنوان يرشد الألة للانصات على كل العناوين IP المكونة على الالة, مثل 127.0.0.1 و المعروف ب localhost. يمكنكم ملاحظة النتيجة على العنوان http://localhost:3000, مثل الصورة التالية :</p>
 
 <p><img src="/dtmdeblog/images/railsserver.png" title="صفحة البداية بعد تشغيل الحاجز الالي"/></p>
-</div>
-  
-  
+
+      
+      
+    </div>
+  </div>
+
 
 
     </article>
+    
+    <hr>
+    
   
   
     <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/dtmdeblog/blog/2012/06/17/railstools/">بعض الموارد للبدء ب Rails</a></h1>
-    
-    
-      <p class="meta">
-        
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
 
 
 
@@ -436,16 +503,27 @@
   
 
 
-<time datetime="2012-06-17T23:14:00+02:00" pubdate data-updated="true">Jun 17<span>th</span>, 2012</time>
-        
-         | <a href="/dtmdeblog/blog/2012/06/17/railstools/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>ماهي الأدوات التي بمكن أن تسهل لي العمل على لغتي المفضلة ؟ ماهي الكتب و الدروس التي يجب أن أبدأ بها ؟ أسئلة تتكرر عندما نريد تعلم و استخدام أية لغة برمجة. نفس الأسئلة يطرحها مبتدئ مثلي من أجل تعلم Rails. لهذا اخوتي أقترح عليكم بعض الموارد و الكتب التي سوف تعينكم ان شاء الله في بدء مغامرتكم &#8220;الروبستية&#8221; على قضبان &#8220;الرايلز&#8221;, بالتركيز على الموارد الخاصة ب &#8220;Rails&#8221;.
+<i class="icon-calendar-empty"></i> <time datetime="2012-06-17T23:14:00+02:00" pubdate data-updated="true">Jun 17<span>th</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/06/17/railstools/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/dtmdeblog/blog/categories/gem/"><span class="badge">gem</span></a>
+          
+          <a href="/dtmdeblog/blog/categories/rails/"><span class="badge">rails</span></a>
+          
+          <a href="/dtmdeblog/blog/categories/ruby/"><span class="badge">ruby</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/dtmdeblog/blog/2012/06/17/railstools/">بعض الموارد للبدء ب Rails</a></h1>
+      <p>ماهي الأدوات التي بمكن أن تسهل لي العمل على لغتي المفضلة ؟ ماهي الكتب و الدروس التي يجب أن أبدأ بها ؟ أسئلة تتكرر عندما نريد تعلم و استخدام أية لغة برمجة. نفس الأسئلة يطرحها مبتدئ مثلي من أجل تعلم Rails. لهذا اخوتي أقترح عليكم بعض الموارد و الكتب التي سوف تعينكم ان شاء الله في بدء مغامرتكم &#8220;الروبستية&#8221; على قضبان &#8220;الرايلز&#8221;, بالتركيز على الموارد الخاصة ب &#8220;Rails&#8221;.
 أعتقد أن أي مبتدئ بأي لغة يمكنه الاعتماد على الدروس المقدمة من المورد المختص أو &#8220;الرسمي&#8221; للغة البرمجة والذي ينشأه بشكل عام مصممو اللغة. فيما يخص &#8220;Rails&#8221;,تعتبر صفحة <a href="http://rubyonrails.org">http://rubyonrails.org</a> المورد الرئيسي بلا منازع من حيث تنوع المعلومات و الدروس الخاصة ب Rails.</p>
 
 <p>كتاب جميل هو ذلك الكتاب <a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book">دروس روبي اون رايلز</a> المقدم من طرف مايكل هارتل. الكتاب عبارة عن مثال لتطبيق اجتماعي معروض بطريقة تجعل القارئ و المتعلم يجوب أغلب أساسيات ل Rails. شخصيا تعلمت الكثير من هذا الكتاب السهل الممتع و الذي يشمل على الكثير من المعلومات.</p>
@@ -457,23 +535,26 @@
 <li>آخر مورد أطرحه عليكم هو <a href="http://railsforzombies.com">http://railsforzombies.com</a> الذي يحتوي على أجمل الدروس المختصرة و بقالب مروع و لكن فكاهي مع بعض التمارين التي تتدرج من السهل الى الصعب مع التنقيط, هنا أيضا الوصول لبعض الدروس ليس مجانيا و لكن يجب الاشادة بالفكرة التي وراء هذه الصفحة.</li>
 </ul>
 
-</div>
-  
-  
+
+      
+      
+    </div>
+  </div>
+
 
 
     </article>
+    
+    <hr>
+    
   
   
     <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/dtmdeblog/blog/2012/06/06/railsinstall/">تثبيث Ruby on Rails</a></h1>
-    
-    
-      <p class="meta">
-        
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
 
 
 
@@ -485,39 +566,53 @@
   
 
 
-<time datetime="2012-06-06T21:53:00+02:00" pubdate data-updated="true">Jun 6<span>th</span>, 2012</time>
-        
-         | <a href="/dtmdeblog/blog/2012/06/06/railsinstall/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>يسهل  Ruby On rails تطوير التطبيقات على الويب مع جعلها فعالة و قوية. لهذا لن نتعجب من سهولة تثبيثه. الطريقة السهلة من أجل تثبيث Rails (على اللينوكس) هي استعمال RubyGems بالطريقة الأتية :</p>
+<i class="icon-calendar-empty"></i> <time datetime="2012-06-06T21:53:00+02:00" pubdate data-updated="true">Jun 6<span>th</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/06/06/railsinstall/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          <a href="/dtmdeblog/blog/categories/gem/"><span class="badge">gem</span></a>
+          
+          <a href="/dtmdeblog/blog/categories/rails/"><span class="badge">rails</span></a>
+          
+          <a href="/dtmdeblog/blog/categories/ruby/"><span class="badge">ruby</span></a>
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/dtmdeblog/blog/2012/06/06/railsinstall/">تثبيث ruby on rails</a></h1>
+      <p>يسهل  Ruby On rails تطوير التطبيقات على الويب مع جعلها فعالة و قوية. لهذا لن نتعجب من سهولة تثبيثه. الطريقة السهلة من أجل تثبيث Rails (على اللينوكس) هي استعمال RubyGems بالطريقة الأتية :</p>
 
 <pre><code>                                                            `gem install rails`   
 </code></pre>
 
 <p>تعتبر RubyGems عن نظام ادارة حزم ل Ruby يشبه لحد كبير apt-get و يستعمل من أجل تثبيث المكتبات البرمجية و التطبيقات الخاصة ب Ruby. أما عن Ruby فلتثبيثه يمكن استعمال Ruby Version Manager و التي تسمح بتسيير الاصدارات الخاصة ب Ruby بطريقية يدوية. لمزيد من المعلومات حول كيفية تثبيث Ruby بواسطة Ruby Version Manager يمكنكم الاطلاع على الرابط التالي <a href="https://help.ubuntu.com/community/RubyOnRails">روبي على اوبنتو</a>. مع العلم أن الاصدار 1.9.3 يعتبر الاصدار المفضل للعمل ب Rails حتى و ان كانت الاصدارات 1.8.7,1.9.1, 1.8.4 و 1.8.2 تليق أيضا ما عدا الاصدار 1.8.3 .
 كما تلاجظون لقد ركزت مدونتي على التثبيث على ألة لينوكس لأنه و بكل بساطة غالبية &#8216;المجتمع الروبيستي&#8217; يعتمد على لينوكس في برمجة التطبيقات الروبية و ليسامحني محبو الويندوز.</p>
-</div>
-  
-  
+
+      
+      
+    </div>
+  </div>
+
 
 
     </article>
+    
+    <hr>
+    
   
   
     <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/dtmdeblog/blog/2012/06/01/rails-intro/">نبذة عن Ruby on Rails</a></h1>
-    
-    
-      <p class="meta">
-        
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
 
 
 
@@ -529,16 +624,21 @@
   
 
 
-<time datetime="2012-06-01T00:25:00+02:00" pubdate data-updated="true">Jun 1<span>st</span>, 2012</time>
-        
-         | <a href="/dtmdeblog/blog/2012/06/01/rails-intro/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>بسم الله الرحمن الرحيم</p>
+<i class="icon-calendar-empty"></i> <time datetime="2012-06-01T00:25:00+02:00" pubdate data-updated="true">Jun 1<span>st</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/06/01/rails-intro/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/dtmdeblog/blog/2012/06/01/rails-intro/">نبذة عن ruby on rails</a></h1>
+      <p>بسم الله الرحمن الرحيم</p>
 
 <p>أبدأ معكم اليوم سلسلة تعلم Rails و التي هي عبارة عن مجموعة من المدونات باللغة العربية من أجل التحكم في Ruby on Rails. مع العلم انني بدأت اكتشاف هذه البرمجة حديثا.
 هذه المدونة عبارة عن مقدمة لباقي المدونات اﻷخرى انشاء الله.</p>
@@ -560,23 +660,26 @@
 <p>ه. ActionMailer : تسمح و تسهل ارسال و استقبال الايميلات.</p>
 
 <p>و. ActioWebService : تسمح بانشاء خدمات الويب (web services) بطريقة جد سهلة.</p>
-</div>
-  
-  
+
+      
+      
+    </div>
+  </div>
+
 
 
     </article>
+    
+    <hr>
+    
   
   
     <article>
       
-  <header>
-    
-      <h1 class="entry-title"><a href="/dtmdeblog/blog/2012/05/19/premier-post/">المدونة الأولى</a></h1>
-    
-    
-      <p class="meta">
-        
+
+  <div class="row-fluid">
+    <div class="span2">
+		<h1 class="date-time">
 
 
 
@@ -588,103 +691,58 @@
   
 
 
-<time datetime="2012-05-19T19:40:00+02:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time>
-        
-         | <a href="/dtmdeblog/blog/2012/05/19/premier-post/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>بسم الله الرحمن الرحيم</p>
+<i class="icon-calendar-empty"></i> <time datetime="2012-05-19T19:40:00+02:00" pubdate data-updated="true">May 19<span>th</span>, 2012</time></h5>
+          <div class="row-fluid">
+          
+          <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/05/19/premier-post/#disqus_thread">Comments </a> <span class="fui-bubble-16"></span>
+          
+          </div>
+          
+          <div class="row-fluid">
+          
+          </div>
+          
+    </div>
+    <div class="span10">
+      <h1 class="link"><a href="/dtmdeblog/blog/2012/05/19/premier-post/">المدونة الأولى</a></h1>
+      <p>بسم الله الرحمن الرحيم</p>
 
 <p>أول مدونة لي باللغة العربية، أرحب بكل من يزورني على مدونتي و اتمنى تبادلا شيقا بيني و بين الكل</p>
-</div>
-  
-  
+
+      
+      
+    </div>
+  </div>
+
 
 
     </article>
+    
   
   <div class="pagination">
     
-    <a href="/dtmdeblog/blog/archives">Blog Archives</a>
+
     
     <a class="next" href="/dtmdeblog/blog/page/3/">Newer &rarr;</a>
     
   </div>
 </div>
-<aside class="sidebar">
-  
-    <section>
-  <h1>Recent Posts</h1>
-  <ul id="recent_posts">
-    
-      <li class="post">
-        <a href="/dtmdeblog/blog/2013/08/30/bill-gates-10conseils/">ال10 أشياء التي لا نتعلمها في المدرسة حسب بيل غاتس</a>
-      </li>
-    
-      <li class="post">
-        <a href="/dtmdeblog/blog/2013/08/28/impact-developpeur-equipe/">ما هو التأثير الذي يحدثه  المبرمج  الجديد لحظة وصوله للفريق ؟</a>
-      </li>
-    
-      <li class="post">
-        <a href="/dtmdeblog/blog/2013/08/25/booster-motivation/">كيف تحفز نفسك يوميا</a>
-      </li>
-    
-      <li class="post">
-        <a href="/dtmdeblog/blog/2013/08/19/startup-definition/">ما هو المعنى الحقيقي لستارتب؟</a>
-      </li>
-    
-      <li class="post">
-        <a href="/dtmdeblog/blog/2013/08/14/erreurs-employes/">أخطاء ترتكبها كرائد للمشروع  تُحبط الموظفين و تعجل برحليهم من مشروعك</a>
-      </li>
-    
-  </ul>
-</section>
 
 
-<section>
-  <h1>Latest Tweets</h1>
-  <ul id="tweets">
-    <li class="loading">Status updating&#8230;</li>
-  </ul>
-  <script type="text/javascript">
-    $.domReady(function(){
-      getTwitterFeed("dtmdeblog", 4, false);
-    });
-  </script>
-  <script src="/dtmdeblog/javascripts/twitter.js" type="text/javascript"> </script>
-  
-    <a href="http://twitter.com/dtmdeblog" class="twitter-follow-button" data-show-count="false">Follow @dtmdeblog</a>
-  
-</section>
-
-
-
-<section class="googleplus">
-  <h1>
-    <a href="https://plus.google.com/101099896157910648102?rel=author">
-      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
-      Google+
-    </a>
-  </h1>
-</section>
-
-
-
-  
-</aside>
-
-    </div>
-  </div>
-  <footer role="contentinfo"><p>
+        </div>
+      </div>
+      <div class="row-fluid">
+        <footer class="footer-page" role="contentinfo">
+          <p>
   Copyright &copy; 2013 - طيب مرابطي -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> - Theme by <a href="http://alexgaribay.com">Alex Garibay</a>
 </p>
 
-</footer>
+
+        </footer>
+      </div>
+    </div>
+  </div>
   
 
 <script type="text/javascript">
