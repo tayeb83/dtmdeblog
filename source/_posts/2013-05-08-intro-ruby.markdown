@@ -12,6 +12,7 @@ categories: ruby, روبي, intro Ruby, مدخل إلى روبي
 
 <img src="/images/ruby/YukihiroMatsumoto.JPG" title="Matz"/>
 
+<!-- more -->
 تثبيت و تجربة روبي :
 ----------------------
 

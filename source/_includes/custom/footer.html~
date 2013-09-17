@@ -1,5 +1,4 @@
-<hr>
 <p>
-  جميع الحقوق محفوظة &copy; {{ site.time | date: "%Y" }} - {{ site.author }} -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  كود المدونة مفتوح للجميع &copy; {{ site.time | date: "%Y" }} - {{ site.author }} -
+  <span class="credit"><a href="http://octopress.org"> octopress طور بواسطة</a></span>
 </p>

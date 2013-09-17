@@ -23,7 +23,8 @@ perl -v $
 في حالة ما إذا كان العكس لديكم الإختيار :
 
 1. إعادة تجميعه المصادر متوفرة في perl.com، أو
-2. إتباع أوامر تحميل و تثبيث الActivPerl المتوفر في الصفحة : [http://www.activestate.com](http://www.activestate.com://)  حسب نوع النظام.
+2. إتباع أوامر تحميل و تثبيث الActivPerl المتوفر في الصفحة : 
+[http://www.activestate.com](http://www.activestate.com)  حسب نوع النظام.
 
 التحية ببيرل :
 -----------------
