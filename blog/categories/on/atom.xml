@@ -4,7 +4,7 @@
   <title><![CDATA[Category: on | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/on/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-09-18T00:34:39+02:00</updated>
+  <updated>2013-11-09T23:20:51+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[تهيئة gedit من أجل روبي أون رايلز]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/11/09/gedit-configuration/"/>
+    <updated>2013-11-09T23:07:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/11/09/gedit-configuration</id>
+    <content type="html"><![CDATA[<p>أنا لست محب للمحررات التي معظمها ثقيلة نوعا ما و إن كانت فعالة مثل Eclipse أو RubyMine، لهذا فإنني أُُُفضل  محررا بسيط مثل gedit على الubuntu  مع استعمال حوسبة تساعد في تهيئة المحرر.</p>
+
+<!-- more -->
+
+
+<p>لو تستعملون  textmate فسنحاول أن نحول الgedit لشبيه هذا المحرر حتى نكون فعالين. لهذا و حتى نُحسن من المحرر gedit سنتعمل مجموعة من الحوسبة.</p>
+
+<p>في البداية سنضيف مخزن PPA يحتوي على حوسبات رايلز. داخل الterminal, يمكنكم ارسال الأمر التالي :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/geditConfig/intr1.png" title="intr1"/></p>
+
+<p>بعدها نقوم  بتثبيث حزمة المكونات الإضافية داخل أبونتو و تلك المتعلقة برايلز من خلال المخزن الذي أضفناه من خلال الأمر التالي كما هو موضح  في الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/geditConfig/intr2.png" title="intr2"/></p>
+
+<p>انتهينا، الآن يمكننا فتح  gedit و الذهاب إلى الPreferences و من ثم الأيقونة greffons للحصول على الأدوات المتعددة التي تم تثبيثها كما هو موضح في الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/geditConfig/preferences de gedit_002.png" title="pref2"/></p>
+
+<p>أو الأيقونة  : Polices &amp; Couleurs لتبديل الألوان و التي تسمح باختيار التيمات التي تريدونها، على سبيل المثال : تيمات الموقع railscast للذين يعرفونه كما هو موضح في الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/geditConfig/pref003.png" title="pref3"/></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[تسريع التعامل مع أوامر rails]]></title>

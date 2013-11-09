@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby, | مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/ruby-/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-09-18T00:34:39+02:00</updated>
+  <updated>2013-11-09T23:20:51+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,36 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[تهيئة gedit من أجل روبي أون رايلز]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/11/09/gedit-configuration/"/>
+    <updated>2013-11-09T23:07:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/11/09/gedit-configuration</id>
+    <content type="html"><![CDATA[<p>أنا لست محب للمحررات التي معظمها ثقيلة نوعا ما و إن كانت فعالة مثل Eclipse أو RubyMine، لهذا فإنني أُُُفضل  محررا بسيط مثل gedit على الubuntu  مع استعمال حوسبة تساعد في تهيئة المحرر.</p>
+
+<!-- more -->
+
+
+<p>لو تستعملون  textmate فسنحاول أن نحول الgedit لشبيه هذا المحرر حتى نكون فعالين. لهذا و حتى نُحسن من المحرر gedit سنتعمل مجموعة من الحوسبة.</p>
+
+<p>في البداية سنضيف مخزن PPA يحتوي على حوسبات رايلز. داخل الterminal, يمكنكم ارسال الأمر التالي :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/geditConfig/intr1.png" title="intr1"/></p>
+
+<p>بعدها نقوم  بتثبيث حزمة المكونات الإضافية داخل أبونتو و تلك المتعلقة برايلز من خلال المخزن الذي أضفناه من خلال الأمر التالي كما هو موضح  في الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/geditConfig/intr2.png" title="intr2"/></p>
+
+<p>انتهينا، الآن يمكننا فتح  gedit و الذهاب إلى الPreferences و من ثم الأيقونة greffons للحصول على الأدوات المتعددة التي تم تثبيثها كما هو موضح في الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/geditConfig/preferences de gedit_002.png" title="pref2"/></p>
+
+<p>أو الأيقونة  : Polices &amp; Couleurs لتبديل الألوان و التي تسمح باختيار التيمات التي تريدونها، على سبيل المثال : تيمات الموقع railscast للذين يعرفونه كما هو موضح في الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/geditConfig/pref003.png" title="pref3"/></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[تطبيق عملي لقياس سرعةالكود بروبي]]></title>
@@ -232,66 +262,6 @@
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/regexp_ruby/reptetive_case.png" title="rubyversion"/></p>
 
 <p>في الجزء الثاني إن شاءالله، سأكمل الامثلة المتداولة و سوف أعرض لكم طريقة البحث و الاستبدال بواسطة روبي و التعابير النمطية.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[مدخل إلى روبي]]></title>
-    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/05/08/intro-ruby/"/>
-    <updated>2013-05-08T18:29:00+02:00</updated>
-    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/05/08/intro-ruby</id>
-    <content type="html"><![CDATA[<h2>نبذة عامة  عن روبي :</h2>
-
-<p>كان أول ظهور لRuby سنة 1995 بفضل مطوره Yukihiro Matsumoto، جامعي ياباني، مما جعل هذه اللغة أكثر شهرة في اليابان من Perl أو Python. يأخذ Ruby تركيبه من لغات مختلفة : الجانب البراغماتي من Perl، التوجه الكائني من الSmaltalk ، و الوضوح من الPython. أما عن أصل التسمية فهذا يرجع لكون Ruby يقتبس أفكارا كثيرة من Perl، لهذا فإن المطورين في Perl لن يجدو صعوبة كبيرة  في تعلم هذه اللغة.</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/ruby/YukihiroMatsumoto.JPG" title="Matz"/></p>
-
-<!-- more -->
-
-
-<h2>تثبيت و تجربة روبي :</h2>
-
-<p>الطريقة الأمثل لتعلم لغة جديدة هو استعمالها و لاستعمالها فلا بد من تثبيتها. روبي متوفر في كل الأنظمة (linux/unix، Windows، Mac OS X، OS/2...). النسخة الثابتة الحالية لروبي هي النسخة ١.٩.٣ و إن كانت النسخة ٢.٠.٠ قد ظهرت من بضعة أيام.
-على الWindows النسخة يمكن تحمليها من الموقع <a href="http://rubyinstaller.org/downloads">http://rubyinstaller.org/downloads</a> . في لينوكس، روبي متوفر الآن في شكل حزم لأغلبية التوزيعات في حالة عدم توفره للتوزيعة الخاصة بكم يمكنكم تحمليه و تثبيته "يدويا" من الموقع    <a href="www.ruby-lang.org">www.ruby-lang.org</a> باستعمال الطريقة المعتادة : "make; make install". بالنسبة للMac فإنه وبعد النسخة ١٠.٤ فهو يحوي روبي داخل حزمة أدوات التطوير  (development kit ).</p>
-
-<h2>الخطوات الأولى :</h2>
-
-<p>لتجاربنا الأولية سوف نستعمل برنامج من أهم البرامج الروبية وهو الIRB لInteractive Ruby ، لنفرض أنكم قمتم و بجدارة بتثبيت روبي، يمكنكم التأكد من النسخة التي قمتم بتثبيتها عن طريق الأمر :</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/ruby/rubyVersion.png" title="rubyversion"/></p>
-
-<p>نفس الشيء بالنسبة لIRB :</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/ruby/irbVersion.png" title="irbversion"/></p>
-
-<p>يمكنكم الإقلاع الآن، لنبدأ بكتابة المثال التالي على المحرر الذي تريدون كما في الصورة، بعدها احفظوه  باسم example.rb مثلا.</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/ruby/exampleRuby.png" title="exampleRuby"/></p>
-
-<p>بعدها افتحوا الterminal على مكان الملف و قومو بارسال الأمر ruby example.rb النتيجة توضحها الصورة :</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/ruby/examplerubyexecution.png" title="executeRubyversion"/></p>
-
-<p>هذا المثال جد بسيط لكل من له بعض المفاهيم في البرمجة، لهذا فهو لا يحتاج لشرح مفصل و لكننا سنشرح فقط ما قمنا به من الجانب البرمجي، في السطر الثالث استعملنا الوظيفة print التي تسمح بطباعة النص على الشاشة، هذه الوظيفة تستقبل وسيطا واحدا و هو عبارة عن سلسلة محارف بين علامتي التنصيص "". في السطر الرابع، البرنامج ينتظر الإجابة على السؤال ا لمطروح سابقا و الذي هو اسم المستخدم، لهذا الغرض نستعمل الوظيفة readline و التي لها دور القراءة على جهاز الإدخال القياسي (STDIN) إلى أن نقوم بالضغط على المفتاح ENTER، النتيجة ستحفظ داخل المتغير name. الآن المتغير سيحتوي على الإسم و علامة الرجوع إلى السطر" n\"، لهذا قمنا باستعمال chomp قبل الطبع لحذف العودة إلى السطر.</p>
-
-<h2>أين تجدون المساعدة :</h2>
-
-<p>لعل التوثيق هو أكبر مشكل في روبي و ماعدا الموجود في المكتبة الرئيسية سوف ترون بأنفسكم أنه مشكل لديه حل وحيد و هو قراءة الأمثلة المرفقة و في بعض الأحيان قراءة مصدر الحزم.
-عندما قمتم بتثبيت روبي فقد قمتم بتثبيت RI : Ruby Interactive Reference. البحث يواسطة هذا البرنامج سهل، بحيث أنه يلزمكم فقط طلبه مرفقا بالنص الذي تريدون البحث عليه. مثلا، لو أردتم البحث على التوثيق الخاص بالArray، فإنه يجب ارسال الأمر كالتالي : ri Array، و سوف تحصلون على ما تريدونه.</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/ruby/arrayhelp.png" title="arrayHelp"/></p>
-
-<h2>قبل الذهاب بعيدا :</h2>
-
-<p>في الأخير إليكم بعض الموارد التي يمكن مطالعتها و اللجوء إليها لتعلم المزيد عن هذه اللغة :</p>
-
-<ol>
-<li><a href="http://www.ruby-lang.org">http://www.ruby-lang.org</a></li>
-<li><a href="http://raa.ruby-lang.org">http://raa.ruby-lang.org</a></li>
-<li><a href="http://rubyforge.org">http://rubyforge.org</a></li>
-<li><a href="https://www.ruby-toolbox.com">https://www.ruby-toolbox.com</a></li>
-</ol>
-
 ]]></content>
   </entry>
   
