@@ -20,7 +20,7 @@ categories: ruby on rails, gedit, ruby,
 
 انتهينا، الآن يمكننا فتح  gedit و الذهاب إلى الPreferences و من ثم الأيقونة greffons للحصول على الأدوات المتعددة التي تم تثبيثها كما هو موضح في الصورة :
 
-<img src="/images/geditConfig/preferences de gedit_002.png" title="pref2"/>
+<img src="/images/geditConfig/pref002.png" title="pref2"/>
 
 
 
