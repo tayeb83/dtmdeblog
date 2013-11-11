@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: بروبي | مدونة الطيب الضادي]]></title>
+  <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/بروبي/atom.xml" rel="self"/>
+  <link href="http://tayeb83.github.com/dtmdeblog/"/>
+  <updated>2013-11-11T01:15:32+01:00</updated>
+  <id>http://tayeb83.github.com/dtmdeblog/</id>
+  <author>
+    <name><![CDATA[طيب مرابطي]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[فتح الملفات بروبي]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/11/11/ruby-file-reading/"/>
+    <updated>2013-11-11T01:07:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/11/11/ruby-file-reading</id>
+    <content type="html"><![CDATA[<p>كيف أفتح الملف داخل البرنامج و كيف يمكنني قراءته، سؤال طرحه كل واحد منا في جوجل أو على المنتديات المختصة، كيف لا و قراءة الملفات من أهم المهام التي نستعملها يوميا سواء في البرمجة أو خاصة في مجال البحث العلمي.</p>
+
+<!-- more -->
+
+
+<p>في هذا المقال سوف أعطيكم طريقة بسيطة من دون تعقيدات و تفصيلات حول طريقة فتح ،قراءة و كتابة الملفات.</p>
+
+<h2>قراءة ملف كامل :</h2>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/filereadingruby/1.png" title="intr1"/></p>
+
+<h2>الكتابة في ملف :</h2>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/filereadingruby/2.png" title="intr1"/></p>
+
+<p>الكودين  السابقين يغطيان قرابة %80 من احتياجات المبرمج لانجاز سكريبت سريع.</p>
+
+<h2>فيمايلي بعض الأمثلة حول قراءة الملف سطرا بسطر:</h2>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/filereadingruby/3.png" title="intr1"/></p>
+
+<h2>كتابة الملف المفتوح سطرا بسطر داخل جدول :</h2>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/filereadingruby/4.png" title="intr1"/></p>
+
+<h2>كتابة شيئ في نهاية الملف :</h2>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/filereadingruby/5.png" title="intr1"/></p>
+]]></content>
+  </entry>
+  
+</feed>

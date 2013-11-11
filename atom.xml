@@ -4,7 +4,7 @@
   <title><![CDATA[مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-11-09T23:22:51+01:00</updated>
+  <updated>2013-11-11T01:15:32+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,42 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[فتح الملفات بروبي]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/11/11/ruby-file-reading/"/>
+    <updated>2013-11-11T01:07:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/11/11/ruby-file-reading</id>
+    <content type="html"><![CDATA[<p>كيف أفتح الملف داخل البرنامج و كيف يمكنني قراءته، سؤال طرحه كل واحد منا في جوجل أو على المنتديات المختصة، كيف لا و قراءة الملفات من أهم المهام التي نستعملها يوميا سواء في البرمجة أو خاصة في مجال البحث العلمي.</p>
+
+<!-- more -->
+
+
+<p>في هذا المقال سوف أعطيكم طريقة بسيطة من دون تعقيدات و تفصيلات حول طريقة فتح ،قراءة و كتابة الملفات.</p>
+
+<h2>قراءة ملف كامل :</h2>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/filereadingruby/1.png" title="intr1"/></p>
+
+<h2>الكتابة في ملف :</h2>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/filereadingruby/2.png" title="intr1"/></p>
+
+<p>الكودين  السابقين يغطيان قرابة %80 من احتياجات المبرمج لانجاز سكريبت سريع.</p>
+
+<h2>فيمايلي بعض الأمثلة حول قراءة الملف سطرا بسطر:</h2>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/filereadingruby/3.png" title="intr1"/></p>
+
+<h2>كتابة الملف المفتوح سطرا بسطر داخل جدول :</h2>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/filereadingruby/4.png" title="intr1"/></p>
+
+<h2>كتابة شيئ في نهاية الملف :</h2>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/filereadingruby/5.png" title="intr1"/></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[تهيئة gedit من أجل روبي أون رايلز]]></title>
@@ -775,24 +811,6 @@
 <p>و ملف الدرس قمت بتقاسمه في هذا الرابط</p>
 
 <p><a href="http://fr.slideshare.net/tayebmerabti/github-16704980">ملف الدرس </a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[ التهيئة  والرجوع إلى الوراء في الgit بالفيديو]]></title>
-    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/21/git-staged-and-reset-vid2/"/>
-    <updated>2013-02-21T00:28:00+01:00</updated>
-    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/02/21/git-staged-and-reset-vid2</id>
-    <content type="html"><![CDATA[<p>هذا المقال عبارة  عن تكملة لما بدأته مسبقا حول الgit بالفيديو. الدرس الثاني عبارة عن عرض لأهم الأوامر التس تساعد في التحكم بتهيئة الملفات و حفظها و كيفية  الغاءها و الرجوع إلى الوراء في حالة الخطأ أو لمجرد التغيير.</p>
-
-<p>أتمنى أن الدرس سيفيدكم و أنا في الخدمة من أجل مناقشة الدرس أو تحسينه في المستقبل.</p>
-
-<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/X-yqXZzd-YQ "></iframe></div>
-
-
-<p>و ملف الدرس قمت بتقاسمه في هذا الرابط</p>
-
-<p><a href="http://fr.slideshare.net/tayebmerabti/git-cours-2-pdf">ملف الدرس </a></p>
 ]]></content>
   </entry>
   
