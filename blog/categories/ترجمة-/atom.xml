@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: ترجمة، | مدونة الطيب الضادي]]></title>
+  <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/ترجمة-/atom.xml" rel="self"/>
+  <link href="http://tayeb83.github.com/dtmdeblog/"/>
+  <updated>2013-11-12T21:15:04+01:00</updated>
+  <id>http://tayeb83.github.com/dtmdeblog/</id>
+  <author>
+    <name><![CDATA[طيب مرابطي]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[جيم للتعامل مع واجهة جوجل للترجمة في روبي]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/11/12/translate-api-google/"/>
+    <updated>2013-11-12T20:54:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/11/12/translate-api-google</id>
+    <content type="html"><![CDATA[<p>في هذا المقال المختصر سأقدم لكم جيم Gem جميل جدا، تستطيعون من خلاله استعمال واجهة جوجل للترجمة من خلال واجهة سطر الأوامر فقط.</p>
+
+<!-- more -->
+
+
+<p>أول شيئ يجب القيام  به  هو تثبيث الجيم باستعمال الbundler أو باستعمال الطريقة المعتادة في تثبيث الجيمات كما هو موضح في الصورة :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/gemFileImages/13.png" title="intr1"/></p>
+
+<p>الآن ما عليكم سوى تجريب المكتبة من خلال ارسال الأوامر داخل واجهة سطر الأوامر. على سبيل المثال يمكنكم إرسال الأمر الذي يعطيكم الغات التي يمكن أن يقرأها و اللغات التي يترجم لها، كما هو موضح في الصورة :
+<img src="http://tayeb83.github.com/dtmdeblog/images/gemFileImages/015.png" title="intr1"/></p>
+
+<p>لاستعمال الجيم مباشرة  داخل واجهة سطر الأوامر، يمكنكم ارسال الأمر كالتالي :</p>
+
+<p>t + الجملة المراد ترجمتها + اللغة المرادة
+الصورة التالية توضح لكم المثال و إن كانت الغة العربية ليست واضحة بواسطة واجهة الأوامر التي استعملها :</p>
+
+<p><img src="http://tayeb83.github.com/dtmdeblog/images/gemFileImages/016.png" title="intr1"/></p>
+
+<p>لمزيد من المعلومات يمكنكم زيارة مخزن المكتبة على ال github :</p>
+
+<p><a href="https://github.com/shvets/google-translate">https://github.com/shvets/google-translate</a></p>
+]]></content>
+  </entry>
+  
+</feed>
