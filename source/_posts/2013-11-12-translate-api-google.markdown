@@ -13,20 +13,21 @@ categories: روبي، ترجمة، جوجل
 أول شيئ يجب القيام  به  هو تثبيث الجيم باستعمال الbundler أو باستعمال الطريقة المعتادة في تثبيث الجيمات كما هو موضح في الصورة :
 
 
-<img src="/images/gemFileImages/13.png" title="intr1"/>
+<img src="/images/gemFilesImages/13.png" title="intr1"/>
 
 الآن ما عليكم سوى تجريب المكتبة من خلال ارسال الأوامر داخل واجهة سطر الأوامر. على سبيل المثال يمكنكم إرسال الأمر الذي يعطيكم الغات التي يمكن أن يقرأها و اللغات التي يترجم لها، كما هو موضح في الصورة :
-<img src="/images/gemFileImages/015.png" title="intr1"/>
+<img src="/images/gemFilesImages/015.png" title="intr1"/>
 
 لاستعمال الجيم مباشرة  داخل واجهة سطر الأوامر، يمكنكم ارسال الأمر كالتالي :
 
 t + الجملة المراد ترجمتها + اللغة المرادة 
 الصورة التالية توضح لكم المثال و إن كانت الغة العربية ليست واضحة بواسطة واجهة الأوامر التي استعملها : 
 
-<img src="/images/gemFileImages/016.png" title="intr1"/>
+<img src="/images/gemFilesImages/016.png" title="intr1"/>
 
 
 لمزيد من المعلومات يمكنكم زيارة مخزن المكتبة على ال github :
 
 [https://github.com/shvets/google-translate](https://github.com/shvets/google-translate)
+
  
