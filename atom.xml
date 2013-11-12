@@ -4,7 +4,7 @@
   <title><![CDATA[مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-11-12T21:26:27+01:00</updated>
+  <updated>2013-11-12T21:32:27+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -33,9 +33,9 @@
 
 <p>لاستعمال الجيم مباشرة  داخل واجهة سطر الأوامر، يمكنكم ارسال الأمر كالتالي :</p>
 
-<p><code>t + الجملة المراد ترجمتها + اللغة المرادة</code></p>
+<p><code>t +الجملة المراد ترجمتها + اللغة المرادة</code></p>
 
-<p>الصورة التالية توضح لكم المثال و إن كانت اللغة العربية ليست واضحة بواسطة واجهة الأوامر التي استعملها :</p>
+<p>الصورة التالية توضح لكم المثال و إن كانت الغة العربية ليست واضحة بواسطة واجهة الأوامر التي استعملها :</p>
 
 <p><img src="http://tayeb83.github.com/dtmdeblog/images/gemFilesImages/016.png" title="intr1"/></p>
 
