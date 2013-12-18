@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: المحتوى | مدونة الطيب الضادي]]></title>
+  <link href="http://tayeb83.github.com/dtmdeblog/blog/categories/المحتوى/atom.xml" rel="self"/>
+  <link href="http://tayeb83.github.com/dtmdeblog/"/>
+  <updated>2013-12-18T18:39:05+01:00</updated>
+  <id>http://tayeb83.github.com/dtmdeblog/</id>
+  <author>
+    <name><![CDATA[طيب مرابطي]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[25٪ إلى 30٪ من الويب عبارة عن محتوى مكرر]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/12/18/content-duplication/"/>
+    <updated>2013-12-18T17:51:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/12/18/content-duplication</id>
+    <content type="html"><![CDATA[<p>قام matt cutts بتسجيل فيديو على يوتوب يصف من خلاله مشكل المحتوى المكرر على الإنترنت والتاثير الذي يحدثه على نتائج البحث في جوجل.</p>
+
+<p>الفيديو يبدأ بالإجابة على سؤال لأحد المستخدمين مقتضاه :  كيف يتعامل جوجل مع المحتوى المكرر وماهي الاثار السلبية التي يسببها على نتائج البحث في جوجل ؟</p>
+
+<!-- more -->
+
+
+<p>في مقدمة إجابته يوضح مختص السبام في جوجل انه عند تحليل محتوى الإنترنت فإن 25% إلى 30% من المحتوى مكرر. وبعبارة  أخرى، المحتوى المكرر موجود في كل مكان وبكل الأساليب : إقتباس، أخذ فقرات من مدونات مختلفة ...وهلم جر. من خلال ذلك يوضح matt cutts أن ليس كل ما هو محتوى مكرر عبارة عن سبام (بريد مزعج).</p>
+
+<p>في الحقيقة جوجل لا تريد إظهار الصفحات المتشابهة للمستخدمين، و بالتالي عندما يحلل محرك البحث صفحات الويب ويكتشف التشابه بين صفحتين، فإنه يترك صفحة واحدة  و إسقاط الثانية بعيدا في نتائج البحث. أيضا ووفقا لخبير جوجل فإن هذه ليست طريقة لمعاقبة  المقالات المكررة ولكن من واجب جوجل تقديم نتائج بحث دقيقة.</p>
+
+<p><div class="embed-video-container"><iframe src="http://www.youtube.com/embed/mQZY7EmjbMA "></iframe></div></p>
+]]></content>
+  </entry>
+  
+</feed>

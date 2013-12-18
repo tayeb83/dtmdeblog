@@ -4,7 +4,7 @@
   <title><![CDATA[مدونة الطيب الضادي]]></title>
   <link href="http://tayeb83.github.com/dtmdeblog/atom.xml" rel="self"/>
   <link href="http://tayeb83.github.com/dtmdeblog/"/>
-  <updated>2013-11-12T21:36:45+01:00</updated>
+  <updated>2013-12-18T18:39:05+01:00</updated>
   <id>http://tayeb83.github.com/dtmdeblog/</id>
   <author>
     <name><![CDATA[طيب مرابطي]]></name>
@@ -12,6 +12,29 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[25٪ إلى 30٪ من الويب عبارة عن محتوى مكرر]]></title>
+    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/12/18/content-duplication/"/>
+    <updated>2013-12-18T17:51:00+01:00</updated>
+    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/12/18/content-duplication</id>
+    <content type="html"><![CDATA[<p>قام matt cutts بتسجيل فيديو على يوتوب يصف من خلاله مشكل المحتوى المكرر على الإنترنت والتاثير الذي يحدثه على نتائج البحث في جوجل.</p>
+
+<p>الفيديو يبدأ بالإجابة على سؤال لأحد المستخدمين مقتضاه :  كيف يتعامل جوجل مع المحتوى المكرر وماهي الاثار السلبية التي يسببها على نتائج البحث في جوجل ؟</p>
+
+<!-- more -->
+
+
+<p>في مقدمة إجابته يوضح مختص السبام في جوجل انه عند تحليل محتوى الإنترنت فإن 25% إلى 30% من المحتوى مكرر. وبعبارة  أخرى، المحتوى المكرر موجود في كل مكان وبكل الأساليب : إقتباس، أخذ فقرات من مدونات مختلفة &#8230;وهلم جر. من خلال ذلك يوضح matt cutts أن ليس كل ما هو محتوى مكرر عبارة عن سبام (بريد مزعج).</p>
+
+<p>في الحقيقة جوجل لا تريد إظهار الصفحات المتشابهة للمستخدمين، و بالتالي عندما يحلل محرك البحث صفحات الويب ويكتشف التشابه بين صفحتين، فإنه يترك صفحة واحدة  و إسقاط الثانية بعيدا في نتائج البحث. أيضا ووفقا لخبير جوجل فإن هذه ليست طريقة لمعاقبة  المقالات المكررة ولكن من واجب جوجل تقديم نتائج بحث دقيقة.</p>
+
+<div class="embed-video-container"><iframe src="http://www.youtube.com/embed/mQZY7EmjbMA "></iframe></div>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[جيم للتعامل مع واجهة جوجل للترجمة في روبي]]></title>
@@ -802,33 +825,6 @@
 <li><a href="https://www.ruby-toolbox.com">https://www.ruby-toolbox.com</a></li>
 </ol>
 
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[التكملة التلقائية للgit ]]></title>
-    <link href="http://tayeb83.github.com/dtmdeblog/blog/2013/03/20/git-automcompletion/"/>
-    <updated>2013-03-20T09:29:00+01:00</updated>
-    <id>http://tayeb83.github.com/dtmdeblog/blog/2013/03/20/git-automcompletion</id>
-    <content type="html"><![CDATA[<p>في هذا المقال سأشرح  لكم الطريقة التي يمكنكم من خلالها الاستفادة من التكملة التلقائية لأوامر الgit داخل الbash أو مفسر سطر الأوامر.</p>
-
-<!-- more -->
-
-
-<p>أول شيئ يجب القيام به هو تحميل السكريبت : <code>git-completion.bash</code> و حفظه داخل المجلد البيت الخاص بكم كالتالي :</p>
-
-<figure class='code'><figcaption><span>تحميل السكريبت داخل الملف الخاص   </span></figcaption>
-<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash</span></code></pre></td></tr></table></div></figure>
-
-
-<p>بعدها يجب إضافة الأسطر التالية داخل ملف bash_profile. الموجود داخل المجلد البيت الخاص بكم، هذه الأسطر تُعلم الbash بتنفيذ السكريبت الخاص بالتكملة التلقائية إذا وجد :</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/gitautocompletion/linesaddedtoscript.png" title="اضافة الأسطر التالية للbash_profile"/></p>
-
-<p>الأن ماعليكم فعله الا فتح الbash و البدأ في كتابة أمر git و التكملة باستعمال الTAB، كماماهو موضح في الصورة :</p>
-
-<p><img src="http://tayeb83.github.com/dtmdeblog/images/gitautocompletion/gitexamplecommand.png" title="مثال لتكملة تلقائية لgit"/></p>
 ]]></content>
   </entry>
   
