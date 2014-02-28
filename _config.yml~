@@ -49,7 +49,7 @@ navigation:
   url: /dtmdeblog/about/index.html
 - text: أرشيف المدونة
   url: /dtmdeblog/blog/archives  
-  - text: البداية
+- text: البداية
   url: /dtmdeblog/
   
 # list each of the sidebar modules you want to include, in the order you want them to appear.
