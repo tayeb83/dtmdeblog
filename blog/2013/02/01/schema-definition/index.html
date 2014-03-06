@@ -20,17 +20,17 @@
 
   
   <link rel="canonical" href="http://tayeb83.github.com/dtmdeblog/blog/2013/02/01/schema-definition">
-  <link href="/favicon.png" rel="icon">
+  <link href="/dtmdeblog/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/dtmdeblog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/dtmdeblog/atom.xml" rel="alternate" title="مدونة الطيب الضادي" type="application/atom+xml">
   <script src="/js/jquery.js"></script>
   <script src="/js/bootstrap-collapse.js"></script>
-  <script src="/js/modernizr-2.0.js"></script>
+  <script src="/dtmdeblog/js/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/js/octopress.js" type="text/javascript"></script>
+  <script src="/dtmdeblog/js/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -111,7 +111,7 @@
 
 <p>أول مايجب القيام به و بعد إنشاء التطبيق هو إرسال الأمر من داخل الملف الرئيسي للبرنامج كالتالي :</p>
 
-<p><img src="/images/databseschema/railsgeneratemigration.png" title="إنشاء سكريبت الmigration"/></p>
+<p><img src="/dtmdeblog/images/databseschema/railsgeneratemigration.png" title="إنشاء سكريبت الmigration"/></p>
 
 <p>هذا الأمر سيقوم بإنشاء سكريبت الmigration و الذي إسمه يشبه هذا الإسم :  &#8220;20130201212100_create_database.rb&#8221;، عند فتح السكريبت نجد إحتوائه على وظيفتين up و down. في الوظيفة up سنقوم بإضافة الأوامر الخاصة بإنشاء المخطط البياني بواسطة الأوامر الموجودة في الActive Record الخاصة بإنشاء المخططات البيانية، مثل إنشاء الجداول. العكس يجب فعله في الوظيفة down، بمعنى الأوامر التي تُستعمل من أجل تدمير الجداول التي أنشأتها الوظيفة up.</p>
 
@@ -119,11 +119,11 @@
 </pre></td><td class='code'><pre><code class=''><span class='line'>rake db:migrate $</span></code></pre></td></tr></table></div></figure>
 
 
-<p><img src="/images/databseschema/executionrakedbmigrate.png" title="مراحل إنشاء الجداول عن طريق السكريبت"/></p>
+<p><img src="/dtmdeblog/images/databseschema/executionrakedbmigrate.png" title="مراحل إنشاء الجداول عن طريق السكريبت"/></p>
 
 <p>الأن يمكننا التأكد داخل قاعدة بياناتنا (SQLLite) بأن الجداول تم إنشاءها بطريقة صحيحة.</p>
 
-<p><img src="/images/databseschema/sqliteshowtables.png" title="رؤية الجداول داخل قاعدة البيانات"/></p>
+<p><img src="/dtmdeblog/images/databseschema/sqliteshowtables.png" title="رؤية الجداول داخل قاعدة البيانات"/></p>
 
 <p>الفائدة أنه قمنا بإنشاء مخطط بيانات داخل قاعدة البيانات من دون كتابة سطر SQL واحد ومن دون التفكير في أي نوع من القواعد، وهذا من أهم مميزات الActive Record الذي قمنا بتقديمه في درس سابق،</p>
 
@@ -144,19 +144,19 @@
 
 
 
-  <a href="/blog/categories/databases,/"><span class="badge">databases,</span></a>
+  <a href="/dtmdeblog/blog/categories/databases,/"><span class="badge">databases,</span></a>
 
-  <a href="/blog/categories/rails,/"><span class="badge">rails,</span></a>
+  <a href="/dtmdeblog/blog/categories/rails,/"><span class="badge">rails,</span></a>
 
-  <a href="/blog/categories/البانات،/"><span class="badge">البانات،</span></a>
+  <a href="/dtmdeblog/blog/categories/البانات،/"><span class="badge">البانات،</span></a>
 
-  <a href="/blog/categories/البيانات/"><span class="badge">البيانات</span></a>
+  <a href="/dtmdeblog/blog/categories/البيانات/"><span class="badge">البيانات</span></a>
 
-  <a href="/blog/categories/رايلز،/"><span class="badge">رايلز،</span></a>
+  <a href="/dtmdeblog/blog/categories/رايلز،/"><span class="badge">رايلز،</span></a>
 
-  <a href="/blog/categories/قاعدة/"><span class="badge">قاعدة</span></a>
+  <a href="/dtmdeblog/blog/categories/قاعدة/"><span class="badge">قاعدة</span></a>
 
-  <a href="/blog/categories/مخطط/"><span class="badge">مخطط</span></a>
+  <a href="/dtmdeblog/blog/categories/مخطط/"><span class="badge">مخطط</span></a>
 
 
 
@@ -188,10 +188,10 @@
       <div class="span12">
         <p class="meta">
           
-            <a class="basic-alignment left" href="/blog/2012/12/30/activerecord-part2/" title="Previous Post:  مدخل إلى  Activerecord: العلاقات">&laquo;  مدخل إلى  Activerecord: العلاقات</a>
+            <a class="basic-alignment left" href="/dtmdeblog/blog/2012/12/30/activerecord-part2/" title="Previous Post:  مدخل إلى  Activerecord: العلاقات">&laquo;  مدخل إلى  Activerecord: العلاقات</a>
           
           
-            <a class="basic-alignment right" href="/blog/2013/02/05/unified-medical-language-system/" title="Next Post: Unified Medical Language System - النظام الموحد للغة الطب">Unified Medical Language System - النظام الموحد للغة الطب &raquo;</a>
+            <a class="basic-alignment right" href="/dtmdeblog/blog/2013/02/05/unified-medical-language-system/" title="Next Post: Unified Medical Language System - النظام الموحد للغة الطب">Unified Medical Language System - النظام الموحد للغة الطب &raquo;</a>
           
         </p>
       </div>
