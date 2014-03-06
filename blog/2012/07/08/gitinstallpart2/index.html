@@ -20,17 +20,17 @@
 
   
   <link rel="canonical" href="http://tayeb83.github.com/dtmdeblog/blog/2012/07/08/gitinstallpart2">
-  <link href="/dtmdeblog/favicon.png" rel="icon">
+  <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
-  <link href="/dtmdeblog/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/dtmdeblog/atom.xml" rel="alternate" title="مدونة الطيب الضادي" type="application/atom+xml">
   <script src="/js/jquery.js"></script>
   <script src="/js/bootstrap-collapse.js"></script>
-  <script src="/dtmdeblog/js/modernizr-2.0.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
-  <script src="/dtmdeblog/js/octopress.js" type="text/javascript"></script>
+  <script src="/js/octopress.js" type="text/javascript"></script>
   <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
 <link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -130,11 +130,11 @@
 <p>بعدها يجب إضافة الملفات داخل الrepository, ولكن يكمن هنا مشكل بسيط و هو أن الGIT يتبع التغيرات التي تطرأ على كل الملفات حتى تلك التي لا نريد تتبعها, أخص بالذكر ملفات الlog على سبيل المثال وذلك أن هذه الملفات تتغير بكثرة و لسنا بحاجة لأن يقوم نظام إدارة الإصدارات بتتبع تغيراتها. لحسن الحظ فإن الGIT لديه القدرة على تجاهل مثل هذه الملفات و ذلك بالطريقة التالية :
 نضف إلى الملف الرئيسي للتطبيق ملف إسمه gitignore. و الذي سوف يحتوي على بعض القواعد تحدد لGIT الملفات التي يجب تجاهلها, اﻵن لو عدنا إلى الدرس   <a href="http://tayeb83.github.com/dtmdeblog/blog/2012/06/25/first-application-rails">أول تطبيق برايلز</a>  فسوف تلاحظون أن رايلز قام بإنشاء ملف gitignore. داخل الملف الرئيسي مثل ما توضحه الصورة :</p>
 
-<p><img src="/dtmdeblog/images/gitginoreinapplication.png" title="ملف gitignore. داخل الملف الرئيسي"/></p>
+<p><img src="/images/gitginoreinapplication.png" title="ملف gitignore. داخل الملف الرئيسي"/></p>
 
 <p>اﻵن لو فتحنا gitignore. فسوف تلاحظون أن الملف يحتوي على مجموعة من القواعد تجبر الGIT على تجاهل التغيرات التي تطرأ على ملفات الlog, الملفات المؤقتة و قاعدة البيانات sqllite.</p>
 
-<p><img src="/dtmdeblog/images/gitigorefile.png" title=" محتوى ملف gitignore."/></p>
+<p><img src="/images/gitigorefile.png" title=" محتوى ملف gitignore."/></p>
 
 <h2>الإضافة و الحفظ</h2>
 
@@ -146,7 +146,7 @@
 
 <p>النقطة (.) هنا تمثل الملف الجاري و الGIT ذكي بما فيه الكفاية لكي يقوم بإضافة كل الملفات بطريقة الإستدعاء الذاتي. هذه العملية تقوم بإضافة الملفات إلى &#8220;ساحة التخزين&#8221; (staging area) و التي تحتوي على التغيرات المؤقتة على المشروع. يمكنكم رؤيتها عن طريق تنفيذ الأمر &#8220;git status&#8221;  كما هو موضح في الصورة :</p>
 
-<p><img src="/dtmdeblog/images/gitstatus.png"/></p>
+<p><img src="/images/gitstatus.png"/></p>
 
 <p>اﻵن إذا أردتم حفظ هذه التغيرات و تأكيدها فيجب إستعمال الأمر &#8220;commit -m&#8221; بحيث أن الخاصية &#8220;m-&#8221; تسمح لكم بإضافة تعليق يوضح مثلا سبب التغيير.</p>
 
@@ -162,7 +162,7 @@
 
 <p>لمعرفة ما حصل سوف نفوم بإرسال الأمر &#8220;git status&#8221;.</p>
 
-<p><img src="/dtmdeblog/images/gitstatusrmrfcontrollers.png"/></p>
+<p><img src="/images/gitstatusrmrfcontrollers.png"/></p>
 
 <p>الصورة توضح التغيرات التي حصلت ولكن ما يجب معرفته أن هذه التغيرات لم تحفظ بعد على الGIT و بالتالي فإن بإمكاننا إلغاءها بطريقة سهلة و ربط الGIT مع الإصدار اﻷخير عن طريق تنفيذ اﻷمر  &#8220;git chekout -f&#8221;.</p>
 
@@ -199,11 +199,11 @@
 
 
 
-  <a href="/dtmdeblog/blog/categories/git,/"><span class="badge">git,</span></a>
+  <a href="/blog/categories/git,/"><span class="badge">git,</span></a>
 
-  <a href="/dtmdeblog/blog/categories/github,/"><span class="badge">github,</span></a>
+  <a href="/blog/categories/github,/"><span class="badge">github,</span></a>
 
-  <a href="/dtmdeblog/blog/categories/rails/"><span class="badge">rails</span></a>
+  <a href="/blog/categories/rails/"><span class="badge">rails</span></a>
 
 
 
@@ -235,10 +235,10 @@
       <div class="span12">
         <p class="meta">
           
-            <a class="basic-alignment left" href="/dtmdeblog/blog/2012/07/07/gitinitialisation/" title="Previous Post:  إدارة الإصدارات-مقدمة">&laquo;  إدارة الإصدارات-مقدمة</a>
+            <a class="basic-alignment left" href="/blog/2012/07/07/gitinitialisation/" title="Previous Post:  إدارة الإصدارات-مقدمة">&laquo;  إدارة الإصدارات-مقدمة</a>
           
           
-            <a class="basic-alignment right" href="/dtmdeblog/blog/2012/09/23/github/" title="Next Post: إدارة الإصدارات-github">إدارة الإصدارات-github &raquo;</a>
+            <a class="basic-alignment right" href="/blog/2012/09/23/github/" title="Next Post: إدارة الإصدارات-github">إدارة الإصدارات-github &raquo;</a>
           
         </p>
       </div>
