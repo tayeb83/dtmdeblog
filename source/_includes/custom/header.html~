@@ -1,6 +1,9 @@
 <div class="jumbotron">
+
+  <div class="demo-logo">
+   <div href="{{ root_url }}/" class="logo">
+   </div> </div>
   <div class="container">
-    مرحبا بكم في مدونتي.
-    <h3 class="tagline"></h3>
+   <h3 class="tagline"></h3>
   </div>
 </div>

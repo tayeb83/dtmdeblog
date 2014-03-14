@@ -1,0 +1,23 @@
+{% capture category %}{{ post.categories | size }}{% endcapture %}
+<div class="row-fluid">
+	<div class="span1">
+		<h1 class="date-time">{% include post/date.html %}<i class="icon-calendar-empty"></i> {{ time }}</h1>
+	</div>
+	<div class="span10">
+		<h1><a href="{{ root_url }}{{ post.url }}">{{post.title}}</a></h1>
+	</div>
+</div>
+{% if category != '0' %}
+<div class="row-fluid">
+	<div class="span1">
+	</div>
+	<div class="span10">
+		
+
+		<footer class="archive">
+		  <span class="categories">{{ post.categories | category_links }}</span>
+		</footer>
+		
+	</div>
+</div>
+{% endif %}

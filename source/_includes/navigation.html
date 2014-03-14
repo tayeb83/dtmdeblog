@@ -1,5 +1,5 @@
-{% include custom/navigation.html %}
-<ul class="nav pull-right">
+
+<ul class="nav pull-left">
     {% if site.github_user %}
     <li><a href="http://github.com/{{ site.github_user }}" title="Github Profile"><i class="icon-github-sign social-navbar"></i></a></li>
     {% endif %}
@@ -19,3 +19,5 @@
     <li><a href="mailto:{{ site.email }}" title="Email"><i class="icon-envelope-alt social-navbar"></i></a></li>
     {% endif %}
 </ul>
+
+{% include custom/navigation.html %}

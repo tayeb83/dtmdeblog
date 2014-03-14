@@ -1,8 +1,5 @@
-<ul class="nav pull-right">
-  <li><a href="{{ root_url }}/blog/archives">الأرشيف</a></li>
-  <li><a href="{{ root_url }}/">المدونة</a></li>
-  <li><a href="{{ root_url }}/about">من أنا؟</a></li>
-  <a href="{{ root_url }}/"><img src="/dtmdeblog/images/lowres.jpg"></a>
-  <a class="brand" href="{{ root_url }}/">{{ site.title }}</a>
-
+<ul class="nav">
+    {% for link in site.navigation %}
+        <li {% if page.url == link.url %}class="active"{% endif %}><a href="{{ link.url }}">{{ link.text }}</a></li>
+    {% endfor %}
 </ul>

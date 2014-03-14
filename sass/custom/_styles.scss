@@ -1,3 +1,54 @@
-// Add your custom styling here.
 
-body { direction: rtl; }
+
+// Add your custom styling here.
+.google-form-wrapper {
+  .error {
+    color: black;
+    font-size: 12px;
+  }
+  .errorbox-good {
+    margin-bottom: 20px;
+  }
+  .success-msg {
+    display: none;
+  }
+  .ss-form-entry {
+    label {
+      display:block;
+    }
+    input {
+      display: block;
+      padding: 5px;
+      width: 250px;
+      font: inherit;
+      color: black;
+    }
+    textarea {
+      width: 450px;
+      padding: 5px;
+      font: inherit;
+      color: black;
+    }
+  }
+  .ss-navigate input {
+    width: auto;
+    cursor: pointer;
+  }
+}
+
+
+.code-font {
+  font-family: Menlo, Monaco, "Andale Mono", "Lucida Console", "Courier New", monospace;
+}
+
+.sans-serif-font-bold {
+  font-family: "khaled", "Helvetica Neue", Arial, sans-serif;
+}
+
+.sans-serif-font {
+  font-family: "AlHurra", "Helvetica Neue", Arial, sans-serif;
+}
+
+.default-font {
+  font-family: "AlHurra", Georgia, Times, "Times New Roman", serif;
+}

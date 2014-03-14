@@ -1,4 +1,6 @@
-@import url("http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic");
+@import "custom/typography.scss";
+@import url(http://fonts.googleapis.com/earlyaccess/droidarabickufi.css);
+
 @font-face {
   font-family: "Flat-UI-Icons-16";
   src: url("../fonts/Flat-UI-Icons-16.eot");
@@ -14,6 +16,7 @@
   font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased; }
+  
 
 /* Use the following CSS code if you want to have a class per icon */
 /*Instead of a list of all class selectors,
@@ -177,12 +180,17 @@
   content: "\e004"; }
 
 body {
+
   color: $text-color;
   background: $bg-color;
-  font: 18px/1.831 "Open Sans", sans-serif; }
+  font: 18px/1.831 "Open Sans", sans-serif;
+  
+   }
 
 p {
-  font-weight: 300; }
+  font-weight: 300; 
+
+  }
 
 a {
   color: $secondary-color;
@@ -200,7 +208,7 @@ h1 {
   color: $primary-color;
   font-size: 32px;
   font-weight: 900; 
-  font-family: "Quicksand"; }
+    font-family: "israr", "Helvetica Neue", Arial, sans-serif;  }
   .date-time{
     font-size: 15px;
     color: $accent-color2;
@@ -215,7 +223,7 @@ h2 {
   color: $primary-color;
   font-size: 26px;
   font-weight: 500;
-  font-family: "Quicksand";
+  font-family: "khaled", "Helvetica Neue", Arial, sans-serif;
   margin-bottom: 2px; }
 
 h3 {
@@ -345,13 +353,13 @@ h6 {
   letter-spacing: -2px;
   line-height: 100px; }
   .demo-logo .logo {
-    background: url("../images/demo/logo-mask.png") center 0 no-repeat;
-    background-size: 256px 186px;
+    background: url("../images/binz_dtmde.png") center 0 no-repeat;
+    background-size: 356px 186px;
     height: 186px;
     margin: 0 auto 26px;
     overflow: hidden;
     text-indent: -9999em;
-    width: 256px; }
+    width: 356px; }
   .demo-logo small {
     color: rgba(52, 73, 94, 0.3);
     display: block;
@@ -584,7 +592,9 @@ h6 {
     .navbar .nav > li > a:hover {
       color: $tertiary-color; }
   .navbar .nav li {
-    position: relative; }
+    position: relative; 
+  font-family: "Droid Arabic Kufi", serif;
+    }
     .navbar .nav li:hover > ul {
       opacity: 1;
       z-index: 100;
@@ -2579,10 +2589,12 @@ body.vjs-full-window {
 .jumbotron {
   font-size: 60px;
   line-height: 70px;
-  font-family: "Quicksand";
+  font-family: "Droid Arabic Kufi", serif;
   position: relative;
   padding: 70px 0;
-  color: $primary-color; }
+  color: #CA4A18; 
+  }
+  
 .jumbotron:after {
   content: '';
   display: block;

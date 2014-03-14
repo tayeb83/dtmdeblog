@@ -8,6 +8,7 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+
 article,
 aside,
 details,
@@ -233,10 +234,10 @@ textarea {
 
 body {
   margin: 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   font-size: 14px;
   line-height: 20px;
-  color: #333333;
+  color: #fdf6e3;
   background-color: #ffffff;
 }
 
@@ -399,6 +400,8 @@ a:hover {
 
 .row-fluid {
   width: 100%;
+
+
   *zoom: 1;
 }
 
@@ -411,13 +414,13 @@ a:hover {
 
 .row-fluid:after {
   clear: both;
+
 }
 
 .row-fluid [class*="span"] {
   display: block;
   float: left;
   width: 100%;
-  min-height: 30px;
   margin-left: 2.127659574468085%;
   *margin-left: 2.074468085106383%;
   -webkit-box-sizing: border-box;
@@ -427,14 +430,20 @@ a:hover {
 
 .row-fluid [class*="span"]:first-child {
   margin-left: 0;
+
 }
+
 
 .row-fluid .controls-row [class*="span"] + [class*="span"] {
   margin-left: 2.127659574468085%;
 }
 
+.row-fluid .span {
+  font-family: "israr", "Helvetica Neue", Arial, sans-serif;
+}
 .row-fluid .span12 {
   width: 100%;
+  font-family: "Droid Arabic Kufi" , serif;
   *width: 99.94680851063829%;
 }
 
@@ -445,8 +454,17 @@ a:hover {
 
 .row-fluid .span10 {
   width: 82.97872340425532%;
+  font-family: "Droid Arabic Kufi", serif;
   *width: 82.92553191489361%;
 }
+
+.span10 .link{
+      font-family: "Droid Arabic Kufi", serif;
+ }
+ 
+ .span10 .a{
+      font-family: "Droid Arabic Kufi", serif;
+ }
 
 .row-fluid .span9 {
   width: 74.46808510638297%;
@@ -485,6 +503,7 @@ a:hover {
 
 .row-fluid .span2 {
   width: 14.893617021276595%;
+     font-family: "Droid Arabic Kufi", serif;
   *width: 14.840425531914894%;
 }
 
@@ -659,6 +678,7 @@ a:hover {
 
 p {
   margin: 0 0 10px;
+  font-family: "Droid Arabic Kufi" , serif;
 }
 
 .lead {
@@ -731,7 +751,7 @@ h4,
 h5,
 h6 {
   margin: 10px 0;
-  font-family: inherit;
+  font-family: "AlHurra", "Helvetica Neue", Arial, sans-serif;
   font-weight: bold;
   line-height: 0px;
   color: inherit;
@@ -4466,10 +4486,12 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav.pull-right {
   float: right;
   margin-right: 0;
+  font-family: "Droid Arabic Kufi", serif;
 }
 
 .navbar .nav > li {
   float: left;
+  font-family: "Droid Arabic Kufi", serif;
 }
 
 .navbar .nav > li > a {
@@ -4811,6 +4833,7 @@ input[type="submit"].btn.btn-mini {
 
 .pagination {
   margin: 20px 0;
+  font-family: "Droid Arabic Kufi", serif;
 }
 
 .pagination ul {
@@ -5463,6 +5486,7 @@ a.thumbnail:hover {
   white-space: nowrap;
   vertical-align: baseline;
   background-color: #999999;
+  font-family: "Droid Arabic Kufi", serif;
 }
 
 .label {
